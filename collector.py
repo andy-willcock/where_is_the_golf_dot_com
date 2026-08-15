@@ -27,6 +27,8 @@ LOG = logging.getLogger("pga_collector")
 BASE_DIR = Path(__file__).resolve().parent
 DEFAULT_OUTPUT = BASE_DIR / "data" / "schedule.json"
 
+MEDIA_BROADCAST_URL = "https://pgatourmedia.pgatourhq.com/broadcast-schedule"
+
 EASTERN = ZoneInfo("America/New_York")
 UTC = timezone.utc
 
@@ -229,6 +231,286 @@ def html_to_lines(html: str) -> list[str]:
 
     return deduped
 
+
+
+
+def parse_media_broadcast_schedule(
+    html: str,
+    now: datetime | None = None,
+    include_audio: bool = False,
+) -> tuple[Tournament | None, list[Coverage]]:
+    """
+    Parse the PGA TOUR Media broadcast schedule.
+
+    The page exposes repeated blocks:
+      Tournament:
+      Round:
+      Date:
+      Airtime:
+      Network:
+      Content Type:
+
+    Times are published in Eastern Time.
+    """
+    now = now or datetime.now(UTC)
+    today_eastern = now.astimezone(EASTERN).date()
+    year = today_eastern.year
+
+    soup = BeautifulSoup(html, "html.parser")
+    text = clean_text(soup.get_text("\n", strip=True))
+    lines = [clean_text(line) for line in text.splitlines() if clean_text(line)]
+
+    records = []
+    current = {}
+    in_pga_tour_section = False
+
+    for line in lines:
+        if line == "PGA TOUR":
+            in_pga_tour_section = True
+            continue
+
+        if line.startswith("PGA TOUR Champions"):
+            # Stop before Champions records.
+            break
+
+        if not in_pga_tour_section:
+            continue
+
+        if line.startswith("Tournament:"):
+            if current:
+                records.append(current)
+                current = {}
+            current["tournament"] = clean_text(line.split(":", 1)[1])
+
+        elif line.startswith("Round:"):
+            current["round"] = clean_text(line.split(":", 1)[1])
+
+        elif line.startswith("Date:"):
+            current["date"] = clean_text(line.split(":", 1)[1])
+
+        elif line.startswith("Airtime:"):
+            current["airtime"] = clean_text(line.split(":", 1)[1])
+
+        elif line.startswith("Network:"):
+            current["network"] = clean_text(line.split(":", 1)[1])
+
+        elif line.startswith("Content Type:"):
+            current["content_type"] = clean_text(line.split(":", 1)[1])
+
+    if current:
+        records.append(current)
+
+    parsed = []
+    tournament_dates = {}
+
+    for record in records:
+        required = {"tournament", "round", "date", "airtime", "network", "content_type"}
+        if not required.issubset(record):
+            continue
+
+        network = record["network"]
+        content_type = record["content_type"]
+
+        # Skip audio unless explicitly requested.
+        if not include_audio and (
+            content_type.lower() == "audio"
+            or "siriusxm" in network.lower()
+            or "radio" in network.lower()
+        ):
+            continue
+
+        # Date examples: TH 08/13, SA 08/15
+        date_match = re.search(r"(\d{2})/(\d{2})", record["date"])
+        if not date_match:
+            continue
+
+        month, day = map(int, date_match.groups())
+
+        # Handle January pages viewed in late December / vice versa.
+        event_year = year
+        if today_eastern.month == 12 and month == 1:
+            event_year += 1
+        elif today_eastern.month == 1 and month == 12:
+            event_year -= 1
+
+        event_date = date(event_year, month, day)
+
+        # Airtime example: 3:00 PM - 6:00 PM Eastern
+        airtime = re.sub(r"\s+Eastern\s*$", "", record["airtime"], flags=re.I)
+        parsed_range = parse_time_range(airtime, event_date)
+        if not parsed_range:
+            continue
+
+        start_utc, end_utc = parsed_range
+
+        round_raw = record["round"].strip()
+        round_name = (
+            "Final Round"
+            if round_raw == "4"
+            else f"Round {round_raw}"
+        )
+
+        provider = normalize_media_provider(network)
+        ctype = classify_media_provider(provider, content_type)
+
+        parsed.append(
+            Coverage(
+                round=round_name,
+                provider=provider,
+                feed=content_type,
+                type=ctype,
+                startUtc=start_utc.isoformat().replace("+00:00", "Z"),
+                endUtc=end_utc.isoformat().replace("+00:00", "Z"),
+                sourceUrl=MEDIA_BROADCAST_URL,
+                sourceDomain="pgatourmedia.pgatourhq.com",
+                sourceLabel="PGA TOUR Media Broadcast Schedule",
+            )
+        )
+
+        tournament_dates.setdefault(record["tournament"], []).append(event_date)
+
+    if not parsed:
+        return None, []
+
+    # Pick the tournament whose broadcast dates include today, or the next one.
+    tournament_candidates = []
+    for name, dates in tournament_dates.items():
+        start_date = min(dates)
+        end_date = max(dates)
+        tournament_candidates.append(
+            Tournament(
+                name=name,
+                start_date=start_date,
+                end_date=end_date,
+                source_url=MEDIA_BROADCAST_URL,
+            )
+        )
+
+    tournament = choose_active_tournament(tournament_candidates, today_eastern)
+
+    # If choose_active_tournament finds nothing, use the tournament associated
+    # with the earliest upcoming broadcast record.
+    if tournament is None and tournament_candidates:
+        upcoming = [
+            t for t in tournament_candidates
+            if t.start_date >= today_eastern
+        ]
+        if upcoming:
+            tournament = sorted(upcoming, key=lambda t: t.start_date)[0]
+        else:
+            tournament = sorted(
+                tournament_candidates,
+                key=lambda t: t.end_date,
+                reverse=True,
+            )[0]
+
+    if tournament:
+        parsed = [
+            item for item in parsed
+            if any(
+                item.startUtc == c.startUtc
+                for c in parsed
+            )
+        ]
+
+        # Keep only coverage belonging to the selected tournament by matching
+        # source records again.
+        selected = []
+        for record in records:
+            if record.get("tournament") != tournament.name:
+                continue
+            required = {"round", "date", "airtime", "network", "content_type"}
+            if not required.issubset(record):
+                continue
+
+            network = record["network"]
+            content_type = record["content_type"]
+            if not include_audio and (
+                content_type.lower() == "audio"
+                or "siriusxm" in network.lower()
+                or "radio" in network.lower()
+            ):
+                continue
+
+            dm = re.search(r"(\d{2})/(\d{2})", record["date"])
+            if not dm:
+                continue
+
+            month, day = map(int, dm.groups())
+            event_year = tournament.start_date.year
+            event_date = date(event_year, month, day)
+            airtime = re.sub(r"\s+Eastern\s*$", "", record["airtime"], flags=re.I)
+            parsed_range = parse_time_range(airtime, event_date)
+            if not parsed_range:
+                continue
+
+            start_utc, end_utc = parsed_range
+            round_raw = record["round"].strip()
+            round_name = "Final Round" if round_raw == "4" else f"Round {round_raw}"
+            provider = normalize_media_provider(network)
+
+            selected.append(
+                Coverage(
+                    round=round_name,
+                    provider=provider,
+                    feed=content_type,
+                    type=classify_media_provider(provider, content_type),
+                    startUtc=start_utc.isoformat().replace("+00:00", "Z"),
+                    endUtc=end_utc.isoformat().replace("+00:00", "Z"),
+                    sourceUrl=MEDIA_BROADCAST_URL,
+                    sourceDomain="pgatourmedia.pgatourhq.com",
+                    sourceLabel="PGA TOUR Media Broadcast Schedule",
+                )
+            )
+
+        parsed = dedupe_coverage(selected)
+
+    return tournament, parsed
+
+
+def normalize_media_provider(network: str) -> str:
+    replacements = {
+        "GOLF Channel": "Golf Channel",
+        "GOLF CHANNEL": "Golf Channel",
+    }
+    return replacements.get(network.strip(), network.strip())
+
+
+def classify_media_provider(provider: str, content_type: str) -> str:
+    low = provider.lower()
+
+    if any(
+        token in low
+        for token in (
+            "espn+",
+            "paramount+",
+            "peacock",
+            "pga tour live",
+            "app",
+            ".com",
+        )
+    ):
+        return "streaming"
+
+    return "tv"
+
+
+def collect_from_media_schedule(now: datetime | None = None) -> tuple[Tournament, list[Coverage]]:
+    html = fetch_html(MEDIA_BROADCAST_URL)
+    tournament, coverage = parse_media_broadcast_schedule(html, now=now)
+
+    if tournament is None or not coverage:
+        raise CollectionError(
+            "PGA TOUR Media broadcast schedule did not return a usable current event."
+        )
+
+    LOG.warning(
+        "PGA TOUR Media source -> %s with %d TV/streaming windows",
+        tournament.name,
+        len(coverage),
+    )
+
+    return tournament, coverage
 
 
 def discover_current_tournament(now: datetime | None = None) -> Tournament:
@@ -1135,56 +1417,76 @@ def collect_current_week(
 ) -> dict:
     now = now or datetime.now(UTC)
 
-    tournament = discover_current_tournament(now)
-    LOG.warning(
-        "Current tournament: %s (%s to %s)",
-        tournament.name,
-        tournament.start_date,
-        tournament.end_date,
-    )
+    media_error = None
 
-    guides = discover_viewing_guides(tournament)
-    if not guides:
-        raise CollectionError("No viewing guides were discovered.")
+    try:
+        tournament, collected = collect_from_media_schedule(now)
+        used_sources = [{
+            "url": MEDIA_BROADCAST_URL,
+            "domain": "pgatourmedia.pgatourhq.com",
+            "title": "PGA TOUR Media Broadcast Schedule",
+            "parsedWindows": len(collected),
+        }]
+        parse_failures = []
+    except Exception as exc:
+        media_error = str(exc)
+        LOG.exception("Primary PGA TOUR Media collection failed")
 
-    collected = []
-    used_sources = []
-    parse_failures = []
+        # Fall back to the older multi-source flow.
+        tournament = discover_current_tournament(now)
+        LOG.warning(
+            "Current tournament fallback: %s (%s to %s)",
+            tournament.name,
+            tournament.start_date,
+            tournament.end_date,
+        )
 
-    # Parse several high-quality sources. Multiple sources help fill gaps and
-    # also let us deduplicate simulcast information.
-    for guide in guides[:8]:
-        url = guide["url"]
-        try:
-            html = fetch_html(url)
-            items = parse_viewing_guide(html, tournament, url)
-            if items:
-                LOG.warning("Viewing guide: parsed %d windows from %s", len(items), url)
-                collected.extend(items)
-                used_sources.append(
-                    {
-                        "url": url,
-                        "domain": guide["domain"],
-                        "title": guide.get("title", ""),
-                        "parsedWindows": len(items),
-                    }
-                )
-            else:
-                parse_failures.append(f"No windows parsed: {url}")
-        except Exception as exc:
-            parse_failures.append(f"{url}: {exc}")
-            LOG.warning("Guide failed: %s: %s", url, exc)
+        guides = discover_viewing_guides(tournament)
+        if not guides:
+            raise CollectionError(
+                f"PGA TOUR Media failed ({media_error}); no fallback viewing guides found."
+            )
 
-        # Stop once we have strong Thursday-Sunday coverage.
-        current = dedupe_coverage(collected)
-        if score_coverage(current, tournament) >= 100:
-            rounds = {c.round for c in current}
-            if {"Round 1", "Round 2", "Round 3", "Final Round"}.issubset(rounds):
-                break
+        collected = []
+        used_sources = []
+        parse_failures = []
+
+        for guide in guides[:8]:
+            url = guide["url"]
+            try:
+                html = fetch_html(url)
+                items = parse_viewing_guide(html, tournament, url)
+                if items:
+                    LOG.warning("Viewing guide: parsed %d windows from %s", len(items), url)
+                    collected.extend(items)
+                    used_sources.append(
+                        {
+                            "url": url,
+                            "domain": guide["domain"],
+                            "title": guide.get("title", ""),
+                            "parsedWindows": len(items),
+                        }
+                    )
+                else:
+                    parse_failures.append(f"No windows parsed: {url}")
+            except Exception as exc:
+                parse_failures.append(f"{url}: {exc}")
+                LOG.warning("Guide failed: %s: %s", url, exc)
+
+            current = dedupe_coverage(collected)
+            if score_coverage(current, tournament) >= 100:
+                rounds = {c.round for c in current}
+                if {"Round 1", "Round 2", "Round 3", "Final Round"}.issubset(rounds):
+                    break
+
+        collected = dedupe_coverage(collected)
 
     collected = dedupe_coverage(collected)
     score = score_coverage(collected, tournament)
     issues = validate_coverage(collected, tournament)
+
+    if media_error:
+        issues.append(f"Primary PGA TOUR Media source failed: {media_error}")
 
     if score < min_score:
         raise CollectionError(
@@ -1216,9 +1518,10 @@ def collect_current_week(
             "sources": used_sources,
             "failedSources": parse_failures,
             "sourceTimezone": "America/New_York",
+            "primarySource": MEDIA_BROADCAST_URL,
             "notes": (
-                "Only complete start/end windows are published. "
-                "The collector does not invent missing end times."
+                "PGA TOUR Media broadcast schedule is the primary source. "
+                "Audio-only records are excluded. Times are converted from Eastern to UTC."
             ),
         },
     }
@@ -1229,6 +1532,7 @@ def collect_current_week(
     temp_path.replace(output_path)
 
     return payload
+
 
 
 def main():

@@ -444,3 +444,27 @@ is retained as the second source.
 
 The collector no longer calls ESPN's scoreboard JSON endpoint when deciding
 which tournament is current.
+
+
+# v7 — PGA TOUR Media broadcast schedule as primary source
+
+Primary data source:
+
+```text
+https://pgatourmedia.pgatourhq.com/broadcast-schedule
+```
+
+This page already publishes structured current-week fields for PGA TOUR:
+
+- Tournament
+- Round
+- Date
+- Airtime
+- Network
+- Content Type
+
+The collector parses that source directly, converts Eastern airtimes to UTC,
+and excludes audio-only entries such as SiriusXM.
+
+The older CBS / PGA TOUR / viewing-guide discovery logic remains as fallback
+only if the media schedule is unavailable.
