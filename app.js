@@ -33,26 +33,6 @@ async function loadSchedule() {
   }
 }
 
-async function refreshSchedule() {
-  el.refreshButton.disabled = true;
-  el.refreshButton.textContent = "Collecting…";
-  showStatus("Collecting the current week's PGA TOUR schedule…");
-
-  try {
-    const response = await fetch("/api/refresh", {method:"POST"});
-    const result = await response.json();
-    if (!response.ok || !result.ok) throw new Error(result.error || `HTTP ${response.status}`);
-    state.data = result.schedule;
-    el.statusBanner.hidden = true;
-    renderAll();
-  } catch (error) {
-    showStatus(`Refresh failed. The previous schedule was kept. ${error.message}`);
-  } finally {
-    el.refreshButton.disabled = false;
-    el.refreshButton.textContent = "Refresh schedule";
-  }
-}
-
 function showStatus(message) {
   el.statusBanner.textContent = message;
   el.statusBanner.hidden = false;
@@ -264,7 +244,6 @@ function formatDateTime(date) {
   return new Intl.DateTimeFormat("en-US", {month:"short",day:"numeric",hour:"numeric",minute:"2-digit",timeZone:state.timezone}).format(date);
 }
 
-el.refreshButton.addEventListener("click", refreshSchedule);
 initTimezonePicker();
 loadSchedule();
 setInterval(() => state.data && renderAll(), 60_000);

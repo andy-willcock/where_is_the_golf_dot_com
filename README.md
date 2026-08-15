@@ -308,3 +308,113 @@ Searching for viewing guides for: ...
 
 If the next failure is in viewing-guide search or parsing, those lines will now
 show exactly where it occurs.
+
+
+# v4 — GitHub Actions collection architecture
+
+Render is now used only to serve the Flask website.
+
+The live Render process **does not scrape ESPN/PGA TOUR** because sports sites
+may block Render datacenter IP addresses with HTTP 403 responses.
+
+Instead:
+
+```text
+GitHub Actions
+     |
+     | runs collector.py
+     v
+data/schedule.json
+     |
+     | git commit + push
+     v
+GitHub main branch
+     |
+     | Render auto-deploy
+     v
+whereisthegolf.com
+```
+
+## First-time GitHub setup
+
+After pushing v4, go to your GitHub repository:
+
+```text
+Actions > Refresh PGA Schedule
+```
+
+Click:
+
+```text
+Run workflow
+```
+
+This performs an immediate collection test.
+
+If GitHub says the workflow cannot push changes, go to:
+
+```text
+Repository Settings
+> Actions
+> General
+> Workflow permissions
+```
+
+and allow workflows to have read/write repository permission.
+
+The workflow itself also declares:
+
+```yaml
+permissions:
+  contents: write
+```
+
+## Automatic schedule
+
+`.github/workflows/refresh-schedule.yml` runs:
+
+- Monday, to discover the next week's tournament.
+- Thursday-Sunday several times per day.
+- Any time you manually click **Run workflow**.
+
+GitHub Actions cron expressions use UTC.
+
+## What happens after a successful run
+
+If `data/schedule.json` changes, the workflow commits:
+
+```text
+Update PGA TOUR schedule
+```
+
+to `main`.
+
+If Render Auto-Deploy is enabled for the linked branch, Render then deploys
+that commit automatically.
+
+## Render setting
+
+`AUTO_REFRESH_HOURS` is now `0`.
+
+Do not rely on `/api/refresh` for production collection. The browser refresh
+button has been removed because Render's outgoing requests were receiving
+403 responses from ESPN.
+
+## Debugging
+
+Open:
+
+```text
+GitHub > Actions > Refresh PGA Schedule > latest run
+```
+
+The collection output is visible in the **Collect current PGA TOUR schedule**
+step.
+
+The workflow then validates:
+
+- tournament name exists;
+- at least one complete coverage window exists;
+- collector score is at least 45.
+
+If validation fails, it does not commit bad schedule data.
