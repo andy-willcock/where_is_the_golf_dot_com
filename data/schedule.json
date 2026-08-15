@@ -1,76 +1,14 @@
 {
-  "lastUpdatedUtc": "2026-08-15T21:39:40.874182Z",
+  "lastUpdatedUtc": null,
   "tournament": {
-    "name": "FedEx St. Jude Championship",
-    "course": "TPC Southwind",
-    "location": "Memphis, TN",
-    "startDate": "2026-08-13",
-    "endDate": "2026-08-16",
-    "sourceUrl": "https://www.cbssports.com/golf/schedules/"
+    "name": "Run python collector.py to collect this week's event"
   },
-  "coverage": [
-    {
-      "id": "coverage-1",
-      "round": "Final Round",
-      "provider": "PGA TOUR LIVE",
-      "feed": "PGA Tour Live",
-      "type": "streaming",
-      "startUtc": "2026-08-16T12:00:00Z",
-      "endUtc": "2026-08-16T22:00:00Z",
-      "sourceUrl": "https://secure-www.cbssports.com/golf/news/2024-st-jude-championship-tv-schedule-channel-live-stream-where-to-watch-fedex-cup-playoffs-coverage/",
-      "sourceDomain": "secure-www.cbssports.com",
-      "sourceLabel": "PGA Tour Live"
-    },
-    {
-      "id": "coverage-2",
-      "round": "Final Round",
-      "provider": "Golf Channel",
-      "feed": "Early TV coverage",
-      "type": "tv",
-      "startUtc": "2026-08-16T16:00:00Z",
-      "endUtc": "2026-08-16T18:00:00Z",
-      "sourceUrl": "https://secure-www.cbssports.com/golf/news/2024-st-jude-championship-tv-schedule-channel-live-stream-where-to-watch-fedex-cup-playoffs-coverage/",
-      "sourceDomain": "secure-www.cbssports.com",
-      "sourceLabel": "Early TV coverage"
-    },
-    {
-      "id": "coverage-3",
-      "round": "Final Round",
-      "provider": "NBC",
-      "feed": "Live TV coverage",
-      "type": "tv",
-      "startUtc": "2026-08-16T18:00:00Z",
-      "endUtc": "2026-08-16T22:00:00Z",
-      "sourceUrl": "https://secure-www.cbssports.com/golf/news/2024-st-jude-championship-tv-schedule-channel-live-stream-where-to-watch-fedex-cup-playoffs-coverage/",
-      "sourceDomain": "secure-www.cbssports.com",
-      "sourceLabel": "Live TV coverage"
-    }
-  ],
+  "coverage": [],
   "collection": {
-    "score": 51,
+    "score": 0,
     "warnings": [
-      "Round 1 coverage was not found.",
-      "Primary PGA TOUR Media source failed: PGA TOUR Media broadcast schedule did not return a usable current event."
+      "No collection has been run yet."
     ],
-    "sources": [
-      {
-        "url": "https://secure-www.cbssports.com/golf/news/2024-st-jude-championship-tv-schedule-channel-live-stream-where-to-watch-fedex-cup-playoffs-coverage/",
-        "domain": "secure-www.cbssports.com",
-        "title": "2024 St. Jude Championship TV schedule, channel... - CBS Sports",
-        "parsedWindows": 3
-      }
-    ],
-    "failedSources": [
-      "No windows parsed: https://www.pgatour.com/watch?/video/pga-tour/sod/2008/09/25/sod_rnd1.pgatour=",
-      "No windows parsed: https://www.golfchannel.com/pga-tour/news/after-opening-in-82-robert-macintyre-withdraws-before-round-2-in-memphis",
-      "No windows parsed: https://www.nbcsports.com/golf/news/akshay-bhatia-fires-62-to-lead-fedex-st-jude-championship-pga-tours-first-playoff-event",
-      "No windows parsed: https://www.nbcsports.com/golf/news/tom-kims-sunday-meltdown-costs-him-spot-in-fedexcup-top-50",
-      "No windows parsed: https://secure-www.cbssports.com/golf/news/fedex-cup-standings-2025-playoffs-schedule-rickie-fowler-jordan-spieth/",
-      "https://www.soccer.cbssports.com/golf/news/fedex-cup-standings-2025-top-30-fedex-cup-playoffs-schedule-purse-prize-oney/: Both requests and browser fallback failed for https://www.soccer.cbssports.com/golf/news/fedex-cup-standings-2025-top-30-fedex-cup-playoffs-schedule-purse-prize-oney/: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://www.soccer.cbssports.com/golf/news/fedex-cup-standings-2025-top-30-fedex-cup-playoffs-schedule-purse-prize-oney/\nCall log:\n  - navigating to \"https://www.soccer.cbssports.com/golf/news/fedex-cup-standings-2025-top-30-fedex-cup-playoffs-schedule-purse-prize-oney/\", waiting until \"domcontentloaded\"\n",
-      "No windows parsed: https://new.cbssports.com/golf/news/scottie-scheffler-to-play-final-round-of-fedex-st-jude-championship-with-fill-in-caddie/"
-    ],
-    "sourceTimezone": "America/New_York",
-    "primarySource": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
-    "notes": "PGA TOUR Media broadcast schedule is the primary source. Audio-only records are excluded. Times are converted from Eastern to UTC."
+    "sources": []
   }
 }

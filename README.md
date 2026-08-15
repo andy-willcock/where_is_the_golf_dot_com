@@ -468,3 +468,31 @@ and excludes audio-only entries such as SiriusXM.
 
 The older CBS / PGA TOUR / viewing-guide discovery logic remains as fallback
 only if the media schedule is unavailable.
+
+
+# v8 — direct PGA TOUR Media record parsing
+
+v8 replaces the line-by-line media parser with a direct six-field parser.
+
+It now captures each block from:
+
+```text
+Tournament
+Round
+Date
+Airtime
+Network
+Content Type
+```
+
+and only then filters the records to the selected PGA TOUR tournament.
+
+This prevents Saturday/Sunday records from being lost during a second parsing
+pass. Collector logs now include a record count by round, for example:
+
+```text
+PGA TOUR Media records by round:
+{'Round 1': 4, 'Round 2': 4, 'Round 3': 5, 'Final Round': 4}
+```
+
+Audio records are excluded from the web schedule.

@@ -240,78 +240,124 @@ def parse_media_broadcast_schedule(
     include_audio: bool = False,
 ) -> tuple[Tournament | None, list[Coverage]]:
     """
-    Parse the PGA TOUR Media broadcast schedule.
+    Parse the PGA TOUR Media broadcast schedule directly from six-field records.
 
-    The page exposes repeated blocks:
-      Tournament:
-      Round:
-      Date:
-      Airtime:
-      Network:
-      Content Type:
+    Expected record structure:
+      Tournament: ...
+      Round: ...
+      Date: SA 08/15
+      Airtime: 3:00 PM - 6:00 PM Eastern
+      Network: CBS
+      Content Type: Full Telecast
 
-    Times are published in Eastern Time.
+    Only the PGA TOUR section is parsed; PGA TOUR Champions records are excluded.
     """
     now = now or datetime.now(UTC)
     today_eastern = now.astimezone(EASTERN).date()
-    year = today_eastern.year
 
     soup = BeautifulSoup(html, "html.parser")
-    text = clean_text(soup.get_text("\n", strip=True))
-    lines = [clean_text(line) for line in text.splitlines() if clean_text(line)]
+
+    # Preserve record labels while normalizing whitespace.
+    raw = soup.get_text("\n", strip=True)
+    raw = raw.replace("\xa0", " ")
+
+    # Restrict parsing to the PGA TOUR block only.
+    tour_start = re.search(r"(?m)^\s*PGA TOUR\s*$", raw)
+    if not tour_start:
+        raise CollectionError("Could not find the PGA TOUR section on the media page.")
+
+    section = raw[tour_start.end():]
+
+    champions_start = re.search(r"(?m)^\s*PGA TOUR Champions\s*$", section)
+    if champions_start:
+        section = section[:champions_start.start()]
+
+    # Use label boundaries rather than HTML layout. This survives changes to
+    # cards, paragraphs, or div nesting as long as the field labels remain.
+    record_re = re.compile(
+        r"Tournament:\s*(?P<tournament>.*?)\s*"
+        r"Round:\s*(?P<round>\d+)\s*"
+        r"Date:\s*(?P<date>[A-Z]{2}\s+\d{2}/\d{2})\s*"
+        r"Airtime:\s*(?P<airtime>.*?)\s*"
+        r"Network:\s*(?P<network>.*?)\s*"
+        r"Content Type:\s*(?P<content_type>.*?)(?="
+        r"\s*Tournament:|\s*$"
+        r")",
+        re.I | re.S,
+    )
 
     records = []
-    current = {}
-    in_pga_tour_section = False
+    for match in record_re.finditer(section):
+        record = {
+            key: clean_text(value)
+            for key, value in match.groupdict().items()
+        }
+        records.append(record)
 
-    for line in lines:
-        if line == "PGA TOUR":
-            in_pga_tour_section = True
-            continue
+    if not records:
+        raise CollectionError(
+            "PGA TOUR Media page was fetched, but no broadcast records were parsed."
+        )
 
-        if line.startswith("PGA TOUR Champions"):
-            # Stop before Champions records.
-            break
-
-        if not in_pga_tour_section:
-            continue
-
-        if line.startswith("Tournament:"):
-            if current:
-                records.append(current)
-                current = {}
-            current["tournament"] = clean_text(line.split(":", 1)[1])
-
-        elif line.startswith("Round:"):
-            current["round"] = clean_text(line.split(":", 1)[1])
-
-        elif line.startswith("Date:"):
-            current["date"] = clean_text(line.split(":", 1)[1])
-
-        elif line.startswith("Airtime:"):
-            current["airtime"] = clean_text(line.split(":", 1)[1])
-
-        elif line.startswith("Network:"):
-            current["network"] = clean_text(line.split(":", 1)[1])
-
-        elif line.startswith("Content Type:"):
-            current["content_type"] = clean_text(line.split(":", 1)[1])
-
-    if current:
-        records.append(current)
-
-    parsed = []
-    tournament_dates = {}
+    # Derive tournament/date candidates from all PGA TOUR records, including
+    # audio; audio is removed only when constructing display coverage.
+    tournament_dates: dict[str, list[date]] = {}
+    normalized_records = []
 
     for record in records:
-        required = {"tournament", "round", "date", "airtime", "network", "content_type"}
-        if not required.issubset(record):
+        dm = re.search(r"(\d{2})/(\d{2})", record["date"])
+        if not dm:
             continue
 
-        network = record["network"]
+        month, day = map(int, dm.groups())
+        event_year = today_eastern.year
+
+        if today_eastern.month == 12 and month == 1:
+            event_year += 1
+        elif today_eastern.month == 1 and month == 12:
+            event_year -= 1
+
+        try:
+            event_date = date(event_year, month, day)
+        except ValueError:
+            continue
+
+        record["event_date"] = event_date
+        normalized_records.append(record)
+        tournament_dates.setdefault(record["tournament"], []).append(event_date)
+
+    candidates = [
+        Tournament(
+            name=name,
+            start_date=min(dates),
+            end_date=max(dates),
+            source_url=MEDIA_BROADCAST_URL,
+        )
+        for name, dates in tournament_dates.items()
+        if dates
+    ]
+
+    tournament = choose_active_tournament(candidates, today_eastern)
+
+    if tournament is None:
+        upcoming = [t for t in candidates if t.start_date >= today_eastern]
+        if upcoming:
+            tournament = min(upcoming, key=lambda t: t.start_date)
+        elif candidates:
+            tournament = max(candidates, key=lambda t: t.end_date)
+
+    if tournament is None:
+        raise CollectionError("No PGA TOUR tournament could be selected from media records.")
+
+    coverage = []
+
+    for record in normalized_records:
+        if record["tournament"] != tournament.name:
+            continue
+
+        network = normalize_media_provider(record["network"])
         content_type = record["content_type"]
 
-        # Skip audio unless explicitly requested.
         if not include_audio and (
             content_type.lower() == "audio"
             or "siriusxm" in network.lower()
@@ -319,46 +365,33 @@ def parse_media_broadcast_schedule(
         ):
             continue
 
-        # Date examples: TH 08/13, SA 08/15
-        date_match = re.search(r"(\d{2})/(\d{2})", record["date"])
-        if not date_match:
-            continue
+        airtime = re.sub(
+            r"\s+Eastern\s*$",
+            "",
+            record["airtime"],
+            flags=re.I,
+        )
 
-        month, day = map(int, date_match.groups())
-
-        # Handle January pages viewed in late December / vice versa.
-        event_year = year
-        if today_eastern.month == 12 and month == 1:
-            event_year += 1
-        elif today_eastern.month == 1 and month == 12:
-            event_year -= 1
-
-        event_date = date(event_year, month, day)
-
-        # Airtime example: 3:00 PM - 6:00 PM Eastern
-        airtime = re.sub(r"\s+Eastern\s*$", "", record["airtime"], flags=re.I)
-        parsed_range = parse_time_range(airtime, event_date)
+        parsed_range = parse_time_range(airtime, record["event_date"])
         if not parsed_range:
+            LOG.warning(
+                "Skipping unparseable PGA TOUR Media airtime: %s | %s | %s",
+                record["date"],
+                record["airtime"],
+                network,
+            )
             continue
 
         start_utc, end_utc = parsed_range
+        round_raw = record["round"]
+        round_name = "Final Round" if round_raw == "4" else f"Round {round_raw}"
 
-        round_raw = record["round"].strip()
-        round_name = (
-            "Final Round"
-            if round_raw == "4"
-            else f"Round {round_raw}"
-        )
-
-        provider = normalize_media_provider(network)
-        ctype = classify_media_provider(provider, content_type)
-
-        parsed.append(
+        coverage.append(
             Coverage(
                 round=round_name,
-                provider=provider,
+                provider=network,
                 feed=content_type,
-                type=ctype,
+                type=classify_media_provider(network, content_type),
                 startUtc=start_utc.isoformat().replace("+00:00", "Z"),
                 endUtc=end_utc.isoformat().replace("+00:00", "Z"),
                 sourceUrl=MEDIA_BROADCAST_URL,
@@ -367,105 +400,22 @@ def parse_media_broadcast_schedule(
             )
         )
 
-        tournament_dates.setdefault(record["tournament"], []).append(event_date)
+    coverage = dedupe_coverage(coverage)
 
-    if not parsed:
-        return None, []
+    LOG.warning(
+        "PGA TOUR Media parser selected %s and retained %d non-audio records",
+        tournament.name,
+        len(coverage),
+    )
 
-    # Pick the tournament whose broadcast dates include today, or the next one.
-    tournament_candidates = []
-    for name, dates in tournament_dates.items():
-        start_date = min(dates)
-        end_date = max(dates)
-        tournament_candidates.append(
-            Tournament(
-                name=name,
-                start_date=start_date,
-                end_date=end_date,
-                source_url=MEDIA_BROADCAST_URL,
-            )
-        )
+    by_round = {}
+    for item in coverage:
+        by_round[item.round] = by_round.get(item.round, 0) + 1
 
-    tournament = choose_active_tournament(tournament_candidates, today_eastern)
+    LOG.warning("PGA TOUR Media records by round: %s", by_round)
 
-    # If choose_active_tournament finds nothing, use the tournament associated
-    # with the earliest upcoming broadcast record.
-    if tournament is None and tournament_candidates:
-        upcoming = [
-            t for t in tournament_candidates
-            if t.start_date >= today_eastern
-        ]
-        if upcoming:
-            tournament = sorted(upcoming, key=lambda t: t.start_date)[0]
-        else:
-            tournament = sorted(
-                tournament_candidates,
-                key=lambda t: t.end_date,
-                reverse=True,
-            )[0]
+    return tournament, coverage
 
-    if tournament:
-        parsed = [
-            item for item in parsed
-            if any(
-                item.startUtc == c.startUtc
-                for c in parsed
-            )
-        ]
-
-        # Keep only coverage belonging to the selected tournament by matching
-        # source records again.
-        selected = []
-        for record in records:
-            if record.get("tournament") != tournament.name:
-                continue
-            required = {"round", "date", "airtime", "network", "content_type"}
-            if not required.issubset(record):
-                continue
-
-            network = record["network"]
-            content_type = record["content_type"]
-            if not include_audio and (
-                content_type.lower() == "audio"
-                or "siriusxm" in network.lower()
-                or "radio" in network.lower()
-            ):
-                continue
-
-            dm = re.search(r"(\d{2})/(\d{2})", record["date"])
-            if not dm:
-                continue
-
-            month, day = map(int, dm.groups())
-            event_year = tournament.start_date.year
-            event_date = date(event_year, month, day)
-            airtime = re.sub(r"\s+Eastern\s*$", "", record["airtime"], flags=re.I)
-            parsed_range = parse_time_range(airtime, event_date)
-            if not parsed_range:
-                continue
-
-            start_utc, end_utc = parsed_range
-            round_raw = record["round"].strip()
-            round_name = "Final Round" if round_raw == "4" else f"Round {round_raw}"
-            provider = normalize_media_provider(network)
-
-            selected.append(
-                Coverage(
-                    round=round_name,
-                    provider=provider,
-                    feed=content_type,
-                    type=classify_media_provider(provider, content_type),
-                    startUtc=start_utc.isoformat().replace("+00:00", "Z"),
-                    endUtc=end_utc.isoformat().replace("+00:00", "Z"),
-                    sourceUrl=MEDIA_BROADCAST_URL,
-                    sourceDomain="pgatourmedia.pgatourhq.com",
-                    sourceLabel="PGA TOUR Media Broadcast Schedule",
-                )
-            )
-
-        parsed = dedupe_coverage(selected)
-
-    return tournament, parsed
 
 
 def normalize_media_provider(network: str) -> str:
@@ -486,6 +436,7 @@ def classify_media_provider(provider: str, content_type: str) -> str:
             "paramount+",
             "peacock",
             "pga tour live",
+            "betcast",
             "app",
             ".com",
         )
