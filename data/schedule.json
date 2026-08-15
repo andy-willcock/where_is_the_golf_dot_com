@@ -1,5 +1,5 @@
 {
-  "lastUpdatedUtc": "2026-08-15T21:47:35.668270Z",
+  "lastUpdatedUtc": "2026-08-15T23:53:25.195888Z",
   "tournament": {
     "name": "FedEx St. Jude Championship",
     "course": "",
@@ -183,7 +183,7 @@
       "provider": "PGA TOUR LIVE Betcast presented by DraftKings",
       "feed": "Full Telecast",
       "type": "streaming",
-      "startUtc": "2026-08-16T11:45:00Z",
+      "startUtc": "2026-08-16T12:15:00Z",
       "endUtc": "2026-08-16T16:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
