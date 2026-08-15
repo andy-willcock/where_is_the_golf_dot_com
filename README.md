@@ -278,3 +278,33 @@ Parsed 40 tournaments from https://www.espn.com/golf/schedule
 Discovered active tournament from ...
 Current tournament: FedEx St. Jude Championship (2026-08-13 to 2026-08-16)
 ```
+
+
+## v3 cloud-hosting reliability fix
+
+v3 changes tournament discovery to use ESPN's JSON scoreboard endpoint first:
+
+```text
+https://site.api.espn.com/apis/site/v2/sports/golf/pga/scoreboard
+```
+
+The endpoint currently exposes the active event, full PGA TOUR season calendar,
+and broadcast-provider names. HTML scraping remains only as fallback.
+
+v3 also:
+- prints refresh errors and full tracebacks into Render logs;
+- logs tournament discovery at WARNING level so Gunicorn surfaces it;
+- prioritizes CBS Sports viewing-guide searches;
+- adds an ESPN JSON regression test.
+
+After deployment, a refresh should produce log lines beginning with:
+
+```text
+Manual schedule refresh requested
+Tournament discovery: ESPN JSON API -> ...
+Current tournament: ...
+Searching for viewing guides for: ...
+```
+
+If the next failure is in viewing-guide search or parsing, those lines will now
+show exactly where it occurs.

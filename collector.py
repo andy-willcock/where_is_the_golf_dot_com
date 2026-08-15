@@ -230,17 +230,103 @@ def html_to_lines(html: str) -> list[str]:
     return deduped
 
 
-def discover_current_tournament(now: datetime | None = None) -> Tournament:
-    """
-    Identify the active PGA TOUR event using multiple independent schedule sources.
 
-    A source failure or markup change should not prevent the other sources from
-    identifying the event.
+def discover_tournament_from_espn_api(now: datetime | None = None) -> Tournament | None:
+    """
+    Primary tournament discovery via ESPN's public scoreboard JSON.
+
+    This is substantially more stable on cloud hosts than scraping the
+    rendered ESPN schedule HTML. The payload contains both the current event
+    and a season calendar.
     """
     now = now or datetime.now(UTC)
     today = now.astimezone(EASTERN).date()
+    url = "https://site.api.espn.com/apis/site/v2/sports/golf/pga/scoreboard"
 
+    response = requests.get(url, headers=HEADERS, timeout=20)
+    response.raise_for_status()
+    payload = response.json()
+
+    candidates: list[Tournament] = []
+
+    # Prefer the current events collection.
+    for event in payload.get("events", []):
+        name = clean_text(event.get("name") or event.get("shortName") or "")
+        start_raw = event.get("date")
+        end_raw = event.get("endDate")
+
+        if not name or not start_raw or not end_raw:
+            continue
+
+        start_dt = dateparser.isoparse(start_raw)
+        end_dt = dateparser.isoparse(end_raw)
+
+        candidates.append(
+            Tournament(
+                name=name,
+                start_date=start_dt.astimezone(EASTERN).date(),
+                end_date=end_dt.astimezone(EASTERN).date(),
+                source_url=url,
+            )
+        )
+
+    active = choose_active_tournament(candidates, today)
+    if active:
+        return active
+
+    # Fall back to the league calendar embedded in the same response. This is
+    # useful Monday-Wednesday before ESPN has placed the next event in `events`.
+    for league in payload.get("leagues", []):
+        for item in league.get("calendar", []):
+            name = clean_text(item.get("label") or "")
+            start_raw = item.get("startDate")
+            end_raw = item.get("endDate")
+
+            if not name or not start_raw or not end_raw:
+                continue
+
+            start_dt = dateparser.isoparse(start_raw)
+            end_dt = dateparser.isoparse(end_raw)
+
+            candidates.append(
+                Tournament(
+                    name=name,
+                    start_date=start_dt.astimezone(EASTERN).date(),
+                    end_date=end_dt.astimezone(EASTERN).date(),
+                    source_url=url,
+                )
+            )
+
+    return choose_active_tournament(candidates, today)
+
+
+def discover_current_tournament(now: datetime | None = None) -> Tournament:
+    """
+    Identify the active PGA TOUR event.
+
+    Order:
+      1. ESPN public scoreboard JSON API
+      2. ESPN schedule HTML
+      3. PGA TOUR schedule HTML
+      4. reputable search-result snippets
+    """
+    now = now or datetime.now(UTC)
+    today = now.astimezone(EASTERN).date()
     errors = []
+
+    try:
+        tournament = discover_tournament_from_espn_api(now)
+        if tournament:
+            LOG.warning(
+                "Tournament discovery: ESPN JSON API -> %s (%s to %s)",
+                tournament.name,
+                tournament.start_date,
+                tournament.end_date,
+            )
+            return tournament
+    except Exception as exc:
+        errors.append(f"ESPN JSON API: {exc}")
+        LOG.exception("ESPN JSON tournament discovery failed")
 
     schedule_sources = [
         ("https://www.espn.com/golf/schedule", parse_espn_schedule),
@@ -251,31 +337,41 @@ def discover_current_tournament(now: datetime | None = None) -> Tournament:
         try:
             html = fetch_html(url)
             tournaments = parser_fn(html, today.year, url)
-            LOG.info("Parsed %d tournaments from %s", len(tournaments), url)
+            LOG.warning("Tournament discovery: parsed %d events from %s", len(tournaments), url)
 
             active = choose_active_tournament(tournaments, today)
             if active:
-                LOG.info("Discovered active tournament from %s: %s", url, active.name)
+                LOG.warning(
+                    "Tournament discovery: HTML -> %s (%s to %s)",
+                    active.name,
+                    active.start_date,
+                    active.end_date,
+                )
                 return active
         except Exception as exc:
             errors.append(f"{url}: {exc}")
-            LOG.warning("Tournament discovery failed at %s: %s", url, exc)
+            LOG.exception("Tournament discovery failed at %s", url)
 
-    # Search-result fallback. This uses the same DDGS dependency already used
-    # later for viewing-guide discovery and does not depend on a site's DOM.
     if DDGS is not None:
         try:
             fallback = discover_tournament_from_search(today)
             if fallback:
-                LOG.info("Discovered active tournament from search fallback: %s", fallback.name)
+                LOG.warning(
+                    "Tournament discovery: search fallback -> %s (%s to %s)",
+                    fallback.name,
+                    fallback.start_date,
+                    fallback.end_date,
+                )
                 return fallback
         except Exception as exc:
             errors.append(f"search fallback: {exc}")
-            LOG.warning("Search fallback failed: %s", exc)
+            LOG.exception("Tournament search fallback failed")
 
     raise CollectionError(
-        "Could not identify the current PGA TOUR tournament.\n" + "\n".join(errors)
+        "Could not identify the current PGA TOUR tournament. "
+        + " | ".join(errors)
     )
+
 
 
 def discover_tournament_from_search(today: date) -> Tournament | None:
@@ -650,8 +746,11 @@ def discover_viewing_guides(tournament: Tournament) -> list[dict]:
             "The 'ddgs' package is required for automatic viewing-guide discovery."
         )
 
+    LOG.warning("Searching for viewing guides for: %s", tournament.name)
+
     year = tournament.start_date.year
     queries = [
+        f'site:cbssports.com/golf/news "{tournament.name}" {year} "TV schedule"',
         f'"{tournament.name}" {year} "TV schedule" golf',
         f'"{tournament.name}" {year} "how to watch" golf',
         f'"{tournament.name}" {year} coverage ESPN Golf Channel CBS NBC',
@@ -1005,7 +1104,7 @@ def collect_current_week(
     now = now or datetime.now(UTC)
 
     tournament = discover_current_tournament(now)
-    LOG.info(
+    LOG.warning(
         "Current tournament: %s (%s to %s)",
         tournament.name,
         tournament.start_date,
@@ -1028,7 +1127,7 @@ def collect_current_week(
             html = fetch_html(url)
             items = parse_viewing_guide(html, tournament, url)
             if items:
-                LOG.info("Parsed %d windows from %s", len(items), url)
+                LOG.warning("Viewing guide: parsed %d windows from %s", len(items), url)
                 collected.extend(items)
                 used_sources.append(
                     {

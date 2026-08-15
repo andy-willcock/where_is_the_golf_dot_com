@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 import os
+import logging
+import traceback
 import threading
 import time
 from pathlib import Path
@@ -13,6 +15,12 @@ from collector import collect_current_week, CollectionError
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_FILE = BASE_DIR / "data" / "schedule.json"
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s %(message)s",
+    force=True,
+)
 
 app = Flask(__name__, static_folder=".", static_url_path="")
 
@@ -48,15 +56,29 @@ def api_schedule():
 @app.post("/api/refresh")
 def api_refresh():
     """
-    Local-development refresh endpoint.
+    Refresh schedule collection.
 
-    Do not expose this endpoint publicly without authentication/rate limiting.
+    The exception is explicitly logged because Gunicorn does not automatically
+    print exceptions that Flask converts into JSON responses.
     """
+    app.logger.warning("Manual schedule refresh requested")
+
     try:
         payload = collect_current_week(DATA_FILE)
+        app.logger.warning(
+            "Schedule refresh succeeded: %s (%d coverage windows)",
+            payload.get("tournament", {}).get("name"),
+            len(payload.get("coverage", [])),
+        )
         return jsonify({"ok": True, "schedule": payload})
-    except CollectionError as exc:
-        return jsonify({"ok": False, "error": str(exc)}), 502
+    except Exception as exc:
+        app.logger.error("Schedule refresh failed: %s", exc)
+        app.logger.error(traceback.format_exc())
+        return jsonify({
+            "ok": False,
+            "error": str(exc),
+            "errorType": type(exc).__name__,
+        }), 502
 
 
 @app.get("/<path:path>")
