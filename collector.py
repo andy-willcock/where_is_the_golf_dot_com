@@ -232,78 +232,341 @@ def html_to_lines(html: str) -> list[str]:
 
 def discover_current_tournament(now: datetime | None = None) -> Tournament:
     """
-    Discover the active PGA TOUR tournament from ESPN's public golf schedule.
-    Falls back to PGA TOUR schedule text if ESPN's markup changes.
+    Identify the active PGA TOUR event using multiple independent schedule sources.
+
+    A source failure or markup change should not prevent the other sources from
+    identifying the event.
     """
     now = now or datetime.now(UTC)
     today = now.astimezone(EASTERN).date()
 
     errors = []
 
-    for url, parser_fn in [
+    schedule_sources = [
         ("https://www.espn.com/golf/schedule", parse_espn_schedule),
         ("https://www.pgatour.com/schedule", parse_pgatour_schedule),
-    ]:
+    ]
+
+    for url, parser_fn in schedule_sources:
         try:
             html = fetch_html(url)
             tournaments = parser_fn(html, today.year, url)
+            LOG.info("Parsed %d tournaments from %s", len(tournaments), url)
+
             active = choose_active_tournament(tournaments, today)
             if active:
+                LOG.info("Discovered active tournament from %s: %s", url, active.name)
                 return active
         except Exception as exc:
             errors.append(f"{url}: {exc}")
             LOG.warning("Tournament discovery failed at %s: %s", url, exc)
+
+    # Search-result fallback. This uses the same DDGS dependency already used
+    # later for viewing-guide discovery and does not depend on a site's DOM.
+    if DDGS is not None:
+        try:
+            fallback = discover_tournament_from_search(today)
+            if fallback:
+                LOG.info("Discovered active tournament from search fallback: %s", fallback.name)
+                return fallback
+        except Exception as exc:
+            errors.append(f"search fallback: {exc}")
+            LOG.warning("Search fallback failed: %s", exc)
 
     raise CollectionError(
         "Could not identify the current PGA TOUR tournament.\n" + "\n".join(errors)
     )
 
 
-def parse_espn_schedule(html: str, year: int, source_url: str) -> list[Tournament]:
-    soup = BeautifulSoup(html, "html.parser")
-    text = clean_text(soup.get_text("\n", strip=True))
-    lines = [clean_text(x) for x in text.splitlines() if clean_text(x)]
+def discover_tournament_from_search(today: date) -> Tournament | None:
+    """
+    Last-resort tournament discovery from reputable search-result snippets.
 
-    results = []
-    date_re = re.compile(
-        r"^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)"
-        r"\s+(\d{1,2})(?:\s*-\s*(?:(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+)?(\d{1,2}))$",
+    Example snippet:
+      "Aug 13 - 16. FedEx St. Jude Championship. TPC Southwind - Memphis, TN."
+    """
+    if DDGS is None:
+        return None
+
+    queries = [
+        f"PGA TOUR schedule {today.year} {today.strftime('%B')} ESPN",
+        f"PGA TOUR schedule {today.year} {today.strftime('%B')} pgatour",
+        f"PGA Tour schedule {today.year} CBS Sports",
+    ]
+
+    domain_allowlist = (
+        "espn.com",
+        "pgatour.com",
+        "cbssports.com",
+    )
+
+    date_pattern = re.compile(
+        r"\b("
+        r"Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|"
+        r"Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?"
+        r")\.?\s+(\d{1,2})\s*[-–—]\s*"
+        r"(?:(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|"
+        r"Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?)\.?\s+)?"
+        r"(\d{1,2})",
         re.I,
     )
 
-    for i, line in enumerate(lines):
-        m = date_re.match(line)
-        if not m:
-            continue
+    month_lookup = {
+        "jan": 1, "january": 1, "feb": 2, "february": 2,
+        "mar": 3, "march": 3, "apr": 4, "april": 4,
+        "may": 5, "jun": 6, "june": 6, "jul": 7, "july": 7,
+        "aug": 8, "august": 8, "sep": 9, "september": 9,
+        "oct": 10, "october": 10, "nov": 11, "november": 11,
+        "dec": 12, "december": 12,
+    }
 
-        start_month, start_day, end_month, end_day = m.groups()
+    candidates = []
+
+    with DDGS() as ddgs:
+        for query in queries:
+            for result in ddgs.text(
+                query,
+                region="us-en",
+                safesearch="moderate",
+                max_results=10,
+            ):
+                url = result.get("href") or result.get("url") or ""
+                domain = urlparse(url).netloc.lower().removeprefix("www.")
+
+                if not any(domain.endswith(d) for d in domain_allowlist):
+                    continue
+
+                combined = clean_text(
+                    " ".join(
+                        [
+                            result.get("title", ""),
+                            result.get("body", ""),
+                        ]
+                    )
+                )
+
+                matches = list(date_pattern.finditer(combined))
+                for i, match in enumerate(matches):
+                    sm, sd, em, ed = match.groups()
+                    sm_num = month_lookup[sm.lower().rstrip(".")]
+                    em_num = month_lookup[(em or sm).lower().rstrip(".")]
+
+                    try:
+                        start_date = date(today.year, sm_num, int(sd))
+                        end_date = date(today.year, em_num, int(ed))
+                    except ValueError:
+                        continue
+
+                    # Only keep the event relevant to today / this week.
+                    if not (
+                        start_date <= today <= end_date
+                        or today < start_date <= today + timedelta(days=6)
+                    ):
+                        continue
+
+                    next_start = matches[i + 1].start() if i + 1 < len(matches) else len(combined)
+                    tail = clean_text(combined[match.end():next_start]).strip(" .-–—|")
+
+                    # Remove obvious schedule-page title/header prefixes.
+                    tail = re.sub(
+                        r"^(?:PGA TOUR Schedule|PGA Tour Schedule|Schedule)\s*[-–—:]?\s*",
+                        "",
+                        tail,
+                        flags=re.I,
+                    )
+
+                    # Event names usually end in one of these tournament terms.
+                    event_match = re.match(
+                        r"(.+?\b(?:Championship|Classic|Invitational|Open|Cup|"
+                        r"Pro-Am|Masters|PLAYERS)\b)",
+                        tail,
+                        flags=re.I,
+                    )
+
+                    if not event_match:
+                        continue
+
+                    name = clean_text(event_match.group(1)).strip(" .")
+                    if len(name) < 4:
+                        continue
+
+                    candidates.append(
+                        Tournament(
+                            name=name,
+                            start_date=start_date,
+                            end_date=end_date,
+                            source_url=url,
+                        )
+                    )
+
+    if not candidates:
+        return None
+
+    # Active event beats upcoming event.
+    active = [c for c in candidates if c.start_date <= today <= c.end_date]
+    pool = active or candidates
+
+    # Majority vote by normalized event name, then earliest start.
+    counts = {}
+    for c in pool:
+        key = re.sub(r"[^a-z0-9]+", " ", c.name.lower()).strip()
+        counts[key] = counts.get(key, 0) + 1
+
+    pool.sort(
+        key=lambda c: (
+            -counts[re.sub(r"[^a-z0-9]+", " ", c.name.lower()).strip()],
+            c.start_date,
+        )
+    )
+    return pool[0]
+
+def parse_espn_schedule(html: str, year: int, source_url: str) -> list[Tournament]:
+    """
+    Parse ESPN's PGA TOUR schedule.
+
+    ESPN has used several renderings of this page:
+      1. date, event and venue as separate text nodes;
+      2. a single collapsed row such as
+         "Aug 13 - 16 FedEx St. Jude Championship TPC Southwind - Memphis, TN".
+
+    Parse the page's visible text as a stream instead of assuming line boundaries.
+    """
+    soup = BeautifulSoup(html, "html.parser")
+
+    for tag in soup(["script", "style", "noscript", "svg"]):
+        tag.decompose()
+
+    raw_text = soup.get_text(" ", strip=True)
+    text = clean_text(raw_text)
+
+    # Match each schedule row by locating its date range and using the next
+    # date range as the boundary. This is much more stable than DOM selectors.
+    date_token = re.compile(
+        r"\b("
+        r"Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
+        r")\s+(\d{1,2})\s*-\s*"
+        r"(?:(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+)?"
+        r"(\d{1,2})\b",
+        re.I,
+    )
+
+    matches = list(date_token.finditer(text))
+    results = []
+
+    for idx, match in enumerate(matches):
+        start_month, start_day, end_month, end_day = match.groups()
         end_month = end_month or start_month
 
         try:
-            start = datetime.strptime(f"{start_month} {start_day} {year}", "%b %d %Y").date()
-            end = datetime.strptime(f"{end_month} {end_day} {year}", "%b %d %Y").date()
+            start_date = datetime.strptime(
+                f"{start_month} {start_day} {year}", "%b %d %Y"
+            ).date()
+            end_date = datetime.strptime(
+                f"{end_month} {end_day} {year}", "%b %d %Y"
+            ).date()
         except ValueError:
             continue
 
-        # ESPN generally places tournament name immediately after the date.
-        name = lines[i + 1] if i + 1 < len(lines) else ""
-        details = lines[i + 2] if i + 2 < len(lines) else ""
+        row_end = matches[idx + 1].start() if idx + 1 < len(matches) else len(text)
+        row = clean_text(text[match.end():row_end])
 
-        if not name or "tournament" in name.lower():
+        # Trim common table/header noise.
+        row = re.sub(
+            r"^(?:Tournament|Course|Location|Winner|Purse|Results|Tickets)\s+",
+            "",
+            row,
+            flags=re.I,
+        )
+
+        if not row:
             continue
 
+        # ESPN's visible row normally contains:
+        # EVENT NAME + COURSE + " - " + LOCATION + optional winner/purse data.
         course = ""
         location = ""
-        if " - " in details:
-            course, location = [x.strip() for x in details.split(" - ", 1)]
+        name = ""
+
+        if " - " in row:
+            left, right = row.split(" - ", 1)
+
+            # Location is usually City, ST. Stop before winner / purse metadata.
+            loc_match = re.match(
+                r"([A-Za-z .'-]+,\s*[A-Z]{2})(?:\s|$)",
+                right,
+            )
+            if loc_match:
+                location = clean_text(loc_match.group(1))
+
+            # Try to split event name from venue using common golf venue words.
+            venue_match = re.search(
+                r"\b("
+                r"TPC|Golf Club|Golf Course|Country Club|GC\b|CC\b|"
+                r"Club de Golf|Resort|Links|Course|Club"
+                r")",
+                left,
+                flags=re.I,
+            )
+
+            if venue_match:
+                # Walk backward to a plausible venue boundary. ESPN does not
+                # consistently insert separators, so use known schedule names
+                # from title-like text when possible.
+                known_event_markers = [
+                    "Championship",
+                    "Classic",
+                    "Invitational",
+                    "Open",
+                    "Cup",
+                    "Pro-Am",
+                    "Masters",
+                    "PLAYERS",
+                ]
+
+                split_at = None
+                for marker in known_event_markers:
+                    marker_positions = [
+                        m.end()
+                        for m in re.finditer(
+                            rf"\b{re.escape(marker)}\b",
+                            left,
+                            flags=re.I,
+                        )
+                    ]
+                    if marker_positions:
+                        split_at = marker_positions[-1]
+                        break
+
+                if split_at:
+                    name = clean_text(left[:split_at])
+                    course = clean_text(left[split_at:])
+                else:
+                    # Fallback: venue begins near the first recognized venue token.
+                    name = clean_text(left[:venue_match.start()])
+                    course = clean_text(left[venue_match.start():])
+            else:
+                name = clean_text(left)
         else:
-            course = details
+            # Even if venue parsing fails, preserve the event row for active-date
+            # discovery. Later sources can enrich course/location.
+            name = row
+
+        # Remove winner/purse tail that can be appended to the name.
+        name = re.split(
+            r"\s+\$[\d,]+|\s+(?:Final|Results|Tickets)\b",
+            name,
+            maxsplit=1,
+            flags=re.I,
+        )[0].strip()
+
+        if len(name) < 3:
+            continue
 
         results.append(
             Tournament(
                 name=name,
-                start_date=start,
-                end_date=end,
+                start_date=start_date,
+                end_date=end_date,
                 course=course,
                 location=location,
                 source_url=source_url,
@@ -311,7 +574,6 @@ def parse_espn_schedule(html: str, year: int, source_url: str) -> list[Tournamen
         )
 
     return results
-
 
 def parse_pgatour_schedule(html: str, year: int, source_url: str) -> list[Tournament]:
     lines = html_to_lines(html)

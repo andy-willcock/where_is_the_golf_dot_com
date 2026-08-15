@@ -255,3 +255,26 @@ instance is running.
 
 For a higher-reliability production deployment, move schedule storage to a
 database such as Postgres, Redis, or an object store.
+
+
+## v2 tournament-discovery fix
+
+This build fixes a production issue where ESPN collapses a schedule row into
+one block of text. The previous parser expected the date to be on a standalone
+line and could therefore return zero tournaments.
+
+v2:
+- parses schedule rows independent of HTML line breaks;
+- keeps PGA TOUR as an independent fallback;
+- adds a DDGS/search-snippet fallback across ESPN, PGA TOUR and CBS Sports;
+- logs the number of tournaments parsed from each source;
+- includes regression tests for collapsed ESPN schedule HTML.
+
+After pushing this version to GitHub, Render should automatically redeploy.
+Open the Render logs and click `Refresh schedule`. Useful log messages include:
+
+```text
+Parsed 40 tournaments from https://www.espn.com/golf/schedule
+Discovered active tournament from ...
+Current tournament: FedEx St. Jude Championship (2026-08-13 to 2026-08-16)
+```
