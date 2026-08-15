@@ -1,0 +1,14 @@
+{
+  "lastUpdatedUtc": null,
+  "tournament": {
+    "name": "Run python collector.py to collect this week's event"
+  },
+  "coverage": [],
+  "collection": {
+    "score": 0,
+    "warnings": [
+      "No collection has been run yet."
+    ],
+    "sources": []
+  }
+}

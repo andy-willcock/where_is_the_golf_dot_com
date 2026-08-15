@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PGA TOUR TV and streaming schedule in your local timezone." />
+  <title>PGA TOUR TV Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__inner">
+      <div>
+        <p class="eyebrow">PGA TOUR WATCH GUIDE</p>
+        <h1>Where is the golf on?</h1>
+        <p class="hero__subtitle">
+          This week's TV and streaming windows, automatically converted to your timezone.
+        </p>
+      </div>
+
+      <div class="hero__controls">
+        <label for="timezoneSelect">Timezone</label>
+        <select id="timezoneSelect"></select>
+        <button id="refreshButton" class="refresh-button">Refresh schedule</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-shell">
+    <section id="statusBanner" class="status-banner" hidden></section>
+
+    <section class="tournament-card">
+      <div class="tournament-card__top">
+        <div>
+          <p class="section-label">CURRENT WEEK</p>
+          <h2 id="tournamentName">Loading…</h2>
+          <p id="tournamentMeta" class="muted"></p>
+        </div>
+
+        <div class="updated">
+          <span>Collected</span>
+          <strong id="lastUpdated">—</strong>
+        </div>
+      </div>
+
+      <div class="summary-grid">
+        <div class="summary-stat">
+          <span class="summary-stat__label">Today</span>
+          <strong id="todaySummary">—</strong>
+        </div>
+        <div class="summary-stat">
+          <span class="summary-stat__label">Live now</span>
+          <strong id="liveSummary">—</strong>
+        </div>
+        <div class="summary-stat">
+          <span class="summary-stat__label">Next coverage</span>
+          <strong id="nextSummary">—</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="toolbar">
+      <div id="dayTabs" class="day-tabs"></div>
+      <div class="filter-group">
+        <button class="filter-chip active" data-filter="all">All coverage</button>
+        <button class="filter-chip" data-filter="tv">TV</button>
+        <button class="filter-chip" data-filter="streaming">Streaming</button>
+      </div>
+    </section>
+
+    <section id="schedule" class="schedule"></section>
+
+    <section id="sourcePanel" class="data-note">
+      <h3>Collection status</h3>
+      <p id="collectionStatus">Loading source information…</p>
+      <div id="sourceList" class="source-list"></div>
+    </section>
+  </main>
+
+  <template id="coverageTemplate">
+    <article class="coverage-card">
+      <div class="coverage-card__accent"></div>
+      <div class="coverage-card__body">
+        <div class="coverage-card__heading">
+          <div class="provider-row">
+            <div class="provider-badge"></div>
+            <div>
+              <h3 class="provider-name"></h3>
+              <p class="feed-name"></p>
+            </div>
+          </div>
+          <span class="state-pill"></span>
+        </div>
+
+        <div class="coverage-time">
+          <strong class="time-range"></strong>
+          <span class="duration"></span>
+        </div>
+
+        <div class="coverage-meta">
+          <span class="round"></span>
+          <span class="coverage-type"></span>
+        </div>
+
+        <div class="progress-wrap" hidden>
+          <div class="progress-track"><div class="progress-bar"></div></div>
+          <span class="progress-text"></span>
+        </div>
+
+        <a class="watch-link source-link" target="_blank" rel="noopener noreferrer">
+          Schedule source →
+        </a>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

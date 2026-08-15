@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: whereisthegolf
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn server:app --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 120
+    healthCheckPath: /api/schedule
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.4
+      - key: FLASK_DEBUG
+        value: "0"
+      - key: AUTO_REFRESH_HOURS
+        value: "6"
