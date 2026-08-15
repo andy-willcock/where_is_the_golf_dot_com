@@ -1,14 +1,245 @@
 {
-  "lastUpdatedUtc": null,
+  "lastUpdatedUtc": "2026-08-15T21:47:35.668270Z",
   "tournament": {
-    "name": "Run python collector.py to collect this week's event"
+    "name": "FedEx St. Jude Championship",
+    "course": "",
+    "location": "",
+    "startDate": "2026-08-13",
+    "endDate": "2026-08-16",
+    "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule"
   },
-  "coverage": [],
+  "coverage": [
+    {
+      "id": "coverage-1",
+      "round": "Round 1",
+      "provider": "ESPN+",
+      "feed": "Full Telecast",
+      "type": "streaming",
+      "startUtc": "2026-08-13T12:00:00Z",
+      "endUtc": "2026-08-13T18:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-2",
+      "round": "Round 1",
+      "provider": "ESPN",
+      "feed": "Full Telecast",
+      "type": "tv",
+      "startUtc": "2026-08-13T13:00:00Z",
+      "endUtc": "2026-08-13T15:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-3",
+      "round": "Round 1",
+      "provider": "PGA TOUR LIVE Betcast presented by DraftKings",
+      "feed": "Full Telecast",
+      "type": "streaming",
+      "startUtc": "2026-08-13T13:00:00Z",
+      "endUtc": "2026-08-13T18:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-4",
+      "round": "Round 1",
+      "provider": "Golf Channel",
+      "feed": "Full Telecast",
+      "type": "tv",
+      "startUtc": "2026-08-13T18:00:00Z",
+      "endUtc": "2026-08-13T22:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-5",
+      "round": "Round 2",
+      "provider": "ESPN+",
+      "feed": "Full Telecast",
+      "type": "streaming",
+      "startUtc": "2026-08-14T12:00:00Z",
+      "endUtc": "2026-08-14T18:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-6",
+      "round": "Round 2",
+      "provider": "ESPN",
+      "feed": "Full Telecast",
+      "type": "tv",
+      "startUtc": "2026-08-14T13:00:00Z",
+      "endUtc": "2026-08-14T15:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-7",
+      "round": "Round 2",
+      "provider": "PGA TOUR LIVE Betcast presented by DraftKings",
+      "feed": "Full Telecast",
+      "type": "streaming",
+      "startUtc": "2026-08-14T13:00:00Z",
+      "endUtc": "2026-08-14T18:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-8",
+      "round": "Round 2",
+      "provider": "Golf Channel",
+      "feed": "Full Telecast",
+      "type": "tv",
+      "startUtc": "2026-08-14T18:00:00Z",
+      "endUtc": "2026-08-14T22:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-9",
+      "round": "Round 3",
+      "provider": "ESPN+",
+      "feed": "Full Telecast",
+      "type": "streaming",
+      "startUtc": "2026-08-15T11:45:00Z",
+      "endUtc": "2026-08-15T17:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-10",
+      "round": "Round 3",
+      "provider": "PGA TOUR LIVE Betcast presented by DraftKings",
+      "feed": "Full Telecast",
+      "type": "streaming",
+      "startUtc": "2026-08-15T12:15:00Z",
+      "endUtc": "2026-08-15T17:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-11",
+      "round": "Round 3",
+      "provider": "Golf Channel",
+      "feed": "Full Telecast",
+      "type": "tv",
+      "startUtc": "2026-08-15T17:00:00Z",
+      "endUtc": "2026-08-15T19:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-12",
+      "round": "Round 3",
+      "provider": "CBS",
+      "feed": "Full Telecast",
+      "type": "tv",
+      "startUtc": "2026-08-15T19:00:00Z",
+      "endUtc": "2026-08-15T22:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-13",
+      "round": "Round 3",
+      "provider": "Paramount+",
+      "feed": "Full Telecast",
+      "type": "streaming",
+      "startUtc": "2026-08-15T19:00:00Z",
+      "endUtc": "2026-08-15T22:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-14",
+      "round": "Final Round",
+      "provider": "ESPN+",
+      "feed": "Full Telecast",
+      "type": "streaming",
+      "startUtc": "2026-08-16T11:45:00Z",
+      "endUtc": "2026-08-16T16:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-15",
+      "round": "Final Round",
+      "provider": "PGA TOUR LIVE Betcast presented by DraftKings",
+      "feed": "Full Telecast",
+      "type": "streaming",
+      "startUtc": "2026-08-16T11:45:00Z",
+      "endUtc": "2026-08-16T16:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-16",
+      "round": "Final Round",
+      "provider": "Golf Channel",
+      "feed": "Full Telecast",
+      "type": "tv",
+      "startUtc": "2026-08-16T16:00:00Z",
+      "endUtc": "2026-08-16T18:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-17",
+      "round": "Final Round",
+      "provider": "CBS",
+      "feed": "Full Telecast",
+      "type": "tv",
+      "startUtc": "2026-08-16T18:00:00Z",
+      "endUtc": "2026-08-16T22:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-18",
+      "round": "Final Round",
+      "provider": "Paramount+",
+      "feed": "Full Telecast",
+      "type": "streaming",
+      "startUtc": "2026-08-16T18:00:00Z",
+      "endUtc": "2026-08-16T22:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    }
+  ],
   "collection": {
-    "score": 0,
-    "warnings": [
-      "No collection has been run yet."
+    "score": 162,
+    "warnings": [],
+    "sources": [
+      {
+        "url": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+        "domain": "pgatourmedia.pgatourhq.com",
+        "title": "PGA TOUR Media Broadcast Schedule",
+        "parsedWindows": 18
+      }
     ],
-    "sources": []
+    "failedSources": [],
+    "sourceTimezone": "America/New_York",
+    "primarySource": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+    "notes": "PGA TOUR Media broadcast schedule is the primary source. Audio-only records are excluded. Times are converted from Eastern to UTC."
   }
 }
