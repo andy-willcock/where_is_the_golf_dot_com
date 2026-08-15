@@ -27,6 +27,11 @@ async function loadSchedule() {
     const response = await fetch("/api/schedule", {cache:"no-store"});
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     state.data = await response.json();
+
+    // Default to the visitor's current local day when the schedule contains it.
+    // This makes Saturday visitors land on Saturday instead of "All days".
+    selectCurrentLocalDay();
+
     renderAll();
   } catch (error) {
     showStatus(`Could not load schedule: ${error.message}`);
@@ -48,8 +53,20 @@ function initTimezonePicker() {
   });
   el.timezoneSelect.addEventListener("change", () => {
     state.timezone = el.timezoneSelect.value;
+    selectCurrentLocalDay();
     renderAll();
   });
+}
+
+function selectCurrentLocalDay() {
+  const today = localDayKey(new Date());
+  const availableDays = new Set(coverage().map(item => localDayKey(item.start)));
+
+  if (availableDays.has(today)) {
+    state.selectedDay = today;
+  } else {
+    state.selectedDay = "all";
+  }
 }
 
 function renderAll() {
@@ -79,7 +96,9 @@ function renderSummary() {
   const today = all.filter(x => localDayKey(x.start) === localDayKey(now));
 
   el.todaySummary.textContent = today.length ? `${today.length} coverage windows` : "No scheduled coverage";
-  el.liveSummary.textContent = live.length ? `${live.length} live` : "Nothing live";
+  el.liveSummary.textContent = live.length
+    ? live.map(item => item.provider).join(" + ")
+    : "Nothing live";
   el.nextSummary.textContent = upcoming.length
     ? `${upcoming[0].provider} ${formatTime(upcoming[0].start)}`
     : "No upcoming coverage";
@@ -133,7 +152,17 @@ function renderSchedule() {
   const items = coverage()
     .filter(x => state.selectedType === "all" || x.type === state.selectedType)
     .filter(x => state.selectedDay === "all" || localDayKey(x.start) === state.selectedDay)
-    .sort((a,b) => a.start-b.start);
+    .sort((a,b) => {
+      const aState = getState(a);
+      const bState = getState(b);
+      const rank = { live: 0, upcoming: 1, ended: 2 };
+
+      if (rank[aState] !== rank[bState]) {
+        return rank[aState] - rank[bState];
+      }
+
+      return a.start - b.start;
+    });
 
   if (!items.length) {
     const empty = document.createElement("div");
@@ -232,7 +261,21 @@ function humanDuration(start,end) {
   return h ? `${h}h${m ? ` ${m}m` : ""}` : `${m}m`;
 }
 function localDayKey(date) {
-  return new Intl.DateTimeFormat("en-CA", {year:"numeric",month:"2-digit",day:"2-digit",timeZone:state.timezone}).format(date);
+  // Do not rely on locale formatting such as en-CA producing YYYY-MM-DD.
+  // Browsers can render locale dates differently. Build the key explicitly.
+  const parts = new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    timeZone: state.timezone,
+  }).formatToParts(date);
+
+  const values = {};
+  for (const part of parts) {
+    if (part.type !== "literal") values[part.type] = part.value;
+  }
+
+  return `${values.year}-${values.month}-${values.day}`;
 }
 function formatTime(date) {
   return new Intl.DateTimeFormat("en-US", {hour:"numeric",minute:"2-digit",timeZone:state.timezone}).format(date);
@@ -246,4 +289,15 @@ function formatDateTime(date) {
 
 initTimezonePicker();
 loadSchedule();
-setInterval(() => state.data && renderAll(), 60_000);
+setInterval(() => {
+  if (!state.data) return;
+
+  // If the visitor leaves the page open across midnight, move to the new day.
+  const today = localDayKey(new Date());
+  const selectedIsScheduleDay = state.selectedDay !== "all";
+  if (selectedIsScheduleDay && state.selectedDay !== today) {
+    selectCurrentLocalDay();
+  }
+
+  renderAll();
+}, 30_000);
