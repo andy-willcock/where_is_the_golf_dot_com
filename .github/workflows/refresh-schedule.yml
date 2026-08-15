@@ -5,9 +5,12 @@ on:
 
   schedule:
     - cron: "17 15 * * 1"
-    - cron: "17 11 * * 4-7"
-    - cron: "17 17 * * 4-7"
-    - cron: "17 23 * * 4-7"
+    - cron: "17 11 * * 4-6"
+    - cron: "17 17 * * 4-6"
+    - cron: "17 23 * * 4-6"
+    - cron: "17 11 * * 0"
+    - cron: "17 17 * * 0"
+    - cron: "17 23 * * 0"
 
 permissions:
   contents: write
