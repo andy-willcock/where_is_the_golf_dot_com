@@ -418,3 +418,29 @@ The workflow then validates:
 - collector score is at least 45.
 
 If validation fails, it does not commit bad schedule data.
+
+
+# v5 — ESPN removed from tournament discovery
+
+GitHub Actions was also receiving HTTP 403 from ESPN's scoreboard endpoint.
+
+v5 removes ESPN from the critical discovery path completely.
+
+Tournament discovery is now:
+
+```text
+CBS Sports PGA Tour schedule
+        |
+        v
+PGA TOUR official schedule
+        |
+        v
+search-result fallback
+```
+
+CBS Sports publishes a season schedule containing the date range, tournament,
+location, course and broadcast-network column. The official PGA TOUR schedule
+is retained as the second source.
+
+The collector no longer calls ESPN's scoreboard JSON endpoint when deciding
+which tournament is current.

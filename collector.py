@@ -231,105 +231,21 @@ def html_to_lines(html: str) -> list[str]:
 
 
 
-def discover_tournament_from_espn_api(now: datetime | None = None) -> Tournament | None:
-    """
-    Primary tournament discovery via ESPN's public scoreboard JSON.
-
-    This is substantially more stable on cloud hosts than scraping the
-    rendered ESPN schedule HTML. The payload contains both the current event
-    and a season calendar.
-    """
-    now = now or datetime.now(UTC)
-    today = now.astimezone(EASTERN).date()
-    url = "https://site.api.espn.com/apis/site/v2/sports/golf/pga/scoreboard"
-
-    response = requests.get(url, headers=HEADERS, timeout=20)
-    response.raise_for_status()
-    payload = response.json()
-
-    candidates: list[Tournament] = []
-
-    # Prefer the current events collection.
-    for event in payload.get("events", []):
-        name = clean_text(event.get("name") or event.get("shortName") or "")
-        start_raw = event.get("date")
-        end_raw = event.get("endDate")
-
-        if not name or not start_raw or not end_raw:
-            continue
-
-        start_dt = dateparser.isoparse(start_raw)
-        end_dt = dateparser.isoparse(end_raw)
-
-        candidates.append(
-            Tournament(
-                name=name,
-                start_date=start_dt.astimezone(EASTERN).date(),
-                end_date=end_dt.astimezone(EASTERN).date(),
-                source_url=url,
-            )
-        )
-
-    active = choose_active_tournament(candidates, today)
-    if active:
-        return active
-
-    # Fall back to the league calendar embedded in the same response. This is
-    # useful Monday-Wednesday before ESPN has placed the next event in `events`.
-    for league in payload.get("leagues", []):
-        for item in league.get("calendar", []):
-            name = clean_text(item.get("label") or "")
-            start_raw = item.get("startDate")
-            end_raw = item.get("endDate")
-
-            if not name or not start_raw or not end_raw:
-                continue
-
-            start_dt = dateparser.isoparse(start_raw)
-            end_dt = dateparser.isoparse(end_raw)
-
-            candidates.append(
-                Tournament(
-                    name=name,
-                    start_date=start_dt.astimezone(EASTERN).date(),
-                    end_date=end_dt.astimezone(EASTERN).date(),
-                    source_url=url,
-                )
-            )
-
-    return choose_active_tournament(candidates, today)
-
-
 def discover_current_tournament(now: datetime | None = None) -> Tournament:
     """
-    Identify the active PGA TOUR event.
+    Identify the active PGA TOUR event without relying on ESPN.
 
     Order:
-      1. ESPN public scoreboard JSON API
-      2. ESPN schedule HTML
-      3. PGA TOUR schedule HTML
-      4. reputable search-result snippets
+      1. CBS Sports PGA Tour schedule
+      2. PGA TOUR official schedule
+      3. search-result fallback from reputable sources
     """
     now = now or datetime.now(UTC)
     today = now.astimezone(EASTERN).date()
     errors = []
 
-    try:
-        tournament = discover_tournament_from_espn_api(now)
-        if tournament:
-            LOG.warning(
-                "Tournament discovery: ESPN JSON API -> %s (%s to %s)",
-                tournament.name,
-                tournament.start_date,
-                tournament.end_date,
-            )
-            return tournament
-    except Exception as exc:
-        errors.append(f"ESPN JSON API: {exc}")
-        LOG.exception("ESPN JSON tournament discovery failed")
-
     schedule_sources = [
-        ("https://www.espn.com/golf/schedule", parse_espn_schedule),
+        ("https://www.cbssports.com/golf/schedules/", parse_cbs_schedule),
         ("https://www.pgatour.com/schedule", parse_pgatour_schedule),
     ]
 
@@ -337,12 +253,17 @@ def discover_current_tournament(now: datetime | None = None) -> Tournament:
         try:
             html = fetch_html(url)
             tournaments = parser_fn(html, today.year, url)
-            LOG.warning("Tournament discovery: parsed %d events from %s", len(tournaments), url)
+            LOG.warning(
+                "Tournament discovery: parsed %d events from %s",
+                len(tournaments),
+                url,
+            )
 
             active = choose_active_tournament(tournaments, today)
             if active:
                 LOG.warning(
-                    "Tournament discovery: HTML -> %s (%s to %s)",
+                    "Tournament discovery: %s -> %s (%s to %s)",
+                    urlparse(url).netloc,
                     active.name,
                     active.start_date,
                     active.end_date,
@@ -391,9 +312,9 @@ def discover_tournament_from_search(today: date) -> Tournament | None:
     ]
 
     domain_allowlist = (
-        "espn.com",
         "pgatour.com",
         "cbssports.com",
+        "sportsmediawatch.com",
     )
 
     date_pattern = re.compile(
@@ -670,6 +591,117 @@ def parse_espn_schedule(html: str, year: int, source_url: str) -> list[Tournamen
         )
 
     return results
+
+def parse_cbs_schedule(html: str, year: int, source_url: str) -> list[Tournament]:
+    """
+    Parse CBS Sports' PGA Tour schedule table.
+
+    CBS currently exposes rows containing:
+      Aug 13-16 | FedEx St. Jude Championship | Memphis, TN | TPC Southwind | ...
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    results = []
+
+    # First try table rows.
+    for row in soup.find_all("tr"):
+        cells = [clean_text(c.get_text(" ", strip=True)) for c in row.find_all(["th", "td"])]
+        if len(cells) < 2:
+            continue
+
+        date_text = cells[0]
+        m = re.search(
+            r"\b("
+            r"Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
+            r")\.?\s*(\d{1,2})\s*[-–—]\s*"
+            r"(?:(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\.?\s*)?"
+            r"(\d{1,2})\b",
+            date_text,
+            re.I,
+        )
+        if not m:
+            continue
+
+        sm, sd, em, ed = m.groups()
+        em = em or sm
+
+        try:
+            start_date = datetime.strptime(f"{sm} {sd} {year}", "%b %d %Y").date()
+            end_date = datetime.strptime(f"{em} {ed} {year}", "%b %d %Y").date()
+        except ValueError:
+            continue
+
+        name = cells[1].strip()
+        location = cells[2].strip() if len(cells) > 2 else ""
+        course = cells[3].strip() if len(cells) > 3 else ""
+
+        if not name or name.lower() == "tournament":
+            continue
+
+        results.append(
+            Tournament(
+                name=name,
+                start_date=start_date,
+                end_date=end_date,
+                course=course,
+                location=location,
+                source_url=source_url,
+            )
+        )
+
+    if results:
+        return results
+
+    # Fallback for collapsed/non-table HTML.
+    text = clean_text(soup.get_text(" ", strip=True))
+    date_re = re.compile(
+        r"\b("
+        r"Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec"
+        r")\.?\s*(\d{1,2})\s*[-–—]\s*"
+        r"(?:(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\.?\s*)?"
+        r"(\d{1,2})\b",
+        re.I,
+    )
+
+    matches = list(date_re.finditer(text))
+    for i, m in enumerate(matches):
+        sm, sd, em, ed = m.groups()
+        em = em or sm
+
+        try:
+            start_date = datetime.strptime(f"{sm} {sd} {year}", "%b %d %Y").date()
+            end_date = datetime.strptime(f"{em} {ed} {year}", "%b %d %Y").date()
+        except ValueError:
+            continue
+
+        row_end = matches[i + 1].start() if i + 1 < len(matches) else len(text)
+        row = clean_text(text[m.end():row_end])
+
+        # Event name generally ends in a tournament-type word.
+        event_match = re.match(
+            r"(.+?\b(?:Championship|Classic|Invitational|Open|Cup|"
+            r"Pro-Am|Masters|PLAYERS)\b)",
+            row,
+            re.I,
+        )
+        if not event_match:
+            continue
+
+        name = clean_text(event_match.group(1))
+        if len(name) < 4:
+            continue
+
+        results.append(
+            Tournament(
+                name=name,
+                start_date=start_date,
+                end_date=end_date,
+                source_url=source_url,
+            )
+        )
+
+    return results
+
+
 
 def parse_pgatour_schedule(html: str, year: int, source_url: str) -> list[Tournament]:
     lines = html_to_lines(html)
