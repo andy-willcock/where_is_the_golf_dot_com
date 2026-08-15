@@ -1,0 +1,86 @@
+name: Refresh PGA Schedule
+
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: "17 15 * * 1"
+    - cron: "17 11 * * 4-7"
+    - cron: "17 17 * * 4-7"
+    - cron: "17 23 * * 4-7"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pga-schedule-refresh
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install -r requirements-browser.txt
+          playwright install --with-deps chromium
+
+      - name: Collect current PGA TOUR schedule
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          python collector.py --verbose
+
+      - name: Validate schedule
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          path = Path("data/schedule.json")
+          data = json.loads(path.read_text())
+
+          tournament = data.get("tournament", {}).get("name")
+          coverage = data.get("coverage", [])
+          score = data.get("collection", {}).get("score", 0)
+
+          print("Tournament:", tournament)
+          print("Coverage windows:", len(coverage))
+          print("Collector score:", score)
+
+          if not tournament:
+              raise SystemExit("Missing tournament name.")
+
+          if not coverage:
+              raise SystemExit("No coverage windows were generated.")
+
+          if score < 45:
+              raise SystemExit(f"Collector score too low: {score}")
+          PY
+
+      - name: Commit updated schedule
+        run: |
+          if git diff --quiet -- data/schedule.json; then
+            echo "Schedule did not change."
+            exit 0
+          fi
+
+          git config user.name "whereisthegolf-schedule-bot"
+          git config user.email "whereisthegolf-schedule-bot@users.noreply.github.com"
+
+          git add data/schedule.json
+          git commit -m "Update PGA TOUR schedule"
+          git push
