@@ -2,112 +2,112 @@
   "tournament": "BMW Championship",
   "tournamentId": "R2026028",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-20T19:47:31.672818Z",
+  "updatedUtc": "2026-08-20T21:02:00.496308Z",
   "players": [
     {
-      "position": "1",
+      "position": "T1",
       "player": "Gary Woodland",
       "toPar": "-6",
       "thru": "F",
       "today": "-6"
     },
     {
-      "position": "T2",
+      "position": "T1",
       "player": "Wyndham Clark",
+      "toPar": "-6",
+      "thru": "F",
+      "today": "-6"
+    },
+    {
+      "position": "T3",
+      "player": "Ryo Hisatsune",
+      "toPar": "-5",
+      "thru": "F",
+      "today": "-5"
+    },
+    {
+      "position": "T3",
+      "player": "Rory McIlroy",
       "toPar": "-5",
       "thru": "17",
       "today": "-5"
     },
     {
-      "position": "T2",
+      "position": "T3",
       "player": "J.J. Spaun",
       "toPar": "-5",
-      "thru": "9",
+      "thru": "14",
       "today": "-5"
     },
     {
-      "position": "T4",
+      "position": "T6",
       "player": "Ludvig \u00c5berg",
       "toPar": "-4",
       "thru": "F",
       "today": "-4"
     },
     {
-      "position": "T4",
+      "position": "T6",
       "player": "Alex Fitzpatrick",
       "toPar": "-4",
       "thru": "F",
       "today": "-4"
     },
     {
-      "position": "T4",
-      "player": "Patrick Cantlay",
+      "position": "T6",
+      "player": "Michael Thorbjornsen",
       "toPar": "-4",
-      "thru": "15",
+      "thru": "F",
       "today": "-4"
     },
     {
-      "position": "T4",
-      "player": "Ryo Hisatsune",
-      "toPar": "-4",
-      "thru": "15",
-      "today": "-4"
-    },
-    {
-      "position": "T8",
+      "position": "T9",
       "player": "Justin Thomas",
       "toPar": "-3",
       "thru": "F",
       "today": "-3"
     },
     {
-      "position": "T8",
+      "position": "T9",
       "player": "Sungjae Im",
       "toPar": "-3",
       "thru": "F",
       "today": "-3"
     },
     {
-      "position": "T8",
+      "position": "T9",
       "player": "Kristoffer Reitan",
       "toPar": "-3",
       "thru": "F",
       "today": "-3"
     },
     {
-      "position": "T8",
+      "position": "T9",
       "player": "Akshay Bhatia",
       "toPar": "-3",
       "thru": "F",
       "today": "-3"
     },
     {
-      "position": "T8",
-      "player": "Michael Thorbjornsen",
+      "position": "T9",
+      "player": "Eric Cole",
       "toPar": "-3",
-      "thru": "14",
+      "thru": "F",
       "today": "-3"
     },
     {
-      "position": "T13",
-      "player": "Aaron Rai",
-      "toPar": "-2",
+      "position": "T9",
+      "player": "Patrick Cantlay",
+      "toPar": "-3",
       "thru": "F",
-      "today": "-2"
+      "today": "-3"
     },
     {
-      "position": "T13",
-      "player": "Ben Griffin",
-      "toPar": "-2",
+      "position": "T9",
+      "player": "Jake Knapp",
+      "toPar": "-3",
       "thru": "F",
-      "today": "-2"
-    },
-    {
-      "position": "T13",
-      "player": "Adam Scott",
-      "toPar": "-2",
-      "thru": "F",
-      "today": "-2"
+      "today": "-3"
     }
   ]
 }
