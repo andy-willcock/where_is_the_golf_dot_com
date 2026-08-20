@@ -90,40 +90,56 @@ def parse_cbs_leaderboard(html: str) -> dict:
     match = re.search(r"^\d{4}\s+(.+?)\s+Leaderboard\b", title, re.I)
     tournament = clean(match.group(1)) if match else ""
 
-    table = None
-    for candidate in soup.find_all("table"):
-        header = clean(
-            " ".join(x.get_text(" ", strip=True) for x in candidate.find_all("th"))
-        ).lower()
-        if "pos" in header and "name" in header and "thru" in header:
-            table = candidate
-            break
-
-    if table is None:
-        raise RuntimeError("CBS leaderboard table was not found")
-
     rows = []
 
-    for tr in table.find_all("tr"):
+    # CBS can render the table header and body in separate table elements.
+    # Scan every rendered <tr> globally instead of restricting to one table.
+    for tr in soup.find_all("tr"):
         cell_nodes = tr.find_all(["th", "td"])
-        cells = [clean(x.get_text(" ", strip=True)) for x in cell_nodes]
-
-        if len(cells) < 6:
+        if len(cell_nodes) < 6:
             continue
 
+        cells = [clean(x.get_text(" ", strip=True)) for x in cell_nodes]
         low = [c.lower() for c in cells]
+
+        # Header row.
         if "pos" in low or ("name" in low and "thru" in low):
             continue
 
-        # CBS current layout:
-        # pos | country | player | to par | thru | today | r1 | r2 | r3 | r4 | total
         position = cells[0]
-        player = _full_player_name(cell_nodes[2]) if len(cell_nodes) > 2 else ""
-        to_par = cells[3] if len(cells) > 3 else ""
-        thru = cells[4] if len(cells) > 4 else ""
-        today = cells[5] if len(cells) > 5 else ""
 
+        # Valid positions are things like 1, 12, T2, T9, etc.
+        if not re.fullmatch(r"T?\d+", position, re.I):
+            continue
+
+        # CBS normally renders:
+        # pos | country | player | to par | thru | today | ...
+        # The country cell may be image-only, so keep index positions based on
+        # actual td elements rather than text presence.
+        if len(cell_nodes) >= 6:
+            player_index = 2 if len(cell_nodes) >= 7 else 1
+            score_index = player_index + 1
+            thru_index = player_index + 2
+            today_index = player_index + 3
+        else:
+            continue
+
+        if today_index >= len(cells):
+            continue
+
+        player = _full_player_name(cell_nodes[player_index])
         if not player:
+            continue
+
+        # Guard against accidentally parsing unrelated site tables.
+        to_par = cells[score_index]
+        thru = cells[thru_index]
+        today = cells[today_index]
+
+        if not (
+            re.fullmatch(r"(?:E|[+-]?\d+|-)", to_par, re.I)
+            and re.fullmatch(r"(?:F|\d+|-)", thru, re.I)
+        ):
             continue
 
         rows.append({
@@ -132,23 +148,83 @@ def parse_cbs_leaderboard(html: str) -> dict:
             "toPar": to_par,
             "thru": thru,
             "today": today,
-            "r1": cells[6] if len(cells) > 6 else "",
-            "r2": cells[7] if len(cells) > 7 else "",
-            "r3": cells[8] if len(cells) > 8 else "",
-            "r4": cells[9] if len(cells) > 9 else "",
-            "total": cells[10] if len(cells) > 10 else "",
+            "r1": cells[today_index + 1] if len(cells) > today_index + 1 else "",
+            "r2": cells[today_index + 2] if len(cells) > today_index + 2 else "",
+            "r3": cells[today_index + 3] if len(cells) > today_index + 3 else "",
+            "r4": cells[today_index + 4] if len(cells) > today_index + 4 else "",
+            "total": cells[today_index + 5] if len(cells) > today_index + 5 else "",
         })
+
+    # Text fallback for CBS layout changes where semantic table rows disappear.
+    if len(rows) < 15:
+        body_text = clean(soup.get_text(" | ", strip=True))
+        marker = re.search(
+            r"pos\s*\|\s*ctry\s*\|\s*name\s*\|\s*to par\s*\|\s*thru\s*\|\s*today",
+            body_text,
+            re.I,
+        )
+        if marker:
+            segment = body_text[marker.end():]
+            # Find row starts such as "| 1 |", "| T2 |".
+            row_starts = list(re.finditer(r"\|\s*(T?\d+)\s*\|", segment, re.I))
+            text_rows = []
+
+            for i, rm in enumerate(row_starts):
+                end_pos = row_starts[i + 1].start() if i + 1 < len(row_starts) else len(segment)
+                chunk = segment[rm.end():end_pos]
+                parts = [clean(p) for p in chunk.split("|") if clean(p)]
+
+                # Expected text columns after position:
+                # country, player, to-par, thru, today, r1...
+                if len(parts) < 5:
+                    continue
+
+                country = parts[0]
+                player = parts[1]
+                to_par = parts[2]
+                thru = parts[3]
+                today = parts[4]
+
+                # Player text may be "G. Woodland Gary Woodland".
+                # Prefer the final full-name portion when available.
+                mname = re.search(
+                    r"(?:[A-Z]\.\s+[A-Za-zÀ-ÿ' -]+\s+)?([A-Z][A-Za-zÀ-ÿ' -]+\s+[A-Z][A-Za-zÀ-ÿ' -]+)$",
+                    player
+                )
+                if mname:
+                    player = clean(mname.group(1))
+
+                if not re.fullmatch(r"(?:E|[+-]?\d+|-)", to_par, re.I):
+                    continue
+                if not re.fullmatch(r"(?:F|\d+|-)", thru, re.I):
+                    continue
+
+                text_rows.append({
+                    "position": rm.group(1).upper(),
+                    "player": player,
+                    "toPar": to_par,
+                    "thru": thru,
+                    "today": today,
+                    "r1": parts[5] if len(parts) > 5 else "",
+                    "r2": parts[6] if len(parts) > 6 else "",
+                    "r3": parts[7] if len(parts) > 7 else "",
+                    "r4": parts[8] if len(parts) > 8 else "",
+                    "total": parts[9] if len(parts) > 9 else "",
+                })
+
+            if len(text_rows) > len(rows):
+                rows = text_rows
 
     if len(rows) < 15:
         raise RuntimeError(f"CBS leaderboard parsed only {len(rows)} player rows")
 
-    payload = {
+    return {
         "tournament": tournament,
         "source": CBS_LEADERBOARD_URL,
         "updatedUtc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "players": rows[:15],
     }
-    return payload
+
 
 
 def save_snapshot(payload: dict, path: Path = SNAPSHOT_FILE) -> None:
