@@ -1,5 +1,5 @@
 {
-  "lastUpdatedUtc": "2026-08-17T15:59:08.687138Z",
+  "lastUpdatedUtc": "2026-08-20T13:58:45.215242Z",
   "tournament": {
     "name": "BMW Championship",
     "course": "",
@@ -24,11 +24,11 @@
     {
       "id": "coverage-2",
       "round": "Round 1",
-      "provider": "PGA TOUR LIVE Betcast presented by DraftKings",
+      "provider": "ESPN+",
       "feed": "Full Telecast",
       "type": "streaming",
-      "startUtc": "2026-08-20T14:15:00Z",
-      "endUtc": "2026-08-20T18:00:00Z",
+      "startUtc": "2026-08-20T14:00:00Z",
+      "endUtc": "2026-08-20T19:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
@@ -36,11 +36,11 @@
     {
       "id": "coverage-3",
       "round": "Round 1",
-      "provider": "ESPN+",
+      "provider": "PGA TOUR LIVE Betcast presented by DraftKings",
       "feed": "Full Telecast",
       "type": "streaming",
-      "startUtc": "2026-08-20T14:15:00Z",
-      "endUtc": "2026-08-20T19:00:00Z",
+      "startUtc": "2026-08-20T14:30:00Z",
+      "endUtc": "2026-08-20T18:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
@@ -75,7 +75,7 @@
       "provider": "ESPN+",
       "feed": "Full Telecast",
       "type": "streaming",
-      "startUtc": "2026-08-21T14:15:00Z",
+      "startUtc": "2026-08-21T14:00:00Z",
       "endUtc": "2026-08-21T19:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
@@ -87,7 +87,7 @@
       "provider": "PGA TOUR LIVE Betcast presented by DraftKings",
       "feed": "Full Telecast",
       "type": "streaming",
-      "startUtc": "2026-08-21T14:15:00Z",
+      "startUtc": "2026-08-21T14:30:00Z",
       "endUtc": "2026-08-21T19:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
