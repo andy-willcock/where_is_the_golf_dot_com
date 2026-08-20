@@ -5,226 +5,172 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 
-import requests
-from bs4 import BeautifulSoup
-
-CBS_LEADERBOARD_URL = "https://www.cbssports.com/golf/leaderboard/pga-tour/"
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/138.0.0.0 Safari/537.36"
-    ),
-    "Accept-Language": "en-US,en;q=0.9",
-}
 BASE_DIR = Path(__file__).resolve().parent
 SNAPSHOT_FILE = BASE_DIR / "data" / "leaderboard.json"
+SCHEDULE_FILE = BASE_DIR / "data" / "schedule.json"
+PGA_SOURCE_URL = "https://www.pgatour.com/leaderboard"
 
 
-def clean(text: str) -> str:
-    return re.sub(r"\s+", " ", text or "").strip()
+def normalize_name(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", (value or "").lower()).strip()
 
 
-def fetch_html(url: str, timeout: int = 20) -> str:
+def load_current_tournament_name() -> str:
+    if not SCHEDULE_FILE.exists():
+        return ""
+
+    data = json.loads(SCHEDULE_FILE.read_text(encoding="utf-8"))
+    return data.get("tournament", {}).get("name", "") or ""
+
+
+def choose_tournament_id(schedule_df, tournament_name: str) -> tuple[str, str]:
     """
-    Try requests first. If a sports site blocks the cloud runner or returns
-    incomplete HTML, use Playwright/Chromium when available.
+    Find the current event in PGA TOUR's season schedule.
+
+    Primary match is the tournament already selected by our broadcast collector.
+    If that name is unavailable, fall back to an event whose status indicates
+    it is currently in progress.
     """
-    request_error = None
-    try:
-        response = requests.get(url, headers=HEADERS, timeout=timeout)
-        response.raise_for_status()
-        html = response.text
-        if "leaderboard" in html.lower() and len(html) > 5000:
-            return html
-    except Exception as exc:
-        request_error = exc
+    if schedule_df is None or getattr(schedule_df, "empty", True):
+        raise RuntimeError("PGA TOUR schedule API returned no tournaments")
 
-    try:
-        from playwright.sync_api import sync_playwright
-    except ImportError as exc:
-        if request_error:
-            raise RuntimeError(
-                f"requests failed ({request_error}) and Playwright is not installed"
-            ) from exc
-        raise
+    target = normalize_name(tournament_name)
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page(user_agent=HEADERS["User-Agent"])
-        page.goto(url, wait_until="domcontentloaded", timeout=30_000)
-        page.wait_for_timeout(1800)
-        html = page.content()
-        browser.close()
+    if target:
+        best = None
+        best_score = -1
 
-    if len(html) < 5000:
-        raise RuntimeError("CBS leaderboard page returned unexpectedly short HTML")
+        for _, row in schedule_df.iterrows():
+            candidate_name = str(row.get("tournament_name") or "")
+            candidate = normalize_name(candidate_name)
 
-    return html
+            if not candidate:
+                continue
 
+            if candidate == target:
+                return str(row["tournament_id"]), candidate_name
 
-def fetch_cbs_leaderboard(timeout: int = 20) -> dict:
-    html = fetch_html(CBS_LEADERBOARD_URL, timeout=timeout)
-    return parse_cbs_leaderboard(html)
+            # Lightweight token overlap handles small naming differences such
+            # as sponsor prefixes/suffixes.
+            target_tokens = set(target.split())
+            candidate_tokens = set(candidate.split())
+            overlap = len(target_tokens & candidate_tokens)
+            union = len(target_tokens | candidate_tokens) or 1
+            score = overlap / union
 
+            if score > best_score:
+                best_score = score
+                best = row
 
-def _full_player_name(cell) -> str:
-    """
-    CBS can render both abbreviation and full name in the same table cell,
-    e.g. 'G. Woodland Gary Woodland'. Prefer the longest link/text candidate.
-    """
-    candidates = [clean(a.get_text(" ", strip=True)) for a in cell.find_all("a")]
-    candidates += [clean(x) for x in cell.stripped_strings]
-    candidates = [x for x in candidates if x and not re.fullmatch(r"[A-Z]{2,3}", x)]
+        if best is not None and best_score >= 0.55:
+            return str(best["tournament_id"]), str(best.get("tournament_name") or tournament_name)
 
-    if candidates:
-        return max(candidates, key=len)
+    # Fallback to status if the local schedule name could not be matched.
+    for _, row in schedule_df.iterrows():
+        status = str(row.get("status") or "").upper()
+        if any(token in status for token in ("PROGRESS", "ACTIVE", "LIVE", "STARTED")):
+            return str(row["tournament_id"]), str(row.get("tournament_name") or "")
 
-    return clean(cell.get_text(" ", strip=True))
+    raise RuntimeError(
+        f"Could not match current tournament {tournament_name!r} "
+        "to PGA TOUR season schedule"
+    )
 
 
-def parse_cbs_leaderboard(html: str) -> dict:
-    soup = BeautifulSoup(html, "html.parser")
+def _value(row, *keys, default=""):
+    for key in keys:
+        try:
+            value = row.get(key)
+        except Exception:
+            value = None
+        if value is not None and str(value) not in ("nan", "None"):
+            return value
+    return default
 
-    title = clean(soup.title.get_text(" ", strip=True) if soup.title else "")
-    match = re.search(r"^\d{4}\s+(.+?)\s+Leaderboard\b", title, re.I)
-    tournament = clean(match.group(1)) if match else ""
 
-    rows = []
+def build_payload_from_current_leaders(df, tournament_name: str, tournament_id: str) -> dict:
+    if df is None or getattr(df, "empty", True):
+        raise RuntimeError("PGA TOUR current-leaders API returned no players")
 
-    # CBS can render the table header and body in separate table elements.
-    # Scan every rendered <tr> globally instead of restricting to one table.
-    for tr in soup.find_all("tr"):
-        cell_nodes = tr.find_all(["th", "td"])
-        if len(cell_nodes) < 6:
+    players = []
+
+    for _, row in df.iterrows():
+        display_name = str(_value(row, "display_name", default="")).strip()
+
+        if not display_name:
+            first = str(_value(row, "first_name", default="")).strip()
+            last = str(_value(row, "last_name", default="")).strip()
+            display_name = f"{first} {last}".strip()
+
+        if not display_name:
             continue
 
-        cells = [clean(x.get_text(" ", strip=True)) for x in cell_nodes]
-        low = [c.lower() for c in cells]
+        position = str(_value(row, "position", default="—"))
+        total_score = str(_value(row, "total_score", "total", default="—"))
+        thru = str(_value(row, "thru", default="—"))
+        round_score = str(_value(row, "round_score", "score", default="—"))
 
-        # Header row.
-        if "pos" in low or ("name" in low and "thru" in low):
-            continue
-
-        position = cells[0]
-
-        # Valid positions are things like 1, 12, T2, T9, etc.
-        if not re.fullmatch(r"T?\d+", position, re.I):
-            continue
-
-        # CBS normally renders:
-        # pos | country | player | to par | thru | today | ...
-        # The country cell may be image-only, so keep index positions based on
-        # actual td elements rather than text presence.
-        if len(cell_nodes) >= 6:
-            player_index = 2 if len(cell_nodes) >= 7 else 1
-            score_index = player_index + 1
-            thru_index = player_index + 2
-            today_index = player_index + 3
-        else:
-            continue
-
-        if today_index >= len(cells):
-            continue
-
-        player = _full_player_name(cell_nodes[player_index])
-        if not player:
-            continue
-
-        # Guard against accidentally parsing unrelated site tables.
-        to_par = cells[score_index]
-        thru = cells[thru_index]
-        today = cells[today_index]
-
-        if not (
-            re.fullmatch(r"(?:E|[+-]?\d+|-)", to_par, re.I)
-            and re.fullmatch(r"(?:F|\d+|-)", thru, re.I)
-        ):
-            continue
-
-        rows.append({
+        players.append({
             "position": position,
-            "player": player,
-            "toPar": to_par,
+            "player": display_name,
+            "toPar": total_score,
             "thru": thru,
-            "today": today,
-            "r1": cells[today_index + 1] if len(cells) > today_index + 1 else "",
-            "r2": cells[today_index + 2] if len(cells) > today_index + 2 else "",
-            "r3": cells[today_index + 3] if len(cells) > today_index + 3 else "",
-            "r4": cells[today_index + 4] if len(cells) > today_index + 4 else "",
-            "total": cells[today_index + 5] if len(cells) > today_index + 5 else "",
+            "today": round_score,
         })
 
-    # Text fallback for CBS layout changes where semantic table rows disappear.
-    if len(rows) < 15:
-        body_text = clean(soup.get_text(" | ", strip=True))
-        marker = re.search(
-            r"pos\s*\|\s*ctry\s*\|\s*name\s*\|\s*to par\s*\|\s*thru\s*\|\s*today",
-            body_text,
-            re.I,
+        if len(players) == 15:
+            break
+
+    if len(players) < 15:
+        raise RuntimeError(
+            f"PGA TOUR current-leaders API returned only {len(players)} usable players"
         )
-        if marker:
-            segment = body_text[marker.end():]
-            # Find row starts such as "| 1 |", "| T2 |".
-            row_starts = list(re.finditer(r"\|\s*(T?\d+)\s*\|", segment, re.I))
-            text_rows = []
-
-            for i, rm in enumerate(row_starts):
-                end_pos = row_starts[i + 1].start() if i + 1 < len(row_starts) else len(segment)
-                chunk = segment[rm.end():end_pos]
-                parts = [clean(p) for p in chunk.split("|") if clean(p)]
-
-                # Expected text columns after position:
-                # country, player, to-par, thru, today, r1...
-                if len(parts) < 5:
-                    continue
-
-                country = parts[0]
-                player = parts[1]
-                to_par = parts[2]
-                thru = parts[3]
-                today = parts[4]
-
-                # Player text may be "G. Woodland Gary Woodland".
-                # Prefer the final full-name portion when available.
-                mname = re.search(
-                    r"(?:[A-Z]\.\s+[A-Za-zÀ-ÿ' -]+\s+)?([A-Z][A-Za-zÀ-ÿ' -]+\s+[A-Z][A-Za-zÀ-ÿ' -]+)$",
-                    player
-                )
-                if mname:
-                    player = clean(mname.group(1))
-
-                if not re.fullmatch(r"(?:E|[+-]?\d+|-)", to_par, re.I):
-                    continue
-                if not re.fullmatch(r"(?:F|\d+|-)", thru, re.I):
-                    continue
-
-                text_rows.append({
-                    "position": rm.group(1).upper(),
-                    "player": player,
-                    "toPar": to_par,
-                    "thru": thru,
-                    "today": today,
-                    "r1": parts[5] if len(parts) > 5 else "",
-                    "r2": parts[6] if len(parts) > 6 else "",
-                    "r3": parts[7] if len(parts) > 7 else "",
-                    "r4": parts[8] if len(parts) > 8 else "",
-                    "total": parts[9] if len(parts) > 9 else "",
-                })
-
-            if len(text_rows) > len(rows):
-                rows = text_rows
-
-    if len(rows) < 15:
-        raise RuntimeError(f"CBS leaderboard parsed only {len(rows)} player rows")
 
     return {
-        "tournament": tournament,
-        "source": CBS_LEADERBOARD_URL,
+        "tournament": tournament_name,
+        "tournamentId": tournament_id,
+        "source": PGA_SOURCE_URL,
         "updatedUtc": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
-        "players": rows[:15],
+        "players": players,
     }
 
+
+def fetch_pga_leaderboard() -> dict:
+    """
+    Get the current top 15 using PGA TOUR's own API.
+
+    pgatourPY wraps the same PGA TOUR GraphQL/data endpoints used by pgatour.com.
+    """
+    import pgatourpy as pga
+
+    current_name = load_current_tournament_name()
+    year = datetime.now(timezone.utc).year
+
+    schedule = pga.pga_schedule(year)
+    tournament_id, official_name = choose_tournament_id(schedule, current_name)
+
+    # PGA TOUR exposes a dedicated top-15 snapshot.
+    leaders = pga.pga_current_leaders(tournament_id)
+
+    # Fallback to the full leaderboard if the compressed current-leaders
+    # operation is temporarily unavailable.
+    if leaders is None or leaders.empty:
+        leaders = pga.pga_leaderboard(tournament_id)
+
+        # Standardize full-leaderboard columns to the current-leaders schema.
+        if leaders is not None and not leaders.empty:
+            rename = {}
+            if "total" in leaders.columns:
+                rename["total"] = "total_score"
+            if "score" in leaders.columns:
+                rename["score"] = "round_score"
+            leaders = leaders.rename(columns=rename)
+
+    return build_payload_from_current_leaders(
+        leaders,
+        official_name or current_name,
+        tournament_id,
+    )
 
 
 def save_snapshot(payload: dict, path: Path = SNAPSHOT_FILE) -> None:
@@ -232,31 +178,32 @@ def save_snapshot(payload: dict, path: Path = SNAPSHOT_FILE) -> None:
         raise RuntimeError("Refusing to save leaderboard with fewer than 15 players")
 
     path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_suffix(".tmp")
-    tmp.write_text(json.dumps(payload, indent=2), encoding="utf-8")
-    tmp.replace(path)
+    temp = path.with_suffix(".tmp")
+    temp.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    temp.replace(path)
 
 
 def load_snapshot(path: Path = SNAPSHOT_FILE) -> dict:
     if not path.exists():
         return {
             "tournament": "",
-            "source": CBS_LEADERBOARD_URL,
+            "source": PGA_SOURCE_URL,
             "updatedUtc": None,
             "players": [],
         }
+
     return json.loads(path.read_text(encoding="utf-8"))
 
 
 def refresh_snapshot() -> dict:
-    payload = fetch_cbs_leaderboard()
+    payload = fetch_pga_leaderboard()
     save_snapshot(payload)
     return payload
 
 
 if __name__ == "__main__":
     payload = refresh_snapshot()
-    print(
-        f"Saved {len(payload['players'])} leaderboard rows "
-        f"for {payload.get('tournament') or 'current PGA TOUR event'}"
-    )
+    print("Tournament:", payload.get("tournament"))
+    print("Tournament ID:", payload.get("tournamentId"))
+    print("Rows:", len(payload.get("players", [])))
+    print("Source:", payload.get("source"))

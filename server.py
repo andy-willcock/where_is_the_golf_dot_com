@@ -11,7 +11,7 @@ from pathlib import Path
 from flask import Flask, jsonify, send_from_directory
 
 from collector import collect_current_week, CollectionError
-from leaderboard import fetch_cbs_leaderboard, load_snapshot
+from leaderboard import fetch_pga_leaderboard, load_snapshot
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -57,7 +57,7 @@ def api_leaderboard():
     if LEADERBOARD_CACHE["payload"] is not None and now - LEADERBOARD_CACHE["fetched_at"] < LEADERBOARD_CACHE_SECONDS:
         return jsonify(LEADERBOARD_CACHE["payload"])
     try:
-        payload = fetch_cbs_leaderboard()
+        payload = fetch_pga_leaderboard()
         payload["live"] = True
         LEADERBOARD_CACHE["payload"] = payload
         LEADERBOARD_CACHE["fetched_at"] = now
@@ -66,7 +66,7 @@ def api_leaderboard():
         app.logger.warning("Live leaderboard fetch failed: %s", exc)
         payload = load_snapshot()
         payload["live"] = False
-        payload["warning"] = "Live CBS fetch unavailable; showing GitHub-collected snapshot."
+        payload["warning"] = "Live PGA TOUR fetch unavailable; showing GitHub-collected snapshot."
         return jsonify(payload)
 
 

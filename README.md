@@ -517,3 +517,30 @@ It:
 
 Render still tries a live CBS request every 60 seconds. If CBS blocks Render,
 the site displays the most recent GitHub-collected snapshot instead.
+
+
+# v12 — Official PGA TOUR leaderboard API
+
+The leaderboard no longer scrapes CBS HTML.
+
+It now uses PGA TOUR's own backend APIs via the maintained `pgatourPY` client:
+
+```text
+PGA TOUR season schedule
+        |
+        v
+current tournament ID
+        |
+        v
+PGA TOUR CurrentLeadersCompressed
+        |
+        v
+Top 15 JSON snapshot
+```
+
+The broadcast collector's current tournament name is matched to PGA TOUR's
+season schedule, which provides the tournament ID required by the live
+leaderboard API.
+
+The implementation first calls the dedicated current-leaders snapshot and
+falls back to the full PGA TOUR leaderboard operation if necessary.

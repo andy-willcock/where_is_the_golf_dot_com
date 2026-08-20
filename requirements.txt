@@ -4,3 +4,4 @@ beautifulsoup4>=4.12,<5
 python-dateutil>=2.9,<3
 ddgs>=9.0,<10
 gunicorn>=22,<24
+git+https://github.com/WalrusQuant/pgatourPY.git
