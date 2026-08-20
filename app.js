@@ -20,6 +20,10 @@ const el = {
   statusBanner:$("statusBanner"), template:$("coverageTemplate"),
   refreshButton:$("refreshButton"), collectionStatus:$("collectionStatus"),
   sourceList:$("sourceList"),
+  leaderboardTournament:$("leaderboardTournament"),
+  leaderboardUpdated:$("leaderboardUpdated"),
+  leaderboardLiveBadge:$("leaderboardLiveBadge"),
+  leaderboardBody:$("leaderboardBody"),
 };
 
 async function loadSchedule() {
@@ -41,6 +45,32 @@ async function loadSchedule() {
 function showStatus(message) {
   el.statusBanner.textContent = message;
   el.statusBanner.hidden = false;
+}
+
+async function loadLeaderboard() {
+  try {
+    const response = await fetch("/api/leaderboard", { cache:"no-store" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    renderLeaderboard(await response.json());
+  } catch (error) {
+    console.error("Leaderboard load failed:", error);
+    el.leaderboardBody.innerHTML = '<tr><td colspan="5" class="leaderboard-empty">Leaderboard temporarily unavailable.</td></tr>';
+  }
+}
+
+function renderLeaderboard(data) {
+  el.leaderboardTournament.textContent = data.tournament || state.data?.tournament?.name || "Current tournament";
+  el.leaderboardUpdated.textContent = data.updatedUtc ? `Updated ${formatDateTime(new Date(data.updatedUtc))}` : "Waiting for first update";
+  el.leaderboardLiveBadge.textContent = data.live === false ? "SAVED" : "LIVE";
+  el.leaderboardLiveBadge.classList.toggle("saved", data.live === false);
+  const players = data.players || [];
+  if (!players.length) { el.leaderboardBody.innerHTML = '<tr><td colspan="5" class="leaderboard-empty">Leaderboard not available yet.</td></tr>'; return; }
+  el.leaderboardBody.innerHTML = "";
+  players.slice(0,15).forEach(player => {
+    const tr=document.createElement("tr");
+    [player.position||"—",player.player||"—",player.toPar||"—",player.thru||"—",player.today||"—"].forEach(value=>{ const td=document.createElement("td"); td.textContent=value; tr.appendChild(td); });
+    el.leaderboardBody.appendChild(tr);
+  });
 }
 
 function initTimezonePicker() {
@@ -289,6 +319,7 @@ function formatDateTime(date) {
 
 initTimezonePicker();
 loadSchedule();
+loadLeaderboard();
 setInterval(() => {
   if (!state.data) return;
 
@@ -301,3 +332,5 @@ setInterval(() => {
 
   renderAll();
 }, 30_000);
+
+setInterval(loadLeaderboard, 60_000);

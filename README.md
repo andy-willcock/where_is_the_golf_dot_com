@@ -496,3 +496,12 @@ PGA TOUR Media records by round:
 ```
 
 Audio records are excluded from the web schedule.
+
+# v9 — Top 15 live leaderboard
+
+Source: https://www.cbssports.com/golf/leaderboard/pga-tour/
+
+- `/api/leaderboard` caches CBS for 60 seconds.
+- Browser refreshes leaderboard every 60 seconds.
+- GitHub Actions saves `data/leaderboard.json` as fallback.
+- If live CBS fetch fails, the saved snapshot is shown.

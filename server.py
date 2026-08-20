@@ -11,6 +11,7 @@ from pathlib import Path
 from flask import Flask, jsonify, send_from_directory
 
 from collector import collect_current_week, CollectionError
+from leaderboard import fetch_cbs_leaderboard, load_snapshot
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -23,6 +24,8 @@ logging.basicConfig(
 )
 
 app = Flask(__name__, static_folder=".", static_url_path="")
+LEADERBOARD_CACHE = {"payload": None, "fetched_at": 0.0}
+LEADERBOARD_CACHE_SECONDS = 60
 
 
 def load_schedule():
@@ -46,6 +49,25 @@ def index():
 @app.get("/health")
 def health():
     return jsonify({"ok": True})
+
+
+@app.get("/api/leaderboard")
+def api_leaderboard():
+    now = time.time()
+    if LEADERBOARD_CACHE["payload"] is not None and now - LEADERBOARD_CACHE["fetched_at"] < LEADERBOARD_CACHE_SECONDS:
+        return jsonify(LEADERBOARD_CACHE["payload"])
+    try:
+        payload = fetch_cbs_leaderboard()
+        payload["live"] = True
+        LEADERBOARD_CACHE["payload"] = payload
+        LEADERBOARD_CACHE["fetched_at"] = now
+        return jsonify(payload)
+    except Exception as exc:
+        app.logger.warning("Live leaderboard fetch failed: %s", exc)
+        payload = load_snapshot()
+        payload["live"] = False
+        payload["warning"] = "Live leaderboard temporarily unavailable; showing saved snapshot."
+        return jsonify(payload)
 
 
 @app.get("/api/schedule")
