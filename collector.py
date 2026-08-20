@@ -15,7 +15,6 @@ from zoneinfo import ZoneInfo
 
 import requests
 from bs4 import BeautifulSoup
-from leaderboard import refresh_snapshot as refresh_leaderboard_snapshot
 from dateutil import parser as dateparser
 
 try:
@@ -1525,11 +1524,6 @@ def main():
         f"Wrote {len(payload['coverage'])} coverage windows for "
         f"{payload['tournament']['name']} to {args.output}"
     )
-    try:
-        leaderboard = refresh_leaderboard_snapshot()
-        print(f"Wrote top {len(leaderboard.get('players', []))} leaderboard rows for {leaderboard.get('tournament') or payload['tournament']['name']}")
-    except Exception as exc:
-        print(f"Leaderboard snapshot refresh failed: {exc}")
     if payload["collection"]["warnings"]:
         print("Warnings:")
         for warning in payload["collection"]["warnings"]:

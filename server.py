@@ -66,7 +66,7 @@ def api_leaderboard():
         app.logger.warning("Live leaderboard fetch failed: %s", exc)
         payload = load_snapshot()
         payload["live"] = False
-        payload["warning"] = "Live leaderboard temporarily unavailable; showing saved snapshot."
+        payload["warning"] = "Live CBS fetch unavailable; showing GitHub-collected snapshot."
         return jsonify(payload)
 
 

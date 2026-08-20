@@ -61,7 +61,7 @@ async function loadLeaderboard() {
 function renderLeaderboard(data) {
   el.leaderboardTournament.textContent = data.tournament || state.data?.tournament?.name || "Current tournament";
   el.leaderboardUpdated.textContent = data.updatedUtc ? `Updated ${formatDateTime(new Date(data.updatedUtc))}` : "Waiting for first update";
-  el.leaderboardLiveBadge.textContent = data.live === false ? "SAVED" : "LIVE";
+  el.leaderboardLiveBadge.textContent = data.live === false ? "SNAPSHOT" : "LIVE";
   el.leaderboardLiveBadge.classList.toggle("saved", data.live === false);
   const players = data.players || [];
   if (!players.length) { el.leaderboardBody.innerHTML = '<tr><td colspan="5" class="leaderboard-empty">Leaderboard not available yet.</td></tr>'; return; }
