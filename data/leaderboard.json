@@ -2,7 +2,7 @@
   "tournament": "BMW Championship",
   "tournamentId": "R2026028",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-20T22:02:38.012496Z",
+  "updatedUtc": "2026-08-20T23:04:02.040740Z",
   "players": [
     {
       "position": "T1",
@@ -36,75 +36,75 @@
       "position": "T1",
       "player": "Chris Gotterup",
       "toPar": "-6",
-      "thru": "16",
+      "thru": "F",
       "today": "-6"
     },
     {
-      "position": "6",
+      "position": "T6",
       "player": "Ryo Hisatsune",
       "toPar": "-5",
       "thru": "F",
       "today": "-5"
     },
     {
-      "position": "T7",
+      "position": "T6",
+      "player": "Matt Fitzpatrick",
+      "toPar": "-5",
+      "thru": "F",
+      "today": "-5"
+    },
+    {
+      "position": "T8",
       "player": "Ludvig \u00c5berg",
       "toPar": "-4",
       "thru": "F",
       "today": "-4"
     },
     {
-      "position": "T7",
+      "position": "T8",
       "player": "Alex Fitzpatrick",
       "toPar": "-4",
       "thru": "F",
       "today": "-4"
     },
     {
-      "position": "T7",
+      "position": "T8",
       "player": "Michael Thorbjornsen",
       "toPar": "-4",
       "thru": "F",
       "today": "-4"
     },
     {
-      "position": "T10",
+      "position": "T8",
+      "player": "Jacob Bridgeman",
+      "toPar": "-4",
+      "thru": "F",
+      "today": "-4"
+    },
+    {
+      "position": "T12",
       "player": "Justin Thomas",
       "toPar": "-3",
       "thru": "F",
       "today": "-3"
     },
     {
-      "position": "T10",
+      "position": "T12",
       "player": "Sungjae Im",
       "toPar": "-3",
       "thru": "F",
       "today": "-3"
     },
     {
-      "position": "T10",
+      "position": "T12",
       "player": "Kristoffer Reitan",
       "toPar": "-3",
       "thru": "F",
       "today": "-3"
     },
     {
-      "position": "T10",
+      "position": "T12",
       "player": "Akshay Bhatia",
-      "toPar": "-3",
-      "thru": "F",
-      "today": "-3"
-    },
-    {
-      "position": "T10",
-      "player": "Eric Cole",
-      "toPar": "-3",
-      "thru": "F",
-      "today": "-3"
-    },
-    {
-      "position": "T10",
-      "player": "Patrick Cantlay",
       "toPar": "-3",
       "thru": "F",
       "today": "-3"
