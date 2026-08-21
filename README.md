@@ -544,3 +544,34 @@ leaderboard API.
 
 The implementation first calls the dedicated current-leaders snapshot and
 falls back to the full PGA TOUR leaderboard operation if necessary.
+
+
+# v13 — Snapshot-first leaderboard display
+
+The web page no longer asks Render to fetch PGA TOUR leaderboard data.
+
+The display path is now:
+
+```text
+GitHub Actions
+      |
+      | pgatourPY -> PGA TOUR API
+      v
+data/leaderboard.json
+      |
+      | commit + Render deploy
+      v
+Browser fetches /data/leaderboard.json directly
+```
+
+`/api/leaderboard` remains available only as a diagnostic endpoint and returns
+the same committed JSON snapshot.
+
+After the GitHub Action succeeds, verify these URLs:
+
+```text
+https://whereisthegolf.com/data/leaderboard.json
+https://whereisthegolf.com/api/leaderboard
+```
+
+Both should contain 15 players.

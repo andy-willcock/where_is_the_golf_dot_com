@@ -11,7 +11,7 @@ from pathlib import Path
 from flask import Flask, jsonify, send_from_directory
 
 from collector import collect_current_week, CollectionError
-from leaderboard import fetch_pga_leaderboard, load_snapshot
+from leaderboard import load_snapshot
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -24,8 +24,6 @@ logging.basicConfig(
 )
 
 app = Flask(__name__, static_folder=".", static_url_path="")
-LEADERBOARD_CACHE = {"payload": None, "fetched_at": 0.0}
-LEADERBOARD_CACHE_SECONDS = 60
 
 
 def load_schedule():
@@ -53,21 +51,8 @@ def health():
 
 @app.get("/api/leaderboard")
 def api_leaderboard():
-    now = time.time()
-    if LEADERBOARD_CACHE["payload"] is not None and now - LEADERBOARD_CACHE["fetched_at"] < LEADERBOARD_CACHE_SECONDS:
-        return jsonify(LEADERBOARD_CACHE["payload"])
-    try:
-        payload = fetch_pga_leaderboard()
-        payload["live"] = True
-        LEADERBOARD_CACHE["payload"] = payload
-        LEADERBOARD_CACHE["fetched_at"] = now
-        return jsonify(payload)
-    except Exception as exc:
-        app.logger.warning("Live leaderboard fetch failed: %s", exc)
-        payload = load_snapshot()
-        payload["live"] = False
-        payload["warning"] = "Live PGA TOUR fetch unavailable; showing GitHub-collected snapshot."
-        return jsonify(payload)
+    """Return the leaderboard snapshot committed by GitHub Actions."""
+    return jsonify(load_snapshot())
 
 
 @app.get("/api/schedule")
