@@ -2,20 +2,20 @@
   "tournament": "BMW Championship",
   "tournamentId": "R2026028",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-21T21:57:20.081733Z",
+  "updatedUtc": "2026-08-21T22:57:13.764708Z",
   "players": [
     {
-      "position": "T1",
+      "position": "1",
+      "player": "Wyndham Clark",
+      "toPar": "-12",
+      "thru": "F",
+      "today": "-6"
+    },
+    {
+      "position": "2",
       "player": "Gary Woodland",
       "toPar": "-11",
       "thru": "F",
-      "today": "-5"
-    },
-    {
-      "position": "T1",
-      "player": "Wyndham Clark",
-      "toPar": "-11",
-      "thru": "16",
       "today": "-5"
     },
     {
@@ -99,15 +99,15 @@
       "position": "T12",
       "player": "Kristoffer Reitan",
       "toPar": "-6",
-      "thru": "17",
+      "thru": "F",
       "today": "-3"
     },
     {
-      "position": "T15",
-      "player": "Ryo Hisatsune",
-      "toPar": "-5",
+      "position": "T12",
+      "player": "Michael Brennan",
+      "toPar": "-6",
       "thru": "F",
-      "today": "E"
+      "today": "-5"
     }
   ]
 }
