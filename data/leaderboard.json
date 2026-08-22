@@ -2,7 +2,7 @@
   "tournament": "BMW Championship",
   "tournamentId": "R2026028",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-22T15:42:37.197186Z",
+  "updatedUtc": "2026-08-22T16:53:25.476038Z",
   "players": [
     {
       "position": "1",
@@ -83,31 +83,31 @@
     },
     {
       "position": "T12",
-      "player": "Viktor Hovland",
+      "player": "Ryan Gerard",
       "toPar": "-6",
-      "thru": "",
-      "today": "-"
+      "thru": "4",
+      "today": "-2"
     },
     {
       "position": "T12",
-      "player": "Justin Thomas",
+      "player": "Eric Cole",
       "toPar": "-6",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T12",
-      "player": "Kristoffer Reitan",
-      "toPar": "-6",
-      "thru": "",
-      "today": "-"
+      "thru": "3",
+      "today": "-1"
     },
     {
       "position": "T12",
       "player": "Michael Brennan",
       "toPar": "-6",
-      "thru": "",
-      "today": "-"
+      "thru": "1",
+      "today": "E"
+    },
+    {
+      "position": "T12",
+      "player": "Justin Thomas",
+      "toPar": "-6",
+      "thru": "1",
+      "today": "E"
     }
   ]
 }
