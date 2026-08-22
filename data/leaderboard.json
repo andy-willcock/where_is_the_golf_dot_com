@@ -2,112 +2,112 @@
   "tournament": "BMW Championship",
   "tournamentId": "R2026028",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-22T17:51:02.634948Z",
+  "updatedUtc": "2026-08-22T19:04:29.622454Z",
   "players": [
     {
       "position": "1",
       "player": "Wyndham Clark",
-      "toPar": "-12",
-      "thru": "",
-      "today": "-"
+      "toPar": "-11",
+      "thru": "5",
+      "today": "+1"
     },
     {
       "position": "2",
       "player": "Gary Woodland",
-      "toPar": "-11",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "3",
-      "player": "J.J. Spaun",
       "toPar": "-10",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "4",
-      "player": "Chris Gotterup",
-      "toPar": "-9",
-      "thru": "1",
-      "today": "E"
-    },
-    {
-      "position": "T5",
-      "player": "Sungjae Im",
-      "toPar": "-8",
-      "thru": "1",
+      "thru": "5",
       "today": "+1"
     },
     {
-      "position": "T5",
-      "player": "Patrick Cantlay",
-      "toPar": "-8",
-      "thru": "1",
+      "position": "T3",
+      "player": "Sungjae Im",
+      "toPar": "-9",
+      "thru": "7",
       "today": "E"
     },
     {
-      "position": "T7",
-      "player": "Ryan Gerard",
-      "toPar": "-7",
-      "thru": "8",
-      "today": "-3"
-    },
-    {
-      "position": "T7",
-      "player": "Michael Brennan",
-      "toPar": "-7",
+      "position": "T3",
+      "player": "Patrick Cantlay",
+      "toPar": "-9",
       "thru": "7",
       "today": "-1"
     },
     {
-      "position": "T7",
-      "player": "Michael Thorbjornsen",
-      "toPar": "-7",
-      "thru": "2",
+      "position": "T3",
+      "player": "J.J. Spaun",
+      "toPar": "-9",
+      "thru": "6",
       "today": "+1"
+    },
+    {
+      "position": "T3",
+      "player": "Chris Gotterup",
+      "toPar": "-9",
+      "thru": "6",
+      "today": "E"
+    },
+    {
+      "position": "T7",
+      "player": "Maverick McNealy",
+      "toPar": "-8",
+      "thru": "9",
+      "today": "-1"
     },
     {
       "position": "T7",
       "player": "Rory McIlroy",
+      "toPar": "-8",
+      "thru": "8",
+      "today": "-1"
+    },
+    {
+      "position": "T9",
+      "player": "Eric Cole",
       "toPar": "-7",
-      "thru": "2",
+      "thru": "13",
+      "today": "-2"
+    },
+    {
+      "position": "T9",
+      "player": "Collin Morikawa",
+      "toPar": "-7",
+      "thru": "9",
       "today": "E"
     },
     {
       "position": "T11",
-      "player": "Eric Cole",
+      "player": "Jacob Bridgeman",
       "toPar": "-6",
-      "thru": "7",
+      "thru": "F",
+      "today": "-4"
+    },
+    {
+      "position": "T11",
+      "player": "Michael Brennan",
+      "toPar": "-6",
+      "thru": "11",
+      "today": "E"
+    },
+    {
+      "position": "T11",
+      "player": "Ryo Hisatsune",
+      "toPar": "-6",
+      "thru": "11",
       "today": "-1"
     },
     {
       "position": "T11",
-      "player": "Collin Morikawa",
+      "player": "Justin Thomas",
       "toPar": "-6",
-      "thru": "4",
-      "today": "+1"
+      "thru": "10",
+      "today": "E"
     },
     {
       "position": "T11",
       "player": "Russell Henley",
       "toPar": "-6",
-      "thru": "3",
+      "thru": "9",
       "today": "+1"
-    },
-    {
-      "position": "T11",
-      "player": "Maverick McNealy",
-      "toPar": "-6",
-      "thru": "3",
-      "today": "+1"
-    },
-    {
-      "position": "T15",
-      "player": "Alex Noren",
-      "toPar": "-5",
-      "thru": "17",
-      "today": "-5"
     }
   ]
 }
