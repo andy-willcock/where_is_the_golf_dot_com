@@ -1,5 +1,5 @@
 {
-  "lastUpdatedUtc": "2026-08-22T17:55:55.301907Z",
+  "lastUpdatedUtc": "2026-08-22T23:54:51.596409Z",
   "tournament": {
     "name": "BMW Championship",
     "course": "",
@@ -171,7 +171,7 @@
       "provider": "ESPN+",
       "feed": "Full Telecast",
       "type": "streaming",
-      "startUtc": "2026-08-23T13:15:00Z",
+      "startUtc": "2026-08-23T13:00:00Z",
       "endUtc": "2026-08-23T16:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
@@ -183,7 +183,7 @@
       "provider": "PGA TOUR LIVE Betcast presented by DraftKings",
       "feed": "Full Telecast",
       "type": "streaming",
-      "startUtc": "2026-08-23T13:15:00Z",
+      "startUtc": "2026-08-23T13:30:00Z",
       "endUtc": "2026-08-23T16:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
