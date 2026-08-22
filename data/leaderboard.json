@@ -2,112 +2,112 @@
   "tournament": "BMW Championship",
   "tournamentId": "R2026028",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-21T23:55:43.438103Z",
+  "updatedUtc": "2026-08-22T13:45:00.539738Z",
   "players": [
     {
       "position": "1",
       "player": "Wyndham Clark",
       "toPar": "-12",
-      "thru": "F",
-      "today": "-6"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "2",
       "player": "Gary Woodland",
       "toPar": "-11",
-      "thru": "F",
-      "today": "-5"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "3",
       "player": "J.J. Spaun",
       "toPar": "-10",
-      "thru": "F",
-      "today": "-4"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T4",
       "player": "Chris Gotterup",
       "toPar": "-9",
-      "thru": "F",
-      "today": "-3"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T4",
       "player": "Sungjae Im",
       "toPar": "-9",
-      "thru": "F",
-      "today": "-6"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T6",
       "player": "Patrick Cantlay",
       "toPar": "-8",
-      "thru": "F",
-      "today": "-5"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T6",
       "player": "Michael Thorbjornsen",
       "toPar": "-8",
-      "thru": "F",
-      "today": "-4"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T8",
       "player": "Rory McIlroy",
       "toPar": "-7",
-      "thru": "F",
-      "today": "-1"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T8",
       "player": "Russell Henley",
       "toPar": "-7",
-      "thru": "F",
-      "today": "-4"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T8",
       "player": "Maverick McNealy",
       "toPar": "-7",
-      "thru": "F",
-      "today": "-4"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T8",
       "player": "Collin Morikawa",
       "toPar": "-7",
-      "thru": "F",
-      "today": "-5"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T12",
       "player": "Viktor Hovland",
       "toPar": "-6",
-      "thru": "F",
-      "today": "-7"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T12",
       "player": "Justin Thomas",
       "toPar": "-6",
-      "thru": "F",
-      "today": "-3"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T12",
       "player": "Kristoffer Reitan",
       "toPar": "-6",
-      "thru": "F",
-      "today": "-3"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T12",
       "player": "Michael Brennan",
       "toPar": "-6",
-      "thru": "F",
-      "today": "-5"
+      "thru": "",
+      "today": "-"
     }
   ]
 }
