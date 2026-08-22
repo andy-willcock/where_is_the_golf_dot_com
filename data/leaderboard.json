@@ -2,55 +2,55 @@
   "tournament": "BMW Championship",
   "tournamentId": "R2026028",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-22T20:55:56.820945Z",
+  "updatedUtc": "2026-08-22T21:50:04.020857Z",
   "players": [
     {
       "position": "1",
       "player": "Wyndham Clark",
-      "toPar": "-17",
-      "thru": "13",
-      "today": "-5"
+      "toPar": "-18",
+      "thru": "17",
+      "today": "-6"
     },
     {
       "position": "T2",
       "player": "Rory McIlroy",
-      "toPar": "-11",
-      "thru": "16",
-      "today": "-4"
+      "toPar": "-12",
+      "thru": "F",
+      "today": "-5"
     },
     {
       "position": "T2",
       "player": "Patrick Cantlay",
-      "toPar": "-11",
-      "thru": "16",
-      "today": "-3"
+      "toPar": "-12",
+      "thru": "F",
+      "today": "-4"
     },
     {
-      "position": "T2",
+      "position": "T4",
       "player": "Chris Gotterup",
       "toPar": "-11",
-      "thru": "14",
+      "thru": "F",
       "today": "-2"
     },
     {
-      "position": "T5",
-      "player": "Collin Morikawa",
-      "toPar": "-10",
+      "position": "T4",
+      "player": "Gary Woodland",
+      "toPar": "-11",
       "thru": "17",
-      "today": "-3"
+      "today": "E"
     },
     {
-      "position": "T5",
-      "player": "Gary Woodland",
+      "position": "6",
+      "player": "Collin Morikawa",
       "toPar": "-10",
-      "thru": "13",
-      "today": "+1"
+      "thru": "F",
+      "today": "-3"
     },
     {
       "position": "7",
       "player": "Sungjae Im",
       "toPar": "-9",
-      "thru": "15",
+      "thru": "F",
       "today": "E"
     },
     {
@@ -71,14 +71,14 @@
       "position": "T8",
       "player": "Maverick McNealy",
       "toPar": "-8",
-      "thru": "17",
+      "thru": "F",
       "today": "-1"
     },
     {
       "position": "T8",
       "player": "J.J. Spaun",
       "toPar": "-8",
-      "thru": "14",
+      "thru": "F",
       "today": "+2"
     },
     {
@@ -92,7 +92,7 @@
       "position": "T12",
       "player": "Russell Henley",
       "toPar": "-7",
-      "thru": "17",
+      "thru": "F",
       "today": "E"
     },
     {
