@@ -2,14 +2,14 @@
   "tournament": "BMW Championship",
   "tournamentId": "R2026028",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-22T21:50:04.020857Z",
+  "updatedUtc": "2026-08-22T22:52:16.279790Z",
   "players": [
     {
       "position": "1",
       "player": "Wyndham Clark",
-      "toPar": "-18",
-      "thru": "17",
-      "today": "-6"
+      "toPar": "-17",
+      "thru": "F",
+      "today": "-5"
     },
     {
       "position": "T2",
@@ -36,7 +36,7 @@
       "position": "T4",
       "player": "Gary Woodland",
       "toPar": "-11",
-      "thru": "17",
+      "thru": "F",
       "today": "E"
     },
     {
