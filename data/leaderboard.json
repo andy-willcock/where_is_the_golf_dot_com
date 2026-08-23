@@ -2,112 +2,112 @@
   "tournament": "BMW Championship",
   "tournamentId": "R2026028",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-23T19:50:56.354762Z",
+  "updatedUtc": "2026-08-23T20:55:07.194587Z",
   "players": [
     {
-      "position": "1",
+      "position": "T1",
       "player": "Wyndham Clark",
-      "toPar": "-15",
-      "thru": "8",
-      "today": "+2"
+      "toPar": "-14",
+      "thru": "13",
+      "today": "+3"
     },
     {
-      "position": "T2",
-      "player": "Patrick Cantlay",
-      "toPar": "-13",
-      "thru": "9",
-      "today": "-1"
-    },
-    {
-      "position": "T2",
+      "position": "T1",
       "player": "Rory McIlroy",
-      "toPar": "-13",
-      "thru": "9",
-      "today": "-1"
-    },
-    {
-      "position": "T4",
-      "player": "Gary Woodland",
-      "toPar": "-12",
-      "thru": "10",
-      "today": "-1"
-    },
-    {
-      "position": "T4",
-      "player": "Collin Morikawa",
-      "toPar": "-12",
-      "thru": "10",
+      "toPar": "-14",
+      "thru": "13",
       "today": "-2"
     },
     {
-      "position": "6",
-      "player": "Chris Gotterup",
-      "toPar": "-11",
-      "thru": "9",
+      "position": "T3",
+      "player": "Gary Woodland",
+      "toPar": "-12",
+      "thru": "15",
+      "today": "-1"
+    },
+    {
+      "position": "T3",
+      "player": "Patrick Cantlay",
+      "toPar": "-12",
+      "thru": "14",
       "today": "E"
+    },
+    {
+      "position": "T3",
+      "player": "Chris Gotterup",
+      "toPar": "-12",
+      "thru": "14",
+      "today": "-1"
+    },
+    {
+      "position": "6",
+      "player": "Collin Morikawa",
+      "toPar": "-11",
+      "thru": "15",
+      "today": "-1"
     },
     {
       "position": "7",
       "player": "Robert MacIntyre",
       "toPar": "-10",
-      "thru": "16",
+      "thru": "F",
       "today": "-5"
     },
     {
       "position": "T8",
       "player": "Jacob Bridgeman",
       "toPar": "-9",
-      "thru": "14",
+      "thru": "F",
       "today": "-3"
     },
     {
       "position": "T8",
       "player": "Maverick McNealy",
       "toPar": "-9",
-      "thru": "12",
+      "thru": "17",
       "today": "-1"
     },
     {
-      "position": "10",
-      "player": "Sungjae Im",
+      "position": "T10",
+      "player": "Michael Brennan",
       "toPar": "-8",
-      "thru": "11",
-      "today": "+1"
+      "thru": "F",
+      "today": "-1"
     },
     {
-      "position": "T11",
+      "position": "T10",
+      "player": "Ryo Hisatsune",
+      "toPar": "-8",
+      "thru": "17",
+      "today": "E"
+    },
+    {
+      "position": "T12",
       "player": "Akshay Bhatia",
       "toPar": "-7",
       "thru": "F",
       "today": "-2"
     },
     {
-      "position": "T11",
+      "position": "T12",
       "player": "Scottie Scheffler",
       "toPar": "-7",
-      "thru": "16",
+      "thru": "F",
       "today": "-2"
     },
     {
-      "position": "T11",
+      "position": "T12",
       "player": "Russell Henley",
       "toPar": "-7",
-      "thru": "14",
-      "today": "E"
-    },
-    {
-      "position": "T11",
-      "player": "Michael Brennan",
-      "toPar": "-7",
-      "thru": "13",
-      "today": "E"
-    },
-    {
-      "position": "T15",
-      "player": "Adam Scott",
-      "toPar": "-6",
       "thru": "F",
-      "today": "-3"
+      "today": "E"
+    },
+    {
+      "position": "T12",
+      "player": "Sungjae Im",
+      "toPar": "-7",
+      "thru": "16",
+      "today": "+2"
     }
   ]
 }
