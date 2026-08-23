@@ -1,5 +1,5 @@
 {
-  "lastUpdatedUtc": "2026-08-23T17:54:03.838888Z",
+  "lastUpdatedUtc": "2026-08-23T23:56:46.902809Z",
   "tournament": {
     "name": "BMW Championship",
     "course": "",
@@ -208,7 +208,7 @@
       "feed": "Full Telecast",
       "type": "tv",
       "startUtc": "2026-08-23T18:00:00Z",
-      "endUtc": "2026-08-23T22:00:00Z",
+      "endUtc": "2026-08-23T22:15:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
@@ -220,7 +220,7 @@
       "feed": "Full Telecast",
       "type": "streaming",
       "startUtc": "2026-08-23T18:00:00Z",
-      "endUtc": "2026-08-23T22:00:00Z",
+      "endUtc": "2026-08-23T22:15:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
