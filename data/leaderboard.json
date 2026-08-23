@@ -2,14 +2,14 @@
   "tournament": "BMW Championship",
   "tournamentId": "R2026028",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-23T21:49:32.483501Z",
+  "updatedUtc": "2026-08-23T22:50:40.875583Z",
   "players": [
     {
       "position": "1",
       "player": "Wyndham Clark",
-      "toPar": "-16",
-      "thru": "17",
-      "today": "+1"
+      "toPar": "-17",
+      "thru": "F",
+      "today": "E"
     },
     {
       "position": "2",
@@ -22,7 +22,7 @@
       "position": "3",
       "player": "Rory McIlroy",
       "toPar": "-13",
-      "thru": "17",
+      "thru": "F",
       "today": "-1"
     },
     {
