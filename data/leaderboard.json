@@ -2,7 +2,7 @@
   "tournament": "BMW Championship",
   "tournamentId": "R2026028",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-23T14:53:50.267149Z",
+  "updatedUtc": "2026-08-23T15:52:53.647135Z",
   "players": [
     {
       "position": "1",
@@ -104,10 +104,10 @@
     },
     {
       "position": "T15",
-      "player": "Alex Noren",
+      "player": "Justin Rose",
       "toPar": "-5",
-      "thru": "",
-      "today": "-"
+      "thru": "9",
+      "today": "-4"
     }
   ]
 }
