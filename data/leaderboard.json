@@ -2,7 +2,7 @@
   "tournament": "TOUR Championship",
   "tournamentId": "R2026060",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-29T18:39:06.504890Z",
+  "updatedUtc": "2026-08-29T18:51:53.859282Z",
   "players": [
     {
       "position": "T1",
@@ -36,77 +36,77 @@
       "position": "T5",
       "player": "Cameron Young",
       "toPar": "-8",
-      "thru": "",
-      "today": "-"
+      "thru": "1",
+      "today": "E"
     },
     {
       "position": "T5",
       "player": "Scottie Scheffler",
       "toPar": "-8",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T7",
-      "player": "Rory McIlroy",
-      "toPar": "-7",
-      "thru": "10",
-      "today": "-4"
+      "thru": "1",
+      "today": "E"
     },
     {
       "position": "T7",
       "player": "Tommy Fleetwood",
       "toPar": "-7",
-      "thru": "9",
-      "today": "-3"
-    },
-    {
-      "position": "T9",
-      "player": "Si Woo Kim",
-      "toPar": "-6",
       "thru": "10",
       "today": "-3"
     },
     {
-      "position": "T9",
+      "position": "T7",
       "player": "Russell Henley",
-      "toPar": "-6",
-      "thru": "5",
-      "today": "-1"
+      "toPar": "-7",
+      "thru": "6",
+      "today": "-2"
     },
     {
-      "position": "T9",
+      "position": "T7",
       "player": "Jacob Bridgeman",
-      "toPar": "-6",
-      "thru": "5",
-      "today": "-1"
+      "toPar": "-7",
+      "thru": "6",
+      "today": "-2"
     },
     {
-      "position": "T9",
+      "position": "T10",
+      "player": "Si Woo Kim",
+      "toPar": "-6",
+      "thru": "11",
+      "today": "-3"
+    },
+    {
+      "position": "T10",
+      "player": "Rory McIlroy",
+      "toPar": "-6",
+      "thru": "11",
+      "today": "-3"
+    },
+    {
+      "position": "T10",
+      "player": "Alex Fitzpatrick",
+      "toPar": "-6",
+      "thru": "8",
+      "today": "-2"
+    },
+    {
+      "position": "T10",
       "player": "Sam Burns",
       "toPar": "-6",
-      "thru": "4",
+      "thru": "5",
       "today": "E"
     },
     {
-      "position": "T9",
+      "position": "T10",
       "player": "Gary Woodland",
       "toPar": "-6",
-      "thru": "4",
+      "thru": "5",
       "today": "E"
     },
     {
-      "position": "T9",
+      "position": "T10",
       "player": "Adam Scott",
       "toPar": "-6",
-      "thru": "2",
-      "today": "+1"
-    },
-    {
-      "position": "T9",
-      "player": "Justin Rose",
-      "toPar": "-6",
-      "thru": "1",
+      "thru": "3",
       "today": "+1"
     }
   ]
