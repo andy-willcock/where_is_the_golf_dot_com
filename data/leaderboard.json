@@ -2,14 +2,14 @@
   "tournament": "TOUR Championship",
   "tournamentId": "R2026060",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-29T22:39:01.568612Z",
+  "updatedUtc": "2026-08-29T22:52:21.458965Z",
   "players": [
     {
       "position": "1",
       "player": "Viktor Hovland",
-      "toPar": "-14",
-      "thru": "17",
-      "today": "-4"
+      "toPar": "-15",
+      "thru": "F",
+      "today": "-5"
     },
     {
       "position": "2",
@@ -40,11 +40,11 @@
       "today": "-4"
     },
     {
-      "position": "6",
+      "position": "T3",
       "player": "Chris Gotterup",
-      "toPar": "-11",
-      "thru": "17",
-      "today": "-2"
+      "toPar": "-12",
+      "thru": "F",
+      "today": "-3"
     },
     {
       "position": "T7",
