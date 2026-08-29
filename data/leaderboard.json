@@ -2,48 +2,48 @@
   "tournament": "TOUR Championship",
   "tournamentId": "R2026060",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-29T21:52:12.989212Z",
+  "updatedUtc": "2026-08-29T22:09:13.385482Z",
   "players": [
     {
-      "position": "1",
+      "position": "T1",
       "player": "Ryan Gerard",
       "toPar": "-13",
-      "thru": "13",
-      "today": "-3"
-    },
-    {
-      "position": "T2",
-      "player": "Adam Scott",
-      "toPar": "-12",
-      "thru": "17",
-      "today": "-5"
-    },
-    {
-      "position": "T2",
-      "player": "Viktor Hovland",
-      "toPar": "-12",
-      "thru": "13",
-      "today": "-2"
-    },
-    {
-      "position": "T4",
-      "player": "Ludvig \u00c5berg",
-      "toPar": "-11",
-      "thru": "17",
-      "today": "-4"
-    },
-    {
-      "position": "T4",
-      "player": "Scottie Scheffler",
-      "toPar": "-11",
       "thru": "15",
       "today": "-3"
     },
     {
-      "position": "T4",
+      "position": "T1",
+      "player": "Viktor Hovland",
+      "toPar": "-13",
+      "thru": "15",
+      "today": "-3"
+    },
+    {
+      "position": "T3",
+      "player": "Adam Scott",
+      "toPar": "-12",
+      "thru": "F",
+      "today": "-5"
+    },
+    {
+      "position": "T3",
+      "player": "Ludvig \u00c5berg",
+      "toPar": "-12",
+      "thru": "F",
+      "today": "-5"
+    },
+    {
+      "position": "T5",
+      "player": "Scottie Scheffler",
+      "toPar": "-11",
+      "thru": "16",
+      "today": "-3"
+    },
+    {
+      "position": "T5",
       "player": "Chris Gotterup",
       "toPar": "-11",
-      "thru": "14",
+      "thru": "15",
       "today": "-2"
     },
     {
@@ -85,29 +85,29 @@
       "position": "T8",
       "player": "Cameron Young",
       "toPar": "-9",
-      "thru": "15",
+      "thru": "16",
       "today": "-1"
     },
     {
-      "position": "T8",
-      "player": "Collin Morikawa",
-      "toPar": "-9",
-      "thru": "14",
-      "today": "E"
-    },
-    {
-      "position": "T14",
+      "position": "T13",
       "player": "Si Woo Kim",
       "toPar": "-8",
       "thru": "F",
       "today": "-5"
     },
     {
-      "position": "T14",
+      "position": "T13",
       "player": "Matt Fitzpatrick",
       "toPar": "-8",
-      "thru": "16",
+      "thru": "17",
       "today": "-1"
+    },
+    {
+      "position": "T15",
+      "player": "Wyndham Clark",
+      "toPar": "-7",
+      "thru": "F",
+      "today": "-3"
     }
   ]
 }
