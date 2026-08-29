@@ -2,49 +2,49 @@
   "tournament": "TOUR Championship",
   "tournamentId": "R2026060",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-29T20:52:23.972729Z",
+  "updatedUtc": "2026-08-29T21:09:18.015055Z",
   "players": [
     {
       "position": "1",
       "player": "Ryan Gerard",
       "toPar": "-12",
-      "thru": "9",
+      "thru": "10",
       "today": "-2"
     },
     {
-      "position": "2",
+      "position": "T2",
+      "player": "Chris Gotterup",
+      "toPar": "-11",
+      "thru": "11",
+      "today": "-2"
+    },
+    {
+      "position": "T2",
       "player": "Viktor Hovland",
       "toPar": "-11",
-      "thru": "8",
+      "thru": "10",
       "today": "-1"
     },
     {
-      "position": "T3",
+      "position": "T4",
       "player": "Rory McIlroy",
       "toPar": "-10",
       "thru": "F",
       "today": "-7"
     },
     {
-      "position": "T3",
+      "position": "T4",
       "player": "Adam Scott",
       "toPar": "-10",
-      "thru": "13",
+      "thru": "14",
       "today": "-3"
     },
     {
-      "position": "T3",
+      "position": "T4",
       "player": "Scottie Scheffler",
       "toPar": "-10",
-      "thru": "10",
+      "thru": "12",
       "today": "-2"
-    },
-    {
-      "position": "T3",
-      "player": "Chris Gotterup",
-      "toPar": "-10",
-      "thru": "9",
-      "today": "-1"
     },
     {
       "position": "T7",
@@ -57,14 +57,14 @@
       "position": "T7",
       "player": "Ludvig \u00c5berg",
       "toPar": "-9",
-      "thru": "13",
+      "thru": "14",
       "today": "-2"
     },
     {
       "position": "T7",
       "player": "Collin Morikawa",
       "toPar": "-9",
-      "thru": "9",
+      "thru": "11",
       "today": "E"
     },
     {
@@ -78,36 +78,36 @@
       "position": "T10",
       "player": "Russell Henley",
       "toPar": "-8",
-      "thru": "16",
+      "thru": "17",
       "today": "-3"
     },
     {
       "position": "T10",
       "player": "Jacob Bridgeman",
       "toPar": "-8",
-      "thru": "16",
+      "thru": "17",
       "today": "-3"
     },
     {
       "position": "T10",
       "player": "Sam Burns",
       "toPar": "-8",
-      "thru": "14",
+      "thru": "15",
       "today": "-2"
-    },
-    {
-      "position": "T10",
-      "player": "Justin Rose",
-      "toPar": "-8",
-      "thru": "11",
-      "today": "-1"
     },
     {
       "position": "T10",
       "player": "Cameron Young",
       "toPar": "-8",
-      "thru": "10",
+      "thru": "12",
       "today": "E"
+    },
+    {
+      "position": "T15",
+      "player": "Wyndham Clark",
+      "toPar": "-7",
+      "thru": "F",
+      "today": "-3"
     }
   ]
 }
