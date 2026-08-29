@@ -2,7 +2,7 @@
   "tournament": "TOUR Championship",
   "tournamentId": "R2026060",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-29T17:39:02.128648Z",
+  "updatedUtc": "2026-08-29T17:52:16.265006Z",
   "players": [
     {
       "position": "T1",
@@ -78,36 +78,36 @@
       "position": "T11",
       "player": "Tommy Fleetwood",
       "toPar": "-6",
-      "thru": "4",
+      "thru": "5",
       "today": "-2"
     },
     {
       "position": "T11",
-      "player": "Sam Burns",
+      "player": "Alex Smalley",
       "toPar": "-6",
-      "thru": "",
-      "today": "-"
+      "thru": "3",
+      "today": "-1"
     },
     {
       "position": "T11",
-      "player": "Gary Woodland",
+      "player": "Jacob Bridgeman",
       "toPar": "-6",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T11",
-      "player": "Akshay Bhatia",
-      "toPar": "-6",
-      "thru": "",
-      "today": "-"
+      "thru": "2",
+      "today": "-1"
     },
     {
       "position": "T11",
       "player": "Ryan Fox",
       "toPar": "-6",
-      "thru": "",
-      "today": "-"
+      "thru": "1",
+      "today": "E"
+    },
+    {
+      "position": "T11",
+      "player": "Akshay Bhatia",
+      "toPar": "-6",
+      "thru": "1",
+      "today": "E"
     }
   ]
 }
