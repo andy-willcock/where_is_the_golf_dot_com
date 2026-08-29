@@ -2,112 +2,112 @@
   "tournament": "TOUR Championship",
   "tournamentId": "R2026060",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-29T15:52:08.997757Z",
+  "updatedUtc": "2026-08-29T16:09:19.197169Z",
   "players": [
     {
       "position": "T1",
       "player": "Ryan Gerard",
       "toPar": "-10",
-      "thru": "F",
-      "today": "-5"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T1",
       "player": "Viktor Hovland",
       "toPar": "-10",
-      "thru": "F",
-      "today": "-4"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T3",
       "player": "Collin Morikawa",
       "toPar": "-9",
-      "thru": "F",
-      "today": "-3"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T3",
       "player": "Chris Gotterup",
       "toPar": "-9",
-      "thru": "F",
-      "today": "-3"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T5",
       "player": "Cameron Young",
       "toPar": "-8",
-      "thru": "F",
-      "today": "-8"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T5",
       "player": "Scottie Scheffler",
       "toPar": "-8",
-      "thru": "F",
-      "today": "-3"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T7",
       "player": "Justin Rose",
       "toPar": "-7",
-      "thru": "F",
-      "today": "-5"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T7",
       "player": "Matt Fitzpatrick",
       "toPar": "-7",
-      "thru": "F",
-      "today": "-3"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T7",
       "player": "Adam Scott",
       "toPar": "-7",
-      "thru": "F",
-      "today": "-3"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T7",
       "player": "Ludvig \u00c5berg",
       "toPar": "-7",
-      "thru": "F",
-      "today": "-2"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T11",
       "player": "Sam Burns",
       "toPar": "-6",
-      "thru": "F",
-      "today": "-2"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T11",
       "player": "Gary Woodland",
       "toPar": "-6",
-      "thru": "F",
-      "today": "-2"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T11",
       "player": "Ryan Fox",
       "toPar": "-6",
-      "thru": "F",
-      "today": "-2"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T11",
       "player": "Akshay Bhatia",
       "toPar": "-6",
-      "thru": "F",
-      "today": "-1"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T15",
       "player": "Russell Henley",
       "toPar": "-5",
-      "thru": "F",
-      "today": "-5"
+      "thru": "",
+      "today": "-"
     }
   ]
 }
