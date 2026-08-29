@@ -2,7 +2,7 @@
   "tournament": "TOUR Championship",
   "tournamentId": "R2026060",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-29T17:52:16.265006Z",
+  "updatedUtc": "2026-08-29T18:09:24.944558Z",
   "players": [
     {
       "position": "T1",
@@ -48,6 +48,13 @@
     },
     {
       "position": "T7",
+      "player": "Tommy Fleetwood",
+      "toPar": "-7",
+      "thru": "6",
+      "today": "-3"
+    },
+    {
+      "position": "T7",
       "player": "Justin Rose",
       "toPar": "-7",
       "thru": "",
@@ -62,51 +69,44 @@
     },
     {
       "position": "T7",
-      "player": "Adam Scott",
-      "toPar": "-7",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T7",
       "player": "Ludvig \u00c5berg",
       "toPar": "-7",
       "thru": "",
       "today": "-"
     },
     {
-      "position": "T11",
-      "player": "Tommy Fleetwood",
-      "toPar": "-6",
-      "thru": "5",
-      "today": "-2"
+      "position": "T7",
+      "player": "Adam Scott",
+      "toPar": "-7",
+      "thru": "",
+      "today": "-"
     },
     {
-      "position": "T11",
-      "player": "Alex Smalley",
+      "position": "T12",
+      "player": "Rory McIlroy",
+      "toPar": "-6",
+      "thru": "7",
+      "today": "-3"
+    },
+    {
+      "position": "T12",
+      "player": "Jacob Bridgeman",
       "toPar": "-6",
       "thru": "3",
       "today": "-1"
     },
     {
-      "position": "T11",
-      "player": "Jacob Bridgeman",
-      "toPar": "-6",
-      "thru": "2",
-      "today": "-1"
-    },
-    {
-      "position": "T11",
+      "position": "T12",
       "player": "Ryan Fox",
       "toPar": "-6",
-      "thru": "1",
+      "thru": "2",
       "today": "E"
     },
     {
-      "position": "T11",
+      "position": "T12",
       "player": "Akshay Bhatia",
       "toPar": "-6",
-      "thru": "1",
+      "thru": "2",
       "today": "E"
     }
   ]
