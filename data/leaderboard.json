@@ -2,7 +2,7 @@
   "tournament": "TOUR Championship",
   "tournamentId": "R2026060",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-29T22:52:21.458965Z",
+  "updatedUtc": "2026-08-29T23:09:06.058032Z",
   "players": [
     {
       "position": "1",
@@ -14,9 +14,9 @@
     {
       "position": "2",
       "player": "Ryan Gerard",
-      "toPar": "-13",
-      "thru": "17",
-      "today": "-3"
+      "toPar": "-14",
+      "thru": "F",
+      "today": "-4"
     },
     {
       "position": "T3",
