@@ -2,20 +2,20 @@
   "tournament": "TOUR Championship",
   "tournamentId": "R2026060",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-29T22:22:32.292985Z",
+  "updatedUtc": "2026-08-29T22:39:01.568612Z",
   "players": [
     {
-      "position": "T1",
-      "player": "Ryan Gerard",
-      "toPar": "-13",
-      "thru": "16",
-      "today": "-3"
+      "position": "1",
+      "player": "Viktor Hovland",
+      "toPar": "-14",
+      "thru": "17",
+      "today": "-4"
     },
     {
-      "position": "T1",
-      "player": "Viktor Hovland",
+      "position": "2",
+      "player": "Ryan Gerard",
       "toPar": "-13",
-      "thru": "16",
+      "thru": "17",
       "today": "-3"
     },
     {
@@ -36,57 +36,57 @@
       "position": "T3",
       "player": "Scottie Scheffler",
       "toPar": "-12",
-      "thru": "17",
+      "thru": "F",
       "today": "-4"
     },
     {
       "position": "6",
       "player": "Chris Gotterup",
       "toPar": "-11",
-      "thru": "16",
+      "thru": "17",
       "today": "-2"
     },
     {
-      "position": "7",
+      "position": "T7",
       "player": "Rory McIlroy",
       "toPar": "-10",
       "thru": "F",
       "today": "-7"
     },
     {
-      "position": "T8",
+      "position": "T7",
+      "player": "Cameron Young",
+      "toPar": "-10",
+      "thru": "F",
+      "today": "-2"
+    },
+    {
+      "position": "T9",
       "player": "Min Woo Lee",
       "toPar": "-9",
       "thru": "F",
       "today": "-4"
     },
     {
-      "position": "T8",
+      "position": "T9",
       "player": "Russell Henley",
       "toPar": "-9",
       "thru": "F",
       "today": "-4"
     },
     {
-      "position": "T8",
+      "position": "T9",
       "player": "Jacob Bridgeman",
       "toPar": "-9",
       "thru": "F",
       "today": "-4"
     },
     {
-      "position": "T8",
+      "position": "T9",
       "player": "Sam Burns",
       "toPar": "-9",
       "thru": "F",
       "today": "-3"
-    },
-    {
-      "position": "T8",
-      "player": "Cameron Young",
-      "toPar": "-9",
-      "thru": "17",
-      "today": "-1"
     },
     {
       "position": "T13",
