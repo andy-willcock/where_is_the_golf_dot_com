@@ -2,20 +2,20 @@
   "tournament": "TOUR Championship",
   "tournamentId": "R2026060",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-29T22:09:13.385482Z",
+  "updatedUtc": "2026-08-29T22:22:32.292985Z",
   "players": [
     {
       "position": "T1",
       "player": "Ryan Gerard",
       "toPar": "-13",
-      "thru": "15",
+      "thru": "16",
       "today": "-3"
     },
     {
       "position": "T1",
       "player": "Viktor Hovland",
       "toPar": "-13",
-      "thru": "15",
+      "thru": "16",
       "today": "-3"
     },
     {
@@ -33,17 +33,17 @@
       "today": "-5"
     },
     {
-      "position": "T5",
+      "position": "T3",
       "player": "Scottie Scheffler",
-      "toPar": "-11",
-      "thru": "16",
-      "today": "-3"
+      "toPar": "-12",
+      "thru": "17",
+      "today": "-4"
     },
     {
-      "position": "T5",
+      "position": "6",
       "player": "Chris Gotterup",
       "toPar": "-11",
-      "thru": "15",
+      "thru": "16",
       "today": "-2"
     },
     {
@@ -85,7 +85,7 @@
       "position": "T8",
       "player": "Cameron Young",
       "toPar": "-9",
-      "thru": "16",
+      "thru": "17",
       "today": "-1"
     },
     {
@@ -97,17 +97,17 @@
     },
     {
       "position": "T13",
-      "player": "Matt Fitzpatrick",
+      "player": "Justin Rose",
       "toPar": "-8",
-      "thru": "17",
+      "thru": "F",
       "today": "-1"
     },
     {
-      "position": "T15",
-      "player": "Wyndham Clark",
-      "toPar": "-7",
+      "position": "T13",
+      "player": "Matt Fitzpatrick",
+      "toPar": "-8",
       "thru": "F",
-      "today": "-3"
+      "today": "-1"
     }
   ]
 }
