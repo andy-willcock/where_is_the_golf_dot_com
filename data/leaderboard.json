@@ -2,7 +2,7 @@
   "tournament": "TOUR Championship",
   "tournamentId": "R2026060",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-29T17:09:15.892802Z",
+  "updatedUtc": "2026-08-29T17:22:16.044819Z",
   "players": [
     {
       "position": "T1",
@@ -104,10 +104,10 @@
     },
     {
       "position": "T15",
-      "player": "Russell Henley",
+      "player": "Tommy Fleetwood",
       "toPar": "-5",
-      "thru": "",
-      "today": "-"
+      "thru": "3",
+      "today": "-1"
     }
   ]
 }
