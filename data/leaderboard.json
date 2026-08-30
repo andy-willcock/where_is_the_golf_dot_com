@@ -2,7 +2,7 @@
   "tournament": "TOUR Championship",
   "tournamentId": "R2026060",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-30T21:52:32.044608Z",
+  "updatedUtc": "2026-08-30T22:09:03.065316Z",
   "players": [
     {
       "position": "1",
@@ -15,14 +15,14 @@
       "position": "2",
       "player": "Viktor Hovland",
       "toPar": "-13",
-      "thru": "17",
+      "thru": "F",
       "today": "+2"
     },
     {
       "position": "3",
       "player": "Ryan Gerard",
       "toPar": "-12",
-      "thru": "17",
+      "thru": "F",
       "today": "+2"
     },
     {
