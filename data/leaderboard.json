@@ -2,41 +2,41 @@
   "tournament": "TOUR Championship",
   "tournamentId": "R2026060",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-30T20:22:25.721921Z",
+  "updatedUtc": "2026-08-30T20:38:50.632618Z",
   "players": [
     {
       "position": "1",
       "player": "Scottie Scheffler",
-      "toPar": "-16",
-      "thru": "13",
-      "today": "-4"
+      "toPar": "-15",
+      "thru": "14",
+      "today": "-3"
     },
     {
       "position": "2",
       "player": "Viktor Hovland",
-      "toPar": "-15",
-      "thru": "11",
-      "today": "E"
+      "toPar": "-14",
+      "thru": "13",
+      "today": "+1"
     },
     {
       "position": "3",
       "player": "Chris Gotterup",
       "toPar": "-13",
-      "thru": "13",
+      "thru": "14",
       "today": "-1"
     },
     {
       "position": "T4",
       "player": "Adam Scott",
       "toPar": "-12",
-      "thru": "12",
+      "thru": "13",
       "today": "E"
     },
     {
       "position": "T4",
       "player": "Ryan Gerard",
       "toPar": "-12",
-      "thru": "11",
+      "thru": "13",
       "today": "+2"
     },
     {
@@ -48,16 +48,16 @@
     },
     {
       "position": "T6",
-      "player": "Cameron Young",
+      "player": "Jacob Bridgeman",
       "toPar": "-11",
-      "thru": "14",
-      "today": "-1"
+      "thru": "F",
+      "today": "-2"
     },
     {
       "position": "T6",
       "player": "Ludvig \u00c5berg",
       "toPar": "-11",
-      "thru": "12",
+      "thru": "13",
       "today": "+1"
     },
     {
@@ -69,30 +69,30 @@
     },
     {
       "position": "T9",
-      "player": "Si Woo Kim",
-      "toPar": "-10",
-      "thru": "17",
-      "today": "-2"
-    },
-    {
-      "position": "T9",
-      "player": "Jacob Bridgeman",
+      "player": "Min Woo Lee",
       "toPar": "-10",
       "thru": "16",
       "today": "-1"
     },
     {
       "position": "T9",
-      "player": "Min Woo Lee",
+      "player": "Russell Henley",
       "toPar": "-10",
-      "thru": "15",
+      "thru": "16",
       "today": "-1"
     },
     {
       "position": "T9",
       "player": "Rory McIlroy",
       "toPar": "-10",
-      "thru": "14",
+      "thru": "15",
+      "today": "E"
+    },
+    {
+      "position": "T9",
+      "player": "Cameron Young",
+      "toPar": "-10",
+      "thru": "15",
       "today": "E"
     },
     {
