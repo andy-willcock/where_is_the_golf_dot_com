@@ -1,5 +1,5 @@
 {
-  "lastUpdatedUtc": "2026-08-29T23:20:06.799606Z",
+  "lastUpdatedUtc": "2026-08-30T11:20:15.986950Z",
   "tournament": {
     "name": "TOUR Championship",
     "course": "",
@@ -183,7 +183,7 @@
       "provider": "PGA TOUR LIVE Betcast presented by DraftKings",
       "feed": "Full Telecast",
       "type": "streaming",
-      "startUtc": "2026-08-30T15:00:00Z",
+      "startUtc": "2026-08-30T15:15:00Z",
       "endUtc": "2026-08-30T16:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
