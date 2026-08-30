@@ -2,7 +2,7 @@
   "tournament": "TOUR Championship",
   "tournamentId": "R2026060",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-30T16:39:08.898644Z",
+  "updatedUtc": "2026-08-30T16:52:32.012049Z",
   "players": [
     {
       "position": "1",
@@ -92,22 +92,22 @@
       "position": "T13",
       "player": "Tom Kim",
       "toPar": "-8",
-      "thru": "3",
+      "thru": "4",
       "today": "-1"
     },
     {
       "position": "T13",
       "player": "Si Woo Kim",
       "toPar": "-8",
-      "thru": "",
-      "today": "-"
+      "thru": "1",
+      "today": "E"
     },
     {
-      "position": "T13",
-      "player": "Justin Rose",
-      "toPar": "-8",
-      "thru": "",
-      "today": "-"
+      "position": "T15",
+      "player": "Collin Morikawa",
+      "toPar": "-7",
+      "thru": "4",
+      "today": "E"
     }
   ]
 }
