@@ -2,7 +2,7 @@
   "tournament": "TOUR Championship",
   "tournamentId": "R2026060",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-30T16:52:32.012049Z",
+  "updatedUtc": "2026-08-30T17:09:25.524611Z",
   "players": [
     {
       "position": "1",
@@ -48,6 +48,13 @@
     },
     {
       "position": "T7",
+      "player": "Jacob Bridgeman",
+      "toPar": "-10",
+      "thru": "2",
+      "today": "-1"
+    },
+    {
+      "position": "T7",
       "player": "Rory McIlroy",
       "toPar": "-10",
       "thru": "",
@@ -61,52 +68,45 @@
       "today": "-"
     },
     {
-      "position": "T9",
+      "position": "T10",
+      "player": "Tom Kim",
+      "toPar": "-9",
+      "thru": "5",
+      "today": "-2"
+    },
+    {
+      "position": "T10",
+      "player": "Sam Burns",
+      "toPar": "-9",
+      "thru": "2",
+      "today": "E"
+    },
+    {
+      "position": "T10",
       "player": "Min Woo Lee",
       "toPar": "-9",
       "thru": "",
       "today": "-"
     },
     {
-      "position": "T9",
+      "position": "T10",
       "player": "Russell Henley",
       "toPar": "-9",
       "thru": "",
       "today": "-"
     },
     {
-      "position": "T9",
-      "player": "Jacob Bridgeman",
-      "toPar": "-9",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T9",
-      "player": "Sam Burns",
-      "toPar": "-9",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T13",
-      "player": "Tom Kim",
-      "toPar": "-8",
-      "thru": "4",
-      "today": "-1"
-    },
-    {
-      "position": "T13",
+      "position": "14",
       "player": "Si Woo Kim",
       "toPar": "-8",
-      "thru": "1",
+      "thru": "3",
       "today": "E"
     },
     {
       "position": "T15",
       "player": "Collin Morikawa",
       "toPar": "-7",
-      "thru": "4",
+      "thru": "5",
       "today": "E"
     }
   ]
