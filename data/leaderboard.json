@@ -2,112 +2,112 @@
   "tournament": "TOUR Championship",
   "tournamentId": "R2026060",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-08-30T19:09:31.822717Z",
+  "updatedUtc": "2026-08-30T19:22:39.259184Z",
   "players": [
     {
-      "position": "1",
-      "player": "Viktor Hovland",
+      "position": "T1",
+      "player": "Scottie Scheffler",
       "toPar": "-14",
-      "thru": "5",
-      "today": "+1"
+      "thru": "8",
+      "today": "-2"
     },
     {
-      "position": "2",
-      "player": "Scottie Scheffler",
-      "toPar": "-13",
-      "thru": "7",
-      "today": "-1"
+      "position": "T1",
+      "player": "Viktor Hovland",
+      "toPar": "-14",
+      "thru": "6",
+      "today": "+1"
     },
     {
       "position": "T3",
       "player": "Chris Gotterup",
       "toPar": "-12",
-      "thru": "7",
+      "thru": "8",
       "today": "E"
     },
     {
       "position": "T3",
       "player": "Adam Scott",
       "toPar": "-12",
-      "thru": "6",
+      "thru": "7",
       "today": "E"
     },
     {
       "position": "T3",
       "player": "Ryan Gerard",
       "toPar": "-12",
-      "thru": "5",
+      "thru": "6",
       "today": "+2"
     },
     {
       "position": "T6",
       "player": "Russell Henley",
       "toPar": "-11",
-      "thru": "9",
+      "thru": "10",
       "today": "-2"
     },
     {
       "position": "T6",
       "player": "Cameron Young",
       "toPar": "-11",
-      "thru": "8",
+      "thru": "9",
       "today": "-1"
     },
     {
       "position": "T6",
       "player": "Ludvig \u00c5berg",
       "toPar": "-11",
-      "thru": "6",
+      "thru": "7",
       "today": "+1"
+    },
+    {
+      "position": "T9",
+      "player": "Alex Fitzpatrick",
+      "toPar": "-10",
+      "thru": "15",
+      "today": "-3"
     },
     {
       "position": "T9",
       "player": "Si Woo Kim",
       "toPar": "-10",
-      "thru": "12",
+      "thru": "13",
       "today": "-2"
     },
     {
       "position": "T9",
       "player": "Sam Burns",
       "toPar": "-10",
-      "thru": "11",
+      "thru": "12",
       "today": "-1"
     },
     {
       "position": "T9",
       "player": "Min Woo Lee",
       "toPar": "-10",
-      "thru": "9",
+      "thru": "10",
       "today": "-1"
     },
     {
-      "position": "T12",
+      "position": "T13",
+      "player": "Tom Kim",
+      "toPar": "-9",
+      "thru": "16",
+      "today": "-2"
+    },
+    {
+      "position": "T13",
       "player": "Collin Morikawa",
       "toPar": "-9",
-      "thru": "15",
+      "thru": "16",
       "today": "-2"
     },
     {
-      "position": "T12",
-      "player": "Alex Fitzpatrick",
-      "toPar": "-9",
-      "thru": "14",
-      "today": "-2"
-    },
-    {
-      "position": "T12",
+      "position": "T13",
       "player": "Justin Rose",
       "toPar": "-9",
-      "thru": "12",
+      "thru": "13",
       "today": "-1"
-    },
-    {
-      "position": "T12",
-      "player": "Jacob Bridgeman",
-      "toPar": "-9",
-      "thru": "11",
-      "today": "E"
     }
   ]
 }
