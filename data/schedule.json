@@ -1,5 +1,5 @@
 {
-  "lastUpdatedUtc": "2026-09-11T11:29:30.836963Z",
+  "lastUpdatedUtc": "2026-09-11T23:23:30.731906Z",
   "tournament": {
     "name": "Biltmore Championship Asheville",
     "course": "The Cliffs at Walnut Cove",
@@ -117,9 +117,9 @@
     "failedSources": [
       "No windows parsed: https://www.pgatour.com/tournaments/2026/biltmore-championship-asheville/R2026557/overview",
       "No windows parsed: https://www.pgatour.com/article/news/latest/2025/11/10/biltmore-championship-asheville-north-carolina-new-event-pga-tour-schedule-2026-fedexcup-fall",
+      "No windows parsed: https://www.golfchannel.com/pga-tour/2026/biltmore-championship-asheville?p=0000019a-ea8d-d39c-ab9b-fefd1ada0001.14",
       "No windows parsed: https://www.golfchannel.com/pga-tour/2026/biltmore-championship-asheville?p=0000019a-ea8d-d39c-ab9b-fefd1ada0001.50",
       "No windows parsed: https://www.golfchannel.com/pga-tour/2026/biltmore-championship-asheville",
-      "No windows parsed: https://www.cbssports.com/golf/news/pga-tour-fedex-cup-fall-schedule-2026/",
       "No windows parsed: https://www.cbssports.com/golf/news/open-championship-2026-tv-schedule-coverage-where-to-watch-live-stream/"
     ],
     "sourceTimezone": "America/New_York",
