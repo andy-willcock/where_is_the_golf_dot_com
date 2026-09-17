@@ -1,113 +1,113 @@
 {
-  "tournament": "TOUR Championship",
-  "tournamentId": "R2026060",
+  "tournament": "Biltmore Championship Asheville",
+  "tournamentId": "R2026557",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-09-11T00:04:18.721932Z",
+  "updatedUtc": "2026-09-17T12:22:08.833750Z",
   "players": [
     {
-      "position": "1",
-      "player": "Scottie Scheffler",
-      "toPar": "-16",
-      "thru": "F",
-      "today": "-4"
-    },
-    {
-      "position": "2",
-      "player": "Viktor Hovland",
-      "toPar": "-13",
-      "thru": "F",
-      "today": "+2"
-    },
-    {
-      "position": "3",
-      "player": "Ryan Gerard",
-      "toPar": "-12",
-      "thru": "F",
-      "today": "+2"
-    },
-    {
-      "position": "T4",
-      "player": "Alex Fitzpatrick",
-      "toPar": "-11",
-      "thru": "F",
-      "today": "-4"
-    },
-    {
-      "position": "T4",
-      "player": "Jacob Bridgeman",
-      "toPar": "-11",
-      "thru": "F",
-      "today": "-2"
-    },
-    {
-      "position": "T4",
-      "player": "Min Woo Lee",
-      "toPar": "-11",
-      "thru": "F",
-      "today": "-2"
-    },
-    {
-      "position": "T4",
-      "player": "Russell Henley",
-      "toPar": "-11",
-      "thru": "F",
-      "today": "-2"
-    },
-    {
-      "position": "T4",
-      "player": "Rory McIlroy",
-      "toPar": "-11",
-      "thru": "F",
-      "today": "-1"
-    },
-    {
-      "position": "T4",
-      "player": "Chris Gotterup",
-      "toPar": "-11",
-      "thru": "F",
-      "today": "+1"
-    },
-    {
-      "position": "T4",
-      "player": "Ludvig \u00c5berg",
-      "toPar": "-11",
-      "thru": "F",
-      "today": "+1"
-    },
-    {
-      "position": "T11",
-      "player": "Tommy Fleetwood",
-      "toPar": "-10",
-      "thru": "F",
-      "today": "-3"
-    },
-    {
-      "position": "T11",
-      "player": "Cameron Young",
-      "toPar": "-10",
-      "thru": "F",
+      "position": "T1",
+      "player": "Nick Hardy",
+      "toPar": "E",
+      "thru": "1",
       "today": "E"
     },
     {
-      "position": "T11",
-      "player": "Adam Scott",
-      "toPar": "-10",
-      "thru": "F",
+      "position": "T1",
+      "player": "Mark Hubbard",
+      "toPar": "E",
+      "thru": "1",
+      "today": "E"
+    },
+    {
+      "position": "T1",
+      "player": "Ryan Brehm",
+      "toPar": "E",
+      "thru": "1*",
+      "today": "E"
+    },
+    {
+      "position": "T1",
+      "player": "Troy Merritt",
+      "toPar": "E",
+      "thru": "1*",
+      "today": "E"
+    },
+    {
+      "position": "T1",
+      "player": "Justin Lower",
+      "toPar": "E",
+      "thru": "1*",
+      "today": "E"
+    },
+    {
+      "position": "6",
+      "player": "Robert Streb",
+      "toPar": "+2",
+      "thru": "1",
       "today": "+2"
     },
     {
-      "position": "T14",
-      "player": "Xander Schauffele",
-      "toPar": "-9",
-      "thru": "F",
-      "today": "-4"
+      "position": "-",
+      "player": "Emiliano Grillo",
+      "toPar": "-",
+      "thru": "",
+      "today": "-"
     },
     {
-      "position": "T14",
-      "player": "Tom Kim",
-      "toPar": "-9",
-      "thru": "F",
-      "today": "-2"
+      "position": "-",
+      "player": "Chad Ramey",
+      "toPar": "-",
+      "thru": "",
+      "today": "-"
+    },
+    {
+      "position": "-",
+      "player": "John Parry",
+      "toPar": "-",
+      "thru": "",
+      "today": "-"
+    },
+    {
+      "position": "-",
+      "player": "Nick Dunlap",
+      "toPar": "-",
+      "thru": "",
+      "today": "-"
+    },
+    {
+      "position": "-",
+      "player": "Henrik Norlander",
+      "toPar": "-",
+      "thru": "",
+      "today": "-"
+    },
+    {
+      "position": "-",
+      "player": "Zach Bauchou",
+      "toPar": "-",
+      "thru": "",
+      "today": "-"
+    },
+    {
+      "position": "-",
+      "player": "Chandler Phillips",
+      "toPar": "-",
+      "thru": "",
+      "today": "-"
+    },
+    {
+      "position": "-",
+      "player": "Will Gordon",
+      "toPar": "-",
+      "thru": "",
+      "today": "-"
+    },
+    {
+      "position": "-",
+      "player": "Hank Lebioda",
+      "toPar": "-",
+      "thru": "",
+      "today": "-"
     }
   ]
 }
