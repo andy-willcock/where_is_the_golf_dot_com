@@ -2,7 +2,7 @@
   "tournament": "Biltmore Championship Asheville",
   "tournamentId": "R2026557",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-09-18T21:40:24.607595Z",
+  "updatedUtc": "2026-09-18T23:36:40.852835Z",
   "players": [
     {
       "position": "1",
@@ -19,24 +19,24 @@
       "today": "-8"
     },
     {
-      "position": "3",
+      "position": "T3",
       "player": "Ricky Castillo",
       "toPar": "-11",
       "thru": "F",
       "today": "-9"
     },
     {
-      "position": "T4",
+      "position": "T3",
+      "player": "Max Greyserman",
+      "toPar": "-11",
+      "thru": "F*",
+      "today": "-4"
+    },
+    {
+      "position": "5",
       "player": "Eric Cole",
       "toPar": "-10",
       "thru": "F",
-      "today": "-3"
-    },
-    {
-      "position": "T4",
-      "player": "Max Greyserman",
-      "toPar": "-10",
-      "thru": "14*",
       "today": "-3"
     },
     {
@@ -68,46 +68,46 @@
       "today": "-4"
     },
     {
-      "position": "T6",
-      "player": "Chris Kirk",
-      "toPar": "-9",
-      "thru": "17*",
-      "today": "-3"
-    },
-    {
-      "position": "T11",
+      "position": "T10",
       "player": "Steven Fisk",
       "toPar": "-8",
       "thru": "F",
       "today": "-5"
     },
     {
-      "position": "T11",
+      "position": "T10",
       "player": "J.T. Poston",
       "toPar": "-8",
       "thru": "F*",
       "today": "-5"
     },
     {
-      "position": "T11",
+      "position": "T10",
       "player": "Ben James",
       "toPar": "-8",
       "thru": "F*",
       "today": "-4"
     },
     {
-      "position": "T11",
+      "position": "T10",
       "player": "Kevin Roy",
       "toPar": "-8",
       "thru": "F",
       "today": "-4"
     },
     {
-      "position": "T11",
+      "position": "T10",
       "player": "Rico Hoey",
       "toPar": "-8",
       "thru": "F*",
       "today": "-4"
+    },
+    {
+      "position": "T10",
+      "player": "Austin Smotherman",
+      "toPar": "-8",
+      "thru": "F",
+      "today": "-3"
     }
   ]
 }
