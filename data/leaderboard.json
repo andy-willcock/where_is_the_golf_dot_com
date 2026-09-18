@@ -2,7 +2,7 @@
   "tournament": "Biltmore Championship Asheville",
   "tournamentId": "R2026557",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-09-17T23:01:02.640849Z",
+  "updatedUtc": "2026-09-18T01:17:04.844096Z",
   "players": [
     {
       "position": "T1",
@@ -54,60 +54,60 @@
       "today": "-6"
     },
     {
-      "position": "T8",
+      "position": "T3",
+      "player": "Neal Shipley",
+      "toPar": "-6",
+      "thru": "F*",
+      "today": "-6"
+    },
+    {
+      "position": "T9",
       "player": "Cam Davis",
       "toPar": "-5",
       "thru": "F",
       "today": "-5"
     },
     {
-      "position": "T8",
+      "position": "T9",
       "player": "Seamus Power",
       "toPar": "-5",
       "thru": "F",
       "today": "-5"
     },
     {
-      "position": "T8",
+      "position": "T9",
       "player": "Pierceson Coody",
       "toPar": "-5",
       "thru": "F",
       "today": "-5"
     },
     {
-      "position": "T8",
+      "position": "T9",
       "player": "Jacob Bridgeman",
       "toPar": "-5",
       "thru": "F",
       "today": "-5"
     },
     {
-      "position": "T8",
+      "position": "T9",
       "player": "Harry Higgs",
       "toPar": "-5",
-      "thru": "17*",
+      "thru": "F*",
       "today": "-5"
     },
     {
-      "position": "T8",
+      "position": "T9",
       "player": "Austin Smotherman",
       "toPar": "-5",
-      "thru": "17*",
+      "thru": "F*",
       "today": "-5"
     },
     {
-      "position": "T8",
-      "player": "Neal Shipley",
+      "position": "T9",
+      "player": "Gordon Sargent",
       "toPar": "-5",
-      "thru": "16*",
-      "today": "-5"
-    },
-    {
-      "position": "T15",
-      "player": "Chad Ramey",
-      "toPar": "-4",
       "thru": "F",
-      "today": "-4"
+      "today": "-5"
     }
   ]
 }
