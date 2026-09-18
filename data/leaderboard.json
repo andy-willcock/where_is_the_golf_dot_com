@@ -2,7 +2,7 @@
   "tournament": "Biltmore Championship Asheville",
   "tournamentId": "R2026557",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-09-18T19:05:00.673994Z",
+  "updatedUtc": "2026-09-18T21:40:24.607595Z",
   "players": [
     {
       "position": "1",
@@ -13,101 +13,101 @@
     },
     {
       "position": "2",
+      "player": "Ben Kohles",
+      "toPar": "-14",
+      "thru": "F",
+      "today": "-8"
+    },
+    {
+      "position": "3",
       "player": "Ricky Castillo",
       "toPar": "-11",
       "thru": "F",
       "today": "-9"
     },
     {
-      "position": "T3",
+      "position": "T4",
       "player": "Eric Cole",
       "toPar": "-10",
       "thru": "F",
       "today": "-3"
     },
     {
-      "position": "T3",
-      "player": "Ben Kohles",
+      "position": "T4",
+      "player": "Max Greyserman",
       "toPar": "-10",
-      "thru": "9",
-      "today": "-4"
+      "thru": "14*",
+      "today": "-3"
     },
     {
-      "position": "T5",
+      "position": "T6",
       "player": "Seamus Power",
       "toPar": "-9",
       "thru": "F*",
       "today": "-4"
     },
     {
-      "position": "T5",
+      "position": "T6",
       "player": "Jackson Suber",
       "toPar": "-9",
       "thru": "F*",
       "today": "-3"
     },
     {
-      "position": "T5",
+      "position": "T6",
       "player": "Jacob Bridgeman",
       "toPar": "-9",
       "thru": "F*",
       "today": "-4"
     },
     {
-      "position": "T5",
+      "position": "T6",
       "player": "Pontus Nyholm",
       "toPar": "-9",
       "thru": "F*",
       "today": "-4"
     },
     {
-      "position": "T9",
+      "position": "T6",
+      "player": "Chris Kirk",
+      "toPar": "-9",
+      "thru": "17*",
+      "today": "-3"
+    },
+    {
+      "position": "T11",
       "player": "Steven Fisk",
       "toPar": "-8",
       "thru": "F",
       "today": "-5"
     },
     {
-      "position": "T9",
+      "position": "T11",
       "player": "J.T. Poston",
       "toPar": "-8",
       "thru": "F*",
       "today": "-5"
     },
     {
-      "position": "T9",
+      "position": "T11",
       "player": "Ben James",
       "toPar": "-8",
       "thru": "F*",
       "today": "-4"
     },
     {
-      "position": "T9",
+      "position": "T11",
       "player": "Kevin Roy",
       "toPar": "-8",
       "thru": "F",
       "today": "-4"
     },
     {
-      "position": "T9",
+      "position": "T11",
       "player": "Rico Hoey",
       "toPar": "-8",
       "thru": "F*",
       "today": "-4"
-    },
-    {
-      "position": "T9",
-      "player": "Austin Smotherman",
-      "toPar": "-8",
-      "thru": "F",
-      "today": "-3"
-    },
-    {
-      "position": "T9",
-      "player": "John VanDerLaan",
-      "toPar": "-8",
-      "thru": "F",
-      "today": "-5"
     }
   ]
 }
