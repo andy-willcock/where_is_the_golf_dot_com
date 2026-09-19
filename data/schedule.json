@@ -1,5 +1,5 @@
 {
-  "lastUpdatedUtc": "2026-09-19T14:29:00.491379Z",
+  "lastUpdatedUtc": "2026-09-19T19:19:20.666689Z",
   "tournament": {
     "name": "Biltmore Championship Asheville",
     "course": "",
@@ -60,25 +60,37 @@
     {
       "id": "coverage-5",
       "round": "Final Round",
+      "provider": "CNBC",
+      "feed": "Full Telecast",
+      "type": "tv",
+      "startUtc": "2026-09-20T16:00:00Z",
+      "endUtc": "2026-09-20T16:30:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-6",
+      "round": "Final Round",
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-09-20T17:00:00Z",
-      "endUtc": "2026-09-20T20:00:00Z",
+      "startUtc": "2026-09-20T16:30:00Z",
+      "endUtc": "2026-09-20T19:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
     }
   ],
   "collection": {
-    "score": 79,
+    "score": 84,
     "warnings": [],
     "sources": [
       {
         "url": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
         "domain": "pgatourmedia.pgatourhq.com",
         "title": "PGA TOUR Media Broadcast Schedule",
-        "parsedWindows": 5
+        "parsedWindows": 6
       }
     ],
     "failedSources": [],
