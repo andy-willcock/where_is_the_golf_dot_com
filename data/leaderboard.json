@@ -2,112 +2,112 @@
   "tournament": "Biltmore Championship Asheville",
   "tournamentId": "R2026557",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-09-20T15:55:02.424844Z",
+  "updatedUtc": "2026-09-20T18:40:25.026746Z",
   "players": [
     {
       "position": "1",
-      "player": "Neal Shipley",
+      "player": "Jacob Bridgeman",
+      "toPar": "-22",
+      "thru": "12",
+      "today": "-6"
+    },
+    {
+      "position": "T2",
+      "player": "J.T. Poston",
       "toPar": "-21",
-      "thru": "2",
-      "today": "E"
+      "thru": "F*",
+      "today": "-11"
+    },
+    {
+      "position": "T2",
+      "player": "Ben James",
+      "toPar": "-21",
+      "thru": "14",
+      "today": "-7"
     },
     {
       "position": "T2",
       "player": "Ricky Castillo",
-      "toPar": "-19",
-      "thru": "2",
-      "today": "-2"
+      "toPar": "-21",
+      "thru": "12",
+      "today": "-4"
     },
     {
       "position": "T2",
-      "player": "Ben Kohles",
-      "toPar": "-19",
-      "thru": "2",
-      "today": "+1"
+      "player": "Neal Shipley",
+      "toPar": "-21",
+      "thru": "11",
+      "today": "E"
     },
     {
-      "position": "4",
-      "player": "Ben James",
+      "position": "T6",
+      "player": "Chris Kirk",
       "toPar": "-18",
-      "thru": "4",
-      "today": "-4"
+      "thru": "16",
+      "today": "-5"
     },
     {
-      "position": "T5",
+      "position": "T6",
       "player": "Jackson Suber",
-      "toPar": "-17",
-      "thru": "6",
+      "toPar": "-18",
+      "thru": "16",
+      "today": "-5"
+    },
+    {
+      "position": "T6",
+      "player": "John VanDerLaan",
+      "toPar": "-18",
+      "thru": "14",
       "today": "-4"
     },
     {
-      "position": "T5",
-      "player": "Jacob Bridgeman",
-      "toPar": "-17",
-      "thru": "2",
-      "today": "-1"
-    },
-    {
-      "position": "T7",
-      "player": "Adam Hadwin",
-      "toPar": "-16",
-      "thru": "8",
-      "today": "-5"
-    },
-    {
-      "position": "T7",
+      "position": "T6",
       "player": "Seamus Power",
-      "toPar": "-16",
-      "thru": "3",
-      "today": "-1"
+      "toPar": "-18",
+      "thru": "14",
+      "today": "-3"
     },
     {
-      "position": "T7",
-      "player": "Haotong Li",
-      "toPar": "-16",
-      "thru": "3",
-      "today": "-1"
-    },
-    {
-      "position": "T7",
-      "player": "Marco Penge",
-      "toPar": "-16",
-      "thru": "3",
-      "today": "-1"
-    },
-    {
-      "position": "T7",
-      "player": "Max Greyserman",
-      "toPar": "-16",
-      "thru": "2",
-      "today": "E"
-    },
-    {
-      "position": "T7",
-      "player": "Eric Cole",
-      "toPar": "-16",
-      "thru": "2",
-      "today": "+1"
-    },
-    {
-      "position": "T13",
-      "player": "J.T. Poston",
-      "toPar": "-15",
-      "thru": "10*",
-      "today": "-5"
-    },
-    {
-      "position": "T13",
-      "player": "John VanDerLaan",
-      "toPar": "-15",
-      "thru": "4",
-      "today": "-1"
-    },
-    {
-      "position": "T13",
+      "position": "T6",
       "player": "Jackson Koivun",
-      "toPar": "-15",
-      "thru": "3",
-      "today": "E"
+      "toPar": "-18",
+      "thru": "13",
+      "today": "-3"
+    },
+    {
+      "position": "T11",
+      "player": "Blades Brown",
+      "toPar": "-17",
+      "thru": "F",
+      "today": "-7"
+    },
+    {
+      "position": "T11",
+      "player": "Peter Malnati",
+      "toPar": "-17",
+      "thru": "F",
+      "today": "-7"
+    },
+    {
+      "position": "T11",
+      "player": "Austin Smotherman",
+      "toPar": "-17",
+      "thru": "F",
+      "today": "-6"
+    },
+    {
+      "position": "T11",
+      "player": "Doug Ghim",
+      "toPar": "-17",
+      "thru": "17*",
+      "today": "-9"
+    },
+    {
+      "position": "T11",
+      "player": "Andrew Novak",
+      "toPar": "-17",
+      "thru": "17",
+      "today": "-5"
     }
   ]
 }
