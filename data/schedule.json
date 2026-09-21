@@ -1,11 +1,11 @@
 {
-  "lastUpdatedUtc": "2026-09-20T23:28:12.419089Z",
+  "lastUpdatedUtc": "2026-09-21T15:27:01.063253Z",
   "tournament": {
-    "name": "Biltmore Championship Asheville",
+    "name": "Presidents Cup",
     "course": "",
     "location": "",
-    "startDate": "2026-09-17",
-    "endDate": "2026-09-20",
+    "startDate": "2026-09-24",
+    "endDate": "2026-09-27",
     "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule"
   },
   "coverage": [
@@ -15,8 +15,8 @@
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-09-17T19:00:00Z",
-      "endUtc": "2026-09-17T22:00:00Z",
+      "startUtc": "2026-09-24T16:30:00Z",
+      "endUtc": "2026-09-24T23:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
@@ -27,8 +27,8 @@
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-09-18T19:00:00Z",
-      "endUtc": "2026-09-18T22:00:00Z",
+      "startUtc": "2026-09-25T18:00:00Z",
+      "endUtc": "2026-09-25T23:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
@@ -39,8 +39,8 @@
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-09-19T16:30:00Z",
-      "endUtc": "2026-09-19T19:00:00Z",
+      "startUtc": "2026-09-26T12:00:00Z",
+      "endUtc": "2026-09-26T13:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
@@ -48,25 +48,61 @@
     {
       "id": "coverage-4",
       "round": "Final Round",
-      "provider": "Golf Channel",
+      "provider": "NBC",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-09-20T16:30:00Z",
-      "endUtc": "2026-09-20T20:30:00Z",
+      "startUtc": "2026-09-26T13:00:00Z",
+      "endUtc": "2026-09-26T23:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-5",
+      "round": "Final Round",
+      "provider": "Peacock",
+      "feed": "Full Telecast",
+      "type": "streaming",
+      "startUtc": "2026-09-26T13:00:00Z",
+      "endUtc": "2026-09-26T23:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-6",
+      "round": "Round 5",
+      "provider": "NBC",
+      "feed": "Full Telecast\n\u00a9 2026 PGA Tour INC. All rights reserved. | 1 PGA TOUR Blvd., Ponte Vedra Beach, FL 32082 |\nTERMS OF SERVICE\n|\nCONTACT US",
+      "type": "tv",
+      "startUtc": "2026-09-27T16:00:00Z",
+      "endUtc": "2026-09-27T22:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-7",
+      "round": "Round 5",
+      "provider": "Peacock",
+      "feed": "Full Telecast",
+      "type": "streaming",
+      "startUtc": "2026-09-27T16:00:00Z",
+      "endUtc": "2026-09-27T22:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
     }
   ],
   "collection": {
-    "score": 72,
+    "score": 111,
     "warnings": [],
     "sources": [
       {
         "url": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
         "domain": "pgatourmedia.pgatourhq.com",
         "title": "PGA TOUR Media Broadcast Schedule",
-        "parsedWindows": 4
+        "parsedWindows": 7
       }
     ],
     "failedSources": [],
