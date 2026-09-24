@@ -1,5 +1,5 @@
 {
-  "lastUpdatedUtc": "2026-09-21T15:27:01.063253Z",
+  "lastUpdatedUtc": "2026-09-24T15:50:29.297286Z",
   "tournament": {
     "name": "Presidents Cup",
     "course": "",
@@ -47,30 +47,54 @@
     },
     {
       "id": "coverage-4",
-      "round": "Final Round",
+      "round": "Round 3",
       "provider": "NBC",
       "feed": "Full Telecast",
       "type": "tv",
       "startUtc": "2026-09-26T13:00:00Z",
-      "endUtc": "2026-09-26T23:00:00Z",
+      "endUtc": "2026-09-26T18:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
     },
     {
       "id": "coverage-5",
-      "round": "Final Round",
+      "round": "Round 3",
       "provider": "Peacock",
       "feed": "Full Telecast",
       "type": "streaming",
       "startUtc": "2026-09-26T13:00:00Z",
-      "endUtc": "2026-09-26T23:00:00Z",
+      "endUtc": "2026-09-26T18:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
     },
     {
       "id": "coverage-6",
+      "round": "Final Round",
+      "provider": "NBC",
+      "feed": "Full Telecast",
+      "type": "tv",
+      "startUtc": "2026-09-26T18:00:00Z",
+      "endUtc": "2026-09-26T23:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-7",
+      "round": "Final Round",
+      "provider": "Peacock",
+      "feed": "Full Telecast",
+      "type": "streaming",
+      "startUtc": "2026-09-26T18:00:00Z",
+      "endUtc": "2026-09-26T23:00:00Z",
+      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
+      "sourceDomain": "pgatourmedia.pgatourhq.com",
+      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+    },
+    {
+      "id": "coverage-8",
       "round": "Round 5",
       "provider": "NBC",
       "feed": "Full Telecast\n\u00a9 2026 PGA Tour INC. All rights reserved. | 1 PGA TOUR Blvd., Ponte Vedra Beach, FL 32082 |\nTERMS OF SERVICE\n|\nCONTACT US",
@@ -82,7 +106,7 @@
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
     },
     {
-      "id": "coverage-7",
+      "id": "coverage-9",
       "round": "Round 5",
       "provider": "Peacock",
       "feed": "Full Telecast",
@@ -95,14 +119,14 @@
     }
   ],
   "collection": {
-    "score": 111,
+    "score": 121,
     "warnings": [],
     "sources": [
       {
         "url": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
         "domain": "pgatourmedia.pgatourhq.com",
         "title": "PGA TOUR Media Broadcast Schedule",
-        "parsedWindows": 7
+        "parsedWindows": 9
       }
     ],
     "failedSources": [],
