@@ -1,113 +1,113 @@
 {
-  "tournament": "Biltmore Championship Asheville",
-  "tournamentId": "R2026557",
+  "tournament": "Bank of Utah Championship",
+  "tournamentId": "R2026554",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-09-21T01:15:07.972018Z",
+  "updatedUtc": "2026-10-01T18:21:28.130460Z",
   "players": [
     {
-      "position": "1",
-      "player": "Jacob Bridgeman",
-      "toPar": "-26",
-      "thru": "F",
-      "today": "-10"
+      "position": "T1",
+      "player": "Sudarshan Yellamaraju",
+      "toPar": "-7",
+      "thru": "17*",
+      "today": "-7"
     },
     {
-      "position": "2",
-      "player": "Ben James",
-      "toPar": "-24",
-      "thru": "F",
-      "today": "-10"
-    },
-    {
-      "position": "T3",
-      "player": "Ricky Castillo",
-      "toPar": "-23",
-      "thru": "F",
-      "today": "-6"
+      "position": "T1",
+      "player": "Steven Fisk",
+      "toPar": "-7",
+      "thru": "13",
+      "today": "-7"
     },
     {
       "position": "T3",
-      "player": "Neal Shipley",
-      "toPar": "-23",
-      "thru": "F",
-      "today": "-2"
-    },
-    {
-      "position": "T5",
-      "player": "J.T. Poston",
-      "toPar": "-21",
-      "thru": "F*",
-      "today": "-11"
-    },
-    {
-      "position": "T5",
-      "player": "Jackson Koivun",
-      "toPar": "-21",
-      "thru": "F",
+      "player": "David Lipsky",
+      "toPar": "-6",
+      "thru": "15",
       "today": "-6"
     },
     {
-      "position": "T7",
-      "player": "Zecheng Dou",
-      "toPar": "-20",
-      "thru": "F",
+      "position": "T3",
+      "player": "Kevin Yu",
+      "toPar": "-6",
+      "thru": "14",
       "today": "-6"
     },
     {
-      "position": "T7",
-      "player": "Seamus Power",
-      "toPar": "-20",
-      "thru": "F",
-      "today": "-5"
-    },
-    {
-      "position": "T7",
-      "player": "Johnny Keefer",
-      "toPar": "-20",
-      "thru": "F",
-      "today": "-6"
-    },
-    {
-      "position": "T10",
-      "player": "Chris Kirk",
-      "toPar": "-19",
-      "thru": "F",
-      "today": "-6"
-    },
-    {
-      "position": "T10",
+      "position": "T3",
       "player": "John VanDerLaan",
-      "toPar": "-19",
-      "thru": "F",
+      "toPar": "-6",
+      "thru": "10",
+      "today": "-6"
+    },
+    {
+      "position": "T6",
+      "player": "Doug Ghim",
+      "toPar": "-5",
+      "thru": "17",
       "today": "-5"
     },
     {
-      "position": "T10",
-      "player": "Haotong Li",
-      "toPar": "-19",
-      "thru": "F",
+      "position": "T6",
+      "player": "Johnny Keefer",
+      "toPar": "-5",
+      "thru": "17*",
+      "today": "-5"
+    },
+    {
+      "position": "T6",
+      "player": "Ben James",
+      "toPar": "-5",
+      "thru": "14*",
+      "today": "-5"
+    },
+    {
+      "position": "T6",
+      "player": "Stephan Jaeger",
+      "toPar": "-5",
+      "thru": "13",
+      "today": "-5"
+    },
+    {
+      "position": "T6",
+      "player": "Zac Blair",
+      "toPar": "-5",
+      "thru": "13*",
+      "today": "-5"
+    },
+    {
+      "position": "T6",
+      "player": "Pontus Nyholm",
+      "toPar": "-5",
+      "thru": "10",
+      "today": "-5"
+    },
+    {
+      "position": "T6",
+      "player": "Alejandro Tosti",
+      "toPar": "-5",
+      "thru": "9*",
+      "today": "-5"
+    },
+    {
+      "position": "T13",
+      "player": "David Skinns",
+      "toPar": "-4",
+      "thru": "15",
       "today": "-4"
     },
     {
-      "position": "T10",
-      "player": "Marco Penge",
-      "toPar": "-19",
-      "thru": "F",
-      "today": "-4"
-    },
-    {
-      "position": "T10",
-      "player": "Max Greyserman",
-      "toPar": "-19",
-      "thru": "F",
-      "today": "-3"
-    },
-    {
-      "position": "T15",
+      "position": "T13",
       "player": "Jackson Suber",
-      "toPar": "-18",
-      "thru": "F",
-      "today": "-5"
+      "toPar": "-4",
+      "thru": "15*",
+      "today": "-4"
+    },
+    {
+      "position": "T13",
+      "player": "Garrick Higgo",
+      "toPar": "-4",
+      "thru": "14",
+      "today": "-4"
     }
   ]
 }
