@@ -2,112 +2,112 @@
   "tournament": "Bank of Utah Championship",
   "tournamentId": "R2026554",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-01T22:52:06.324439Z",
+  "updatedUtc": "2026-10-02T02:06:47.514961Z",
   "players": [
     {
-      "position": "T1",
+      "position": "1",
+      "player": "Zach Bauchou",
+      "toPar": "-9",
+      "thru": "F",
+      "today": "-9"
+    },
+    {
+      "position": "T2",
       "player": "Sudarshan Yellamaraju",
       "toPar": "-8",
       "thru": "F*",
       "today": "-8"
     },
     {
-      "position": "T1",
+      "position": "T2",
       "player": "David Lipsky",
       "toPar": "-8",
       "thru": "F",
       "today": "-8"
     },
     {
-      "position": "T1",
+      "position": "T2",
       "player": "Stephan Jaeger",
       "toPar": "-8",
       "thru": "F",
       "today": "-8"
     },
     {
-      "position": "T1",
+      "position": "T2",
       "player": "Steven Fisk",
       "toPar": "-8",
       "thru": "F",
       "today": "-8"
     },
     {
-      "position": "T5",
+      "position": "T2",
+      "player": "Jordan Smith",
+      "toPar": "-8",
+      "thru": "F*",
+      "today": "-8"
+    },
+    {
+      "position": "T2",
+      "player": "Kevin Roy",
+      "toPar": "-8",
+      "thru": "F",
+      "today": "-8"
+    },
+    {
+      "position": "T2",
+      "player": "Kevin Streelman",
+      "toPar": "-8",
+      "thru": "F*",
+      "today": "-8"
+    },
+    {
+      "position": "T2",
+      "player": "Nick Dunlap",
+      "toPar": "-8",
+      "thru": "F*",
+      "today": "-8"
+    },
+    {
+      "position": "T2",
+      "player": "Austin Smotherman",
+      "toPar": "-8",
+      "thru": "F*",
+      "today": "-8"
+    },
+    {
+      "position": "T11",
       "player": "Garrick Higgo",
       "toPar": "-7",
       "thru": "F",
       "today": "-7"
     },
     {
-      "position": "T5",
+      "position": "T11",
       "player": "Michael Brennan",
       "toPar": "-7",
       "thru": "F*",
       "today": "-7"
     },
     {
-      "position": "T5",
+      "position": "T11",
       "player": "Rico Hoey",
       "toPar": "-7",
       "thru": "F",
       "today": "-7"
     },
     {
-      "position": "T5",
+      "position": "T11",
       "player": "John VanDerLaan",
       "toPar": "-7",
       "thru": "F",
       "today": "-7"
     },
     {
-      "position": "T9",
-      "player": "Doug Ghim",
-      "toPar": "-6",
+      "position": "T11",
+      "player": "Christiaan Bezuidenhout",
+      "toPar": "-7",
       "thru": "F",
-      "today": "-6"
-    },
-    {
-      "position": "T9",
-      "player": "Ben James",
-      "toPar": "-6",
-      "thru": "F*",
-      "today": "-6"
-    },
-    {
-      "position": "T9",
-      "player": "Max McGreevy",
-      "toPar": "-6",
-      "thru": "F*",
-      "today": "-6"
-    },
-    {
-      "position": "T9",
-      "player": "Joel Dahmen",
-      "toPar": "-6",
-      "thru": "F*",
-      "today": "-6"
-    },
-    {
-      "position": "T9",
-      "player": "David Ford",
-      "toPar": "-6",
-      "thru": "F*",
-      "today": "-6"
-    },
-    {
-      "position": "T9",
-      "player": "Kevin Roy",
-      "toPar": "-6",
-      "thru": "14",
-      "today": "-6"
-    },
-    {
-      "position": "T9",
-      "player": "Zach Bauchou",
-      "toPar": "-6",
-      "thru": "13",
-      "today": "-6"
+      "today": "-7"
     }
   ]
 }
