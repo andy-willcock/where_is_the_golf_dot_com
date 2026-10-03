@@ -2,7 +2,7 @@
   "tournament": "Bank of Utah Championship",
   "tournamentId": "R2026554",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-03T00:42:13.692435Z",
+  "updatedUtc": "2026-10-03T16:06:32.864954Z",
   "players": [
     {
       "position": "1",
@@ -106,7 +106,7 @@
       "position": "T9",
       "player": "Max McGreevy",
       "toPar": "-11",
-      "thru": "17",
+      "thru": "F",
       "today": "-5"
     }
   ]
