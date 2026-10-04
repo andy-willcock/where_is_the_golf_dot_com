@@ -2,112 +2,112 @@
   "tournament": "Bank of Utah Championship",
   "tournamentId": "R2026554",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-04T01:01:29.402724Z",
+  "updatedUtc": "2026-10-04T16:46:44.251485Z",
   "players": [
     {
       "position": "1",
       "player": "Austin Smotherman",
       "toPar": "-23",
-      "thru": "F",
-      "today": "-6"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "2",
       "player": "Doug Ghim",
       "toPar": "-22",
-      "thru": "F",
-      "today": "-7"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T3",
       "player": "Trace Crowe",
       "toPar": "-18",
-      "thru": "F",
-      "today": "-7"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T3",
       "player": "Ben James",
       "toPar": "-18",
-      "thru": "F",
-      "today": "-7"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T3",
       "player": "Kevin Streelman",
       "toPar": "-18",
-      "thru": "F",
-      "today": "-3"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T6",
       "player": "Johnny Keefer",
       "toPar": "-17",
-      "thru": "F*",
-      "today": "-9"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T6",
       "player": "Stephan Jaeger",
       "toPar": "-17",
-      "thru": "F",
-      "today": "-3"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T6",
       "player": "Steven Fisk",
       "toPar": "-17",
-      "thru": "F",
-      "today": "-4"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T9",
       "player": "David Ford",
       "toPar": "-16",
-      "thru": "F",
-      "today": "-6"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T9",
       "player": "A.J. Ewart",
       "toPar": "-16",
-      "thru": "F",
-      "today": "-6"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T9",
       "player": "Chris Kirk",
       "toPar": "-16",
-      "thru": "F",
-      "today": "-5"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T9",
       "player": "Neal Shipley",
       "toPar": "-16",
-      "thru": "F",
-      "today": "-4"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T13",
       "player": "Rico Hoey",
       "toPar": "-15",
-      "thru": "F",
-      "today": "-6"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T13",
       "player": "Kristoffer Ventura",
       "toPar": "-15",
-      "thru": "F",
-      "today": "-6"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T13",
       "player": "Gordon Sargent",
       "toPar": "-15",
-      "thru": "F",
-      "today": "-5"
+      "thru": "",
+      "today": "-"
     }
   ]
 }
