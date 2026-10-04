@@ -2,112 +2,112 @@
   "tournament": "Bank of Utah Championship",
   "tournamentId": "R2026554",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-04T16:46:44.251485Z",
+  "updatedUtc": "2026-10-04T19:50:00.460101Z",
   "players": [
     {
       "position": "1",
       "player": "Austin Smotherman",
-      "toPar": "-23",
-      "thru": "",
-      "today": "-"
+      "toPar": "-24",
+      "thru": "1",
+      "today": "-1"
     },
     {
       "position": "2",
       "player": "Doug Ghim",
-      "toPar": "-22",
-      "thru": "",
-      "today": "-"
+      "toPar": "-23",
+      "thru": "1",
+      "today": "-1"
     },
     {
       "position": "T3",
-      "player": "Trace Crowe",
-      "toPar": "-18",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T3",
-      "player": "Ben James",
-      "toPar": "-18",
-      "thru": "",
-      "today": "-"
+      "player": "Luke Clanton",
+      "toPar": "-19",
+      "thru": "13",
+      "today": "-7"
     },
     {
       "position": "T3",
       "player": "Kevin Streelman",
+      "toPar": "-19",
+      "thru": "3",
+      "today": "-1"
+    },
+    {
+      "position": "T5",
+      "player": "Alejandro Tosti",
       "toPar": "-18",
-      "thru": "",
-      "today": "-"
+      "thru": "16",
+      "today": "-7"
     },
     {
-      "position": "T6",
-      "player": "Johnny Keefer",
-      "toPar": "-17",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T6",
-      "player": "Stephan Jaeger",
-      "toPar": "-17",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T6",
-      "player": "Steven Fisk",
-      "toPar": "-17",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T9",
+      "position": "T5",
       "player": "David Ford",
-      "toPar": "-16",
-      "thru": "",
-      "today": "-"
+      "toPar": "-18",
+      "thru": "4",
+      "today": "-2"
     },
     {
-      "position": "T9",
-      "player": "A.J. Ewart",
-      "toPar": "-16",
-      "thru": "",
-      "today": "-"
+      "position": "T5",
+      "player": "Steven Fisk",
+      "toPar": "-18",
+      "thru": "3",
+      "today": "-1"
     },
     {
-      "position": "T9",
-      "player": "Chris Kirk",
-      "toPar": "-16",
-      "thru": "",
-      "today": "-"
+      "position": "T5",
+      "player": "Johnny Keefer",
+      "toPar": "-18",
+      "thru": "3",
+      "today": "-1"
     },
     {
-      "position": "T9",
-      "player": "Neal Shipley",
-      "toPar": "-16",
-      "thru": "",
-      "today": "-"
+      "position": "T5",
+      "player": "Trace Crowe",
+      "toPar": "-18",
+      "thru": "2",
+      "today": "E"
     },
     {
-      "position": "T13",
-      "player": "Rico Hoey",
-      "toPar": "-15",
-      "thru": "",
-      "today": "-"
+      "position": "T5",
+      "player": "Ben James",
+      "toPar": "-18",
+      "thru": "2",
+      "today": "E"
     },
     {
-      "position": "T13",
-      "player": "Kristoffer Ventura",
-      "toPar": "-15",
-      "thru": "",
-      "today": "-"
+      "position": "T11",
+      "player": "Billy Horschel",
+      "toPar": "-17",
+      "thru": "10",
+      "today": "-5"
     },
     {
-      "position": "T13",
+      "position": "T11",
+      "player": "David Lipsky",
+      "toPar": "-17",
+      "thru": "8",
+      "today": "-3"
+    },
+    {
+      "position": "T11",
+      "player": "Kihei Akina",
+      "toPar": "-17",
+      "thru": "7",
+      "today": "-3"
+    },
+    {
+      "position": "T11",
       "player": "Gordon Sargent",
-      "toPar": "-15",
-      "thru": "",
-      "today": "-"
+      "toPar": "-17",
+      "thru": "6",
+      "today": "-2"
+    },
+    {
+      "position": "T11",
+      "player": "Rico Hoey",
+      "toPar": "-17",
+      "thru": "5",
+      "today": "-2"
     }
   ]
 }
