@@ -1,5 +1,5 @@
 {
-  "lastUpdatedUtc": "2026-10-04T20:12:24.341605Z",
+  "lastUpdatedUtc": "2026-10-05T02:03:43.021399Z",
   "tournament": {
     "name": "Bank of Utah Championship",
     "course": "",
@@ -52,7 +52,7 @@
       "feed": "Full Telecast",
       "type": "tv",
       "startUtc": "2026-10-04T21:00:00Z",
-      "endUtc": "2026-10-05T00:00:00Z",
+      "endUtc": "2026-10-05T00:10:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
