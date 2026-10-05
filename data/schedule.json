@@ -1,11 +1,11 @@
 {
-  "lastUpdatedUtc": "2026-10-05T02:03:43.021399Z",
+  "lastUpdatedUtc": "2026-10-05T22:02:45.370348Z",
   "tournament": {
-    "name": "Bank of Utah Championship",
+    "name": "Baycurrent Classic",
     "course": "",
     "location": "",
-    "startDate": "2026-10-01",
-    "endDate": "2026-10-04",
+    "startDate": "2026-10-07",
+    "endDate": "2026-10-10",
     "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule"
   },
   "coverage": [
@@ -15,8 +15,8 @@
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-10-01T21:00:00Z",
-      "endUtc": "2026-10-02T00:00:00Z",
+      "startUtc": "2026-10-08T03:00:00Z",
+      "endUtc": "2026-10-08T07:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
@@ -27,8 +27,8 @@
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-10-02T21:00:00Z",
-      "endUtc": "2026-10-03T00:00:00Z",
+      "startUtc": "2026-10-09T03:00:00Z",
+      "endUtc": "2026-10-09T07:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
@@ -39,8 +39,8 @@
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-10-03T21:00:00Z",
-      "endUtc": "2026-10-04T00:00:00Z",
+      "startUtc": "2026-10-10T03:00:00Z",
+      "endUtc": "2026-10-10T07:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
@@ -51,8 +51,8 @@
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-10-04T21:00:00Z",
-      "endUtc": "2026-10-05T00:10:00Z",
+      "startUtc": "2026-10-11T03:00:00Z",
+      "endUtc": "2026-10-11T07:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
