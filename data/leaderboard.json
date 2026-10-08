@@ -1,113 +1,113 @@
 {
-  "tournament": "Bank of Utah Championship",
-  "tournamentId": "R2026554",
+  "tournament": "Baycurrent Classic",
+  "tournamentId": "R2026527",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-05T01:18:16.358713Z",
+  "updatedUtc": "2026-10-08T18:46:02.583526Z",
   "players": [
     {
       "position": "1",
-      "player": "Austin Smotherman",
-      "toPar": "-26",
-      "thru": "F",
-      "today": "-3"
+      "player": "Jacob Bridgeman",
+      "toPar": "-8",
+      "thru": "F*",
+      "today": "-8"
     },
     {
       "position": "2",
-      "player": "Doug Ghim",
-      "toPar": "-24",
-      "thru": "F",
-      "today": "-2"
-    },
-    {
-      "position": "T3",
-      "player": "David Ford",
-      "toPar": "-23",
-      "thru": "F",
+      "player": "Jordan Smith",
+      "toPar": "-7",
+      "thru": "F*",
       "today": "-7"
     },
     {
       "position": "T3",
-      "player": "Trace Crowe",
-      "toPar": "-23",
+      "player": "Pierceson Coody",
+      "toPar": "-6",
+      "thru": "F",
+      "today": "-6"
+    },
+    {
+      "position": "T3",
+      "player": "Mac Meissner",
+      "toPar": "-6",
+      "thru": "F*",
+      "today": "-6"
+    },
+    {
+      "position": "T3",
+      "player": "Ricky Castillo",
+      "toPar": "-6",
+      "thru": "F*",
+      "today": "-6"
+    },
+    {
+      "position": "T3",
+      "player": "Max Homa",
+      "toPar": "-6",
+      "thru": "F",
+      "today": "-6"
+    },
+    {
+      "position": "T7",
+      "player": "Keith Mitchell",
+      "toPar": "-5",
+      "thru": "F*",
+      "today": "-5"
+    },
+    {
+      "position": "T7",
+      "player": "Kristoffer Ventura",
+      "toPar": "-5",
+      "thru": "F*",
+      "today": "-5"
+    },
+    {
+      "position": "T7",
+      "player": "Michael Thorbjornsen",
+      "toPar": "-5",
       "thru": "F",
       "today": "-5"
     },
     {
-      "position": "T5",
-      "player": "Kevin Streelman",
-      "toPar": "-22",
-      "thru": "F",
-      "today": "-4"
-    },
-    {
-      "position": "T5",
-      "player": "Ben James",
-      "toPar": "-22",
-      "thru": "F",
-      "today": "-4"
+      "position": "T7",
+      "player": "Andrew Putnam",
+      "toPar": "-5",
+      "thru": "F*",
+      "today": "-5"
     },
     {
       "position": "T7",
-      "player": "Luke Clanton",
-      "toPar": "-21",
-      "thru": "F",
-      "today": "-9"
+      "player": "David Lipsky",
+      "toPar": "-5",
+      "thru": "F*",
+      "today": "-5"
     },
     {
-      "position": "T7",
-      "player": "Steven Fisk",
-      "toPar": "-21",
+      "position": "T12",
+      "player": "Nico Echavarria",
+      "toPar": "-4",
       "thru": "F",
       "today": "-4"
     },
     {
-      "position": "9",
-      "player": "Kihei Akina",
-      "toPar": "-20",
-      "thru": "F",
-      "today": "-6"
-    },
-    {
-      "position": "T10",
-      "player": "Rico Hoey",
-      "toPar": "-19",
-      "thru": "F",
+      "position": "T12",
+      "player": "Min Woo Lee",
+      "toPar": "-4",
+      "thru": "F*",
       "today": "-4"
     },
     {
-      "position": "T10",
-      "player": "Neal Shipley",
-      "toPar": "-19",
-      "thru": "F",
-      "today": "-3"
+      "position": "T12",
+      "player": "Collin Morikawa",
+      "toPar": "-4",
+      "thru": "F*",
+      "today": "-4"
     },
     {
-      "position": "T10",
-      "player": "Johnny Keefer",
-      "toPar": "-19",
+      "position": "T12",
+      "player": "Ryo Hisatsune",
+      "toPar": "-4",
       "thru": "F",
-      "today": "-2"
-    },
-    {
-      "position": "T13",
-      "player": "Alejandro Tosti",
-      "toPar": "-18",
-      "thru": "F",
-      "today": "-7"
-    },
-    {
-      "position": "T13",
-      "player": "Lee Hodges",
-      "toPar": "-18",
-      "thru": "F",
-      "today": "-7"
-    },
-    {
-      "position": "T13",
-      "player": "Michael Brennan",
-      "toPar": "-18",
-      "thru": "F",
-      "today": "-6"
+      "today": "-4"
     }
   ]
 }
