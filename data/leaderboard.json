@@ -2,7 +2,7 @@
   "tournament": "Baycurrent Classic",
   "tournamentId": "R2026527",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-09T18:16:27.691219Z",
+  "updatedUtc": "2026-10-09T22:45:49.868609Z",
   "players": [
     {
       "position": "T1",
@@ -22,14 +22,14 @@
       "position": "T3",
       "player": "Max Homa",
       "toPar": "-9",
-      "thru": "F*",
+      "thru": "F",
       "today": "-3"
     },
     {
       "position": "T3",
       "player": "Zach Bauchou",
       "toPar": "-9",
-      "thru": "F*",
+      "thru": "F",
       "today": "-7"
     },
     {
@@ -50,14 +50,14 @@
       "position": "T7",
       "player": "Justin Thomas",
       "toPar": "-8",
-      "thru": "F*",
+      "thru": "F",
       "today": "-6"
     },
     {
       "position": "T7",
       "player": "Stephan Jaeger",
       "toPar": "-8",
-      "thru": "F*",
+      "thru": "F",
       "today": "-6"
     },
     {
@@ -99,7 +99,7 @@
       "position": "T13",
       "player": "Adam Scott",
       "toPar": "-6",
-      "thru": "F*",
+      "thru": "F",
       "today": "-4"
     },
     {
