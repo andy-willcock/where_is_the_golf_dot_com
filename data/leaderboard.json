@@ -2,112 +2,112 @@
   "tournament": "Baycurrent Classic",
   "tournamentId": "R2026527",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-10T20:36:34.469368Z",
+  "updatedUtc": "2026-10-10T23:50:38.922781Z",
   "players": [
     {
       "position": "T1",
       "player": "Michael Brennan",
       "toPar": "-13",
-      "thru": "F",
-      "today": "-6"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T1",
       "player": "Zach Bauchou",
       "toPar": "-13",
-      "thru": "F",
-      "today": "-4"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T1",
       "player": "Jacob Bridgeman",
       "toPar": "-13",
-      "thru": "F",
-      "today": "-2"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T4",
       "player": "Adam Scott",
       "toPar": "-12",
-      "thru": "F",
-      "today": "-6"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T4",
       "player": "Jordan Smith",
       "toPar": "-12",
-      "thru": "F",
-      "today": "-5"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T4",
       "player": "Justin Thomas",
       "toPar": "-12",
-      "thru": "F",
-      "today": "-4"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T4",
       "player": "Stephan Jaeger",
       "toPar": "-12",
-      "thru": "F",
-      "today": "-4"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T4",
       "player": "Keith Mitchell",
       "toPar": "-12",
-      "thru": "F",
-      "today": "-1"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T9",
       "player": "Ryan Gerard",
       "toPar": "-10",
-      "thru": "F",
-      "today": "-5"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T9",
       "player": "Mac Meissner",
       "toPar": "-10",
-      "thru": "F",
-      "today": "-1"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T9",
       "player": "Max Homa",
       "toPar": "-10",
-      "thru": "F",
-      "today": "-1"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T12",
       "player": "Xander Schauffele",
       "toPar": "-9",
-      "thru": "F",
-      "today": "-6"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T12",
       "player": "Brian Harman",
       "toPar": "-9",
-      "thru": "F",
-      "today": "-4"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T12",
       "player": "Sungjae Im",
       "toPar": "-9",
-      "thru": "F",
-      "today": "-3"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T12",
       "player": "Michael Kim",
       "toPar": "-9",
-      "thru": "F",
-      "today": "-3"
+      "thru": "",
+      "today": "-"
     }
   ]
 }
