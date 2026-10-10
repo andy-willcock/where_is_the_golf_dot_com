@@ -2,112 +2,112 @@
   "tournament": "Baycurrent Classic",
   "tournamentId": "R2026527",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-10T01:57:11.568117Z",
+  "updatedUtc": "2026-10-10T17:15:41.200451Z",
   "players": [
     {
       "position": "T1",
-      "player": "Keith Mitchell",
-      "toPar": "-11",
-      "thru": "1",
-      "today": "E"
+      "player": "Michael Brennan",
+      "toPar": "-13",
+      "thru": "F",
+      "today": "-6"
+    },
+    {
+      "position": "T1",
+      "player": "Zach Bauchou",
+      "toPar": "-13",
+      "thru": "F",
+      "today": "-4"
     },
     {
       "position": "T1",
       "player": "Jacob Bridgeman",
-      "toPar": "-11",
-      "thru": "1",
-      "today": "E"
-    },
-    {
-      "position": "3",
-      "player": "Mac Meissner",
-      "toPar": "-10",
-      "thru": "2",
-      "today": "-1"
+      "toPar": "-13",
+      "thru": "F",
+      "today": "-2"
     },
     {
       "position": "T4",
-      "player": "Hideki Matsuyama",
-      "toPar": "-9",
-      "thru": "8",
+      "player": "Adam Scott",
+      "toPar": "-12",
+      "thru": "F",
       "today": "-6"
     },
     {
       "position": "T4",
-      "player": "Ren Yonezawa",
-      "toPar": "-9",
-      "thru": "7",
-      "today": "-4"
+      "player": "Jordan Smith",
+      "toPar": "-12",
+      "thru": "F",
+      "today": "-5"
     },
     {
       "position": "T4",
-      "player": "Ryan Gerard",
-      "toPar": "-9",
-      "thru": "6",
-      "today": "-4"
-    },
-    {
-      "position": "T4",
-      "player": "Doug Ghim",
-      "toPar": "-9",
-      "thru": "6",
+      "player": "Justin Thomas",
+      "toPar": "-12",
+      "thru": "F",
       "today": "-4"
     },
     {
       "position": "T4",
       "player": "Stephan Jaeger",
-      "toPar": "-9",
-      "thru": "3",
+      "toPar": "-12",
+      "thru": "F",
+      "today": "-4"
+    },
+    {
+      "position": "T4",
+      "player": "Keith Mitchell",
+      "toPar": "-12",
+      "thru": "F",
       "today": "-1"
     },
     {
-      "position": "T4",
-      "player": "Zach Bauchou",
-      "toPar": "-9",
-      "thru": "2",
-      "today": "E"
-    },
-    {
-      "position": "T4",
-      "player": "Ben Kohles",
-      "toPar": "-9",
-      "thru": "2",
-      "today": "E"
-    },
-    {
-      "position": "T4",
-      "player": "Max Homa",
-      "toPar": "-9",
-      "thru": "1",
-      "today": "E"
-    },
-    {
-      "position": "T12",
-      "player": "Kevin Roy",
-      "toPar": "-8",
-      "thru": "7",
+      "position": "T9",
+      "player": "Ryan Gerard",
+      "toPar": "-10",
+      "thru": "F",
       "today": "-5"
     },
     {
-      "position": "T12",
-      "player": "Justin Thomas",
-      "toPar": "-8",
-      "thru": "3",
-      "today": "E"
+      "position": "T9",
+      "player": "Mac Meissner",
+      "toPar": "-10",
+      "thru": "F",
+      "today": "-1"
+    },
+    {
+      "position": "T9",
+      "player": "Max Homa",
+      "toPar": "-10",
+      "thru": "F",
+      "today": "-1"
     },
     {
       "position": "T12",
-      "player": "Min Woo Lee",
-      "toPar": "-8",
-      "thru": "3",
-      "today": "E"
-    },
-    {
-      "position": "T15",
       "player": "Xander Schauffele",
-      "toPar": "-7",
-      "thru": "9",
+      "toPar": "-9",
+      "thru": "F",
+      "today": "-6"
+    },
+    {
+      "position": "T12",
+      "player": "Brian Harman",
+      "toPar": "-9",
+      "thru": "F",
       "today": "-4"
+    },
+    {
+      "position": "T12",
+      "player": "Sungjae Im",
+      "toPar": "-9",
+      "thru": "F",
+      "today": "-3"
+    },
+    {
+      "position": "T12",
+      "player": "Michael Kim",
+      "toPar": "-9",
+      "thru": "F",
+      "today": "-3"
     }
   ]
 }
