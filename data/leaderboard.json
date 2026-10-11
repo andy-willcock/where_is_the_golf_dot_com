@@ -2,112 +2,112 @@
   "tournament": "Baycurrent Classic",
   "tournamentId": "R2026527",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-10T23:50:38.922781Z",
+  "updatedUtc": "2026-10-11T03:20:52.190369Z",
   "players": [
     {
-      "position": "T1",
-      "player": "Michael Brennan",
-      "toPar": "-13",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T1",
-      "player": "Zach Bauchou",
-      "toPar": "-13",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T1",
-      "player": "Jacob Bridgeman",
-      "toPar": "-13",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T4",
-      "player": "Adam Scott",
-      "toPar": "-12",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T4",
-      "player": "Jordan Smith",
-      "toPar": "-12",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T4",
-      "player": "Justin Thomas",
-      "toPar": "-12",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T4",
-      "player": "Stephan Jaeger",
-      "toPar": "-12",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T4",
+      "position": "1",
       "player": "Keith Mitchell",
+      "toPar": "-17",
+      "thru": "8",
+      "today": "-5"
+    },
+    {
+      "position": "T2",
+      "player": "Stephan Jaeger",
+      "toPar": "-15",
+      "thru": "8",
+      "today": "-3"
+    },
+    {
+      "position": "T2",
+      "player": "Michael Brennan",
+      "toPar": "-15",
+      "thru": "6",
+      "today": "-2"
+    },
+    {
+      "position": "T2",
+      "player": "Zach Bauchou",
+      "toPar": "-15",
+      "thru": "6",
+      "today": "-2"
+    },
+    {
+      "position": "T5",
+      "player": "Adam Scott",
+      "toPar": "-14",
+      "thru": "6",
+      "today": "-2"
+    },
+    {
+      "position": "T5",
+      "player": "Jacob Bridgeman",
+      "toPar": "-14",
+      "thru": "6",
+      "today": "-1"
+    },
+    {
+      "position": "T7",
+      "player": "Ren Yonezawa",
+      "toPar": "-13",
+      "thru": "14",
+      "today": "-8"
+    },
+    {
+      "position": "T7",
+      "player": "Xander Schauffele",
+      "toPar": "-13",
+      "thru": "9",
+      "today": "-4"
+    },
+    {
+      "position": "T9",
+      "player": "Brian Harman",
       "toPar": "-12",
-      "thru": "",
-      "today": "-"
+      "thru": "9",
+      "today": "-3"
+    },
+    {
+      "position": "T9",
+      "player": "Sungjae Im",
+      "toPar": "-12",
+      "thru": "9",
+      "today": "-3"
     },
     {
       "position": "T9",
       "player": "Ryan Gerard",
-      "toPar": "-10",
-      "thru": "",
-      "today": "-"
+      "toPar": "-12",
+      "thru": "8",
+      "today": "-2"
     },
     {
-      "position": "T9",
-      "player": "Mac Meissner",
-      "toPar": "-10",
-      "thru": "",
-      "today": "-"
+      "position": "T12",
+      "player": "Min Woo Lee",
+      "toPar": "-11",
+      "thru": "10",
+      "today": "-4"
     },
     {
-      "position": "T9",
+      "position": "T12",
+      "player": "Ben Kohles",
+      "toPar": "-11",
+      "thru": "10",
+      "today": "-4"
+    },
+    {
+      "position": "T12",
+      "player": "Kevin Roy",
+      "toPar": "-11",
+      "thru": "10",
+      "today": "-3"
+    },
+    {
+      "position": "T12",
       "player": "Max Homa",
-      "toPar": "-10",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T12",
-      "player": "Xander Schauffele",
-      "toPar": "-9",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T12",
-      "player": "Brian Harman",
-      "toPar": "-9",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T12",
-      "player": "Sungjae Im",
-      "toPar": "-9",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T12",
-      "player": "Michael Kim",
-      "toPar": "-9",
-      "thru": "",
-      "today": "-"
+      "toPar": "-11",
+      "thru": "9",
+      "today": "-1"
     }
   ]
 }
