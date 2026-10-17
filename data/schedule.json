@@ -1,75 +1,89 @@
 {
-  "lastUpdatedUtc": "2026-10-12T02:28:32.475373Z",
+  "lastUpdatedUtc": "2026-10-17T14:14:33.793754Z",
   "tournament": {
-    "name": "Baycurrent Classic",
-    "course": "",
-    "location": "",
-    "startDate": "2026-10-07",
-    "endDate": "2026-10-10",
-    "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule"
+    "name": "Butterfield Bermuda Championship",
+    "course": "Port Royal GC",
+    "location": "Southampton, BER",
+    "startDate": "2026-10-22",
+    "endDate": "2026-10-25",
+    "sourceUrl": "https://www.cbssports.com/golf/schedules/"
   },
   "coverage": [
     {
       "id": "coverage-1",
       "round": "Round 1",
       "provider": "Golf Channel",
-      "feed": "Full Telecast",
+      "feed": "Live TV coverage",
       "type": "tv",
-      "startUtc": "2026-10-08T03:00:00Z",
-      "endUtc": "2026-10-08T07:00:00Z",
-      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
-      "sourceDomain": "pgatourmedia.pgatourhq.com",
-      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+      "startUtc": "2026-10-22T17:00:00Z",
+      "endUtc": "2026-10-22T20:00:00Z",
+      "sourceUrl": "https://www.cbssports.com/golf/news/2024-bermuda-championship-tv-schedule-channel-live-stream-radio-where-to-watch-fedex-cup-fall-coverage/",
+      "sourceDomain": "cbssports.com",
+      "sourceLabel": "Live TV coverage"
     },
     {
       "id": "coverage-2",
       "round": "Round 2",
-      "provider": "Golf Channel",
-      "feed": "Full Telecast",
-      "type": "tv",
-      "startUtc": "2026-10-09T03:00:00Z",
-      "endUtc": "2026-10-09T07:00:00Z",
-      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
-      "sourceDomain": "pgatourmedia.pgatourhq.com",
-      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+      "provider": "Golf Channel Live stream: 1-4 p.m. on Peacock",
+      "feed": "Live TV coverage",
+      "type": "streaming",
+      "startUtc": "2026-10-23T17:00:00Z",
+      "endUtc": "2026-10-23T20:00:00Z",
+      "sourceUrl": "https://www.cbssports.com/golf/news/2023-bermuda-championship-live-stream-watch-online-tv-schedule-channel-tee-times-golf-coverage-radio/",
+      "sourceDomain": "cbssports.com",
+      "sourceLabel": "Live TV coverage"
     },
     {
       "id": "coverage-3",
       "round": "Round 3",
       "provider": "Golf Channel",
-      "feed": "Full Telecast",
+      "feed": "Live TV coverage",
       "type": "tv",
-      "startUtc": "2026-10-10T03:00:00Z",
-      "endUtc": "2026-10-10T07:00:00Z",
-      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
-      "sourceDomain": "pgatourmedia.pgatourhq.com",
-      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+      "startUtc": "2026-10-24T15:30:00Z",
+      "endUtc": "2026-10-24T18:30:00Z",
+      "sourceUrl": "https://www.cbssports.com/golf/news/2024-bermuda-championship-tv-schedule-channel-live-stream-radio-where-to-watch-fedex-cup-fall-coverage/",
+      "sourceDomain": "cbssports.com",
+      "sourceLabel": "Live TV coverage"
     },
     {
       "id": "coverage-4",
       "round": "Final Round",
       "provider": "Golf Channel",
-      "feed": "Full Telecast",
+      "feed": "Live TV coverage",
       "type": "tv",
-      "startUtc": "2026-10-11T03:00:00Z",
-      "endUtc": "2026-10-11T07:00:00Z",
-      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
-      "sourceDomain": "pgatourmedia.pgatourhq.com",
-      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+      "startUtc": "2026-10-25T15:00:00Z",
+      "endUtc": "2026-10-25T18:00:00Z",
+      "sourceUrl": "https://www.cbssports.com/golf/news/2024-bermuda-championship-tv-schedule-channel-live-stream-radio-where-to-watch-fedex-cup-fall-coverage/",
+      "sourceDomain": "cbssports.com",
+      "sourceLabel": "Live TV coverage"
     }
   ],
   "collection": {
-    "score": 72,
-    "warnings": [],
+    "score": 84,
+    "warnings": [
+      "Primary PGA TOUR Media source failed: Could not find the PGA TOUR section on the media page."
+    ],
     "sources": [
       {
-        "url": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
-        "domain": "pgatourmedia.pgatourhq.com",
-        "title": "PGA TOUR Media Broadcast Schedule",
-        "parsedWindows": 4
+        "url": "https://www.cbssports.com/golf/news/2024-bermuda-championship-tv-schedule-channel-live-stream-radio-where-to-watch-fedex-cup-fall-coverage/",
+        "domain": "cbssports.com",
+        "title": "2024 Bermuda Championship TV schedule, channel, live stream ...2023 Bermuda Championship: Live stream, watch online, TV ...2024 Bermuda Championship scores: Hayden Springer, Justin ...",
+        "parsedWindows": 3
+      },
+      {
+        "url": "https://www.cbssports.com/golf/news/2023-bermuda-championship-live-stream-watch-online-tv-schedule-channel-tee-times-golf-coverage-radio/",
+        "domain": "cbssports.com",
+        "title": "2023 Bermuda Championship: Live stream, watch online, TV ...2024 Bermuda Championship scores: Hayden Springer, Justin ...",
+        "parsedWindows": 1
       }
     ],
-    "failedSources": [],
+    "failedSources": [
+      "No windows parsed: https://www.pgatour.com/article/news/latest/2025/11/11/how-to-watch-round-1-2-coverage-details-live-scores-tee-time-featured-groups-times-butterfield-bermuda-championship-golf-channel-michael-brennan-southampton",
+      "No windows parsed: https://www.golfchannel.com/pga-tour/news/bermuda-championship-full-field-for-port-royal",
+      "No windows parsed: https://www.golfchannel.com/pga-tour/2026/butterfield-bermuda-championship",
+      "No windows parsed: https://www.cbssports.com/golf/news/2024-bermuda-championship-scores-hayden-springer-justin-lower-share-lead-as-darkness-suspends-round-1/",
+      "No windows parsed: https://www.cbssports.com/golf/schedules/"
+    ],
     "sourceTimezone": "America/New_York",
     "primarySource": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
     "notes": "PGA TOUR Media broadcast schedule is the primary source. Audio-only records are excluded. Times are converted from Eastern to UTC."
