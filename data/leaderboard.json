@@ -2,112 +2,112 @@
   "tournament": "Butterfield Bermuda Championship",
   "tournamentId": "R2026528",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-22T17:08:49.793055Z",
+  "updatedUtc": "2026-10-22T23:36:37.523165Z",
   "players": [
     {
-      "position": "T1",
+      "position": "1",
+      "player": "Chandler Blanchet",
+      "toPar": "-9",
+      "thru": "F*",
+      "today": "-9"
+    },
+    {
+      "position": "T2",
       "player": "Ben Kohles",
       "toPar": "-8",
       "thru": "F",
       "today": "-8"
     },
     {
-      "position": "T1",
+      "position": "T2",
       "player": "Ben Silverman",
       "toPar": "-8",
       "thru": "F*",
       "today": "-8"
     },
     {
-      "position": "T1",
+      "position": "T2",
       "player": "Danny Walker",
       "toPar": "-8",
       "thru": "F*",
       "today": "-8"
     },
     {
-      "position": "T4",
+      "position": "T2",
+      "player": "Corey Conners",
+      "toPar": "-8",
+      "thru": "F",
+      "today": "-8"
+    },
+    {
+      "position": "T6",
       "player": "Mackenzie Hughes",
       "toPar": "-7",
       "thru": "F*",
       "today": "-7"
     },
     {
-      "position": "T4",
+      "position": "T6",
       "player": "Jonathan Byrd",
       "toPar": "-7",
       "thru": "F",
       "today": "-7"
     },
     {
-      "position": "T4",
+      "position": "T6",
       "player": "Chan Kim",
       "toPar": "-7",
       "thru": "F*",
       "today": "-7"
     },
     {
-      "position": "T7",
+      "position": "T6",
+      "player": "Emiliano Grillo",
+      "toPar": "-7",
+      "thru": "F*",
+      "today": "-7"
+    },
+    {
+      "position": "T6",
+      "player": "Andrew Novak",
+      "toPar": "-7",
+      "thru": "F",
+      "today": "-7"
+    },
+    {
+      "position": "T11",
       "player": "Brice Garnett",
       "toPar": "-6",
       "thru": "F",
       "today": "-6"
     },
     {
-      "position": "T7",
+      "position": "T11",
       "player": "Eric Cole",
       "toPar": "-6",
       "thru": "F*",
       "today": "-6"
     },
     {
-      "position": "T7",
+      "position": "T11",
       "player": "Austin Smotherman",
       "toPar": "-6",
       "thru": "F*",
       "today": "-6"
     },
     {
-      "position": "T7",
+      "position": "T11",
       "player": "Zac Blair",
       "toPar": "-6",
       "thru": "F",
       "today": "-6"
     },
     {
-      "position": "T7",
+      "position": "T11",
       "player": "Taylor Moore",
       "toPar": "-6",
       "thru": "F*",
       "today": "-6"
-    },
-    {
-      "position": "T12",
-      "player": "Lee Hodges",
-      "toPar": "-5",
-      "thru": "F",
-      "today": "-5"
-    },
-    {
-      "position": "T12",
-      "player": "Davis Chatfield",
-      "toPar": "-5",
-      "thru": "F*",
-      "today": "-5"
-    },
-    {
-      "position": "T12",
-      "player": "Hayden Springer",
-      "toPar": "-5",
-      "thru": "F",
-      "today": "-5"
-    },
-    {
-      "position": "T12",
-      "player": "Kihei Akina",
-      "toPar": "-5",
-      "thru": "F",
-      "today": "-5"
     }
   ]
 }
