@@ -2,45 +2,59 @@
   "tournament": "Butterfield Bermuda Championship",
   "tournamentId": "R2026528",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-23T16:53:51.563414Z",
+  "updatedUtc": "2026-10-23T20:17:35.417037Z",
   "players": [
     {
-      "position": "1",
+      "position": "T1",
       "player": "Kensei Hirata",
       "toPar": "-13",
       "thru": "F",
       "today": "-7"
     },
     {
-      "position": "T2",
+      "position": "T1",
+      "player": "Chandler Blanchet",
+      "toPar": "-13",
+      "thru": "F",
+      "today": "-4"
+    },
+    {
+      "position": "T3",
       "player": "Seamus Power",
       "toPar": "-12",
       "thru": "F*",
       "today": "-7"
     },
     {
-      "position": "T2",
+      "position": "T3",
       "player": "Corey Conners",
       "toPar": "-12",
       "thru": "F*",
       "today": "-4"
     },
     {
-      "position": "T2",
-      "player": "Chandler Blanchet",
+      "position": "T3",
+      "player": "Eric Cole",
       "toPar": "-12",
-      "thru": "17",
-      "today": "-3"
+      "thru": "F",
+      "today": "-6"
     },
     {
-      "position": "T5",
+      "position": "T3",
+      "player": "Ben Silverman",
+      "toPar": "-12",
+      "thru": "F",
+      "today": "-4"
+    },
+    {
+      "position": "T7",
       "player": "David Skinns",
       "toPar": "-11",
       "thru": "F",
       "today": "-8"
     },
     {
-      "position": "T5",
+      "position": "T7",
       "player": "Denny McCarthy",
       "toPar": "-11",
       "thru": "F",
@@ -48,66 +62,52 @@
     },
     {
       "position": "T7",
+      "player": "Greyson Sigg",
+      "toPar": "-11",
+      "thru": "F",
+      "today": "-7"
+    },
+    {
+      "position": "T7",
+      "player": "Austin Smotherman",
+      "toPar": "-11",
+      "thru": "F",
+      "today": "-5"
+    },
+    {
+      "position": "T7",
+      "player": "Ben Kohles",
+      "toPar": "-11",
+      "thru": "F*",
+      "today": "-3"
+    },
+    {
+      "position": "12",
+      "player": "Danny Walker",
+      "toPar": "-10",
+      "thru": "16",
+      "today": "-2"
+    },
+    {
+      "position": "T13",
       "player": "Emiliano Grillo",
       "toPar": "-9",
       "thru": "F",
       "today": "-2"
     },
     {
-      "position": "T7",
+      "position": "T13",
       "player": "Mark Hubbard",
       "toPar": "-9",
       "thru": "F",
       "today": "-5"
     },
     {
-      "position": "T7",
+      "position": "T13",
       "player": "Chris Kirk",
       "toPar": "-9",
       "thru": "F*",
       "today": "-4"
-    },
-    {
-      "position": "T7",
-      "player": "Paul Peterson",
-      "toPar": "-9",
-      "thru": "F*",
-      "today": "-6"
-    },
-    {
-      "position": "T7",
-      "player": "Trace Crowe",
-      "toPar": "-9",
-      "thru": "F*",
-      "today": "-4"
-    },
-    {
-      "position": "T7",
-      "player": "Ren Yonezawa",
-      "toPar": "-9",
-      "thru": "F*",
-      "today": "-3"
-    },
-    {
-      "position": "T7",
-      "player": "Eric Cole",
-      "toPar": "-9",
-      "thru": "6",
-      "today": "-3"
-    },
-    {
-      "position": "T7",
-      "player": "Ben Silverman",
-      "toPar": "-9",
-      "thru": "5",
-      "today": "-1"
-    },
-    {
-      "position": "T15",
-      "player": "Chad Ramey",
-      "toPar": "-8",
-      "thru": "F",
-      "today": "-5"
     }
   ]
 }
