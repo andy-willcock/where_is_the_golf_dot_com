@@ -2,7 +2,7 @@
   "tournament": "Butterfield Bermuda Championship",
   "tournamentId": "R2026528",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-23T20:17:35.417037Z",
+  "updatedUtc": "2026-10-23T23:15:03.749351Z",
   "players": [
     {
       "position": "T1",
@@ -47,46 +47,46 @@
       "today": "-4"
     },
     {
-      "position": "T7",
+      "position": "T3",
+      "player": "Danny Walker",
+      "toPar": "-12",
+      "thru": "F",
+      "today": "-4"
+    },
+    {
+      "position": "T8",
       "player": "David Skinns",
       "toPar": "-11",
       "thru": "F",
       "today": "-8"
     },
     {
-      "position": "T7",
+      "position": "T8",
       "player": "Denny McCarthy",
       "toPar": "-11",
       "thru": "F",
       "today": "-7"
     },
     {
-      "position": "T7",
+      "position": "T8",
       "player": "Greyson Sigg",
       "toPar": "-11",
       "thru": "F",
       "today": "-7"
     },
     {
-      "position": "T7",
+      "position": "T8",
       "player": "Austin Smotherman",
       "toPar": "-11",
       "thru": "F",
       "today": "-5"
     },
     {
-      "position": "T7",
+      "position": "T8",
       "player": "Ben Kohles",
       "toPar": "-11",
       "thru": "F*",
       "today": "-3"
-    },
-    {
-      "position": "12",
-      "player": "Danny Walker",
-      "toPar": "-10",
-      "thru": "16",
-      "today": "-2"
     },
     {
       "position": "T13",
