@@ -2,41 +2,41 @@
   "tournament": "Butterfield Bermuda Championship",
   "tournamentId": "R2026528",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-24T18:24:04.126991Z",
+  "updatedUtc": "2026-10-24T21:07:40.261966Z",
   "players": [
     {
-      "position": "1",
+      "position": "T1",
       "player": "Austin Smotherman",
-      "toPar": "-17",
-      "thru": "15",
-      "today": "-6"
-    },
-    {
-      "position": "T2",
-      "player": "Chris Kirk",
-      "toPar": "-15",
-      "thru": "15",
-      "today": "-6"
-    },
-    {
-      "position": "T2",
-      "player": "Ben Silverman",
-      "toPar": "-15",
-      "thru": "13",
-      "today": "-3"
-    },
-    {
-      "position": "T4",
-      "player": "Taylor Moore",
-      "toPar": "-14",
-      "thru": "17",
+      "toPar": "-16",
+      "thru": "F",
       "today": "-5"
     },
     {
-      "position": "T4",
+      "position": "T1",
       "player": "Seamus Power",
+      "toPar": "-16",
+      "thru": "F",
+      "today": "-4"
+    },
+    {
+      "position": "T3",
+      "player": "Taylor Moore",
       "toPar": "-14",
-      "thru": "13",
+      "thru": "F",
+      "today": "-5"
+    },
+    {
+      "position": "T3",
+      "player": "Corey Conners",
+      "toPar": "-14",
+      "thru": "F",
+      "today": "-2"
+    },
+    {
+      "position": "T3",
+      "player": "Ben Silverman",
+      "toPar": "-14",
+      "thru": "F",
       "today": "-2"
     },
     {
@@ -48,65 +48,65 @@
     },
     {
       "position": "T6",
-      "player": "Corey Conners",
+      "player": "Chris Kirk",
       "toPar": "-13",
-      "thru": "13",
+      "thru": "F",
+      "today": "-4"
+    },
+    {
+      "position": "T6",
+      "player": "Chan Kim",
+      "toPar": "-13",
+      "thru": "F*",
+      "today": "-7"
+    },
+    {
+      "position": "T6",
+      "player": "Danny Walker",
+      "toPar": "-13",
+      "thru": "F",
       "today": "-1"
     },
     {
       "position": "T6",
       "player": "Chandler Blanchet",
       "toPar": "-13",
-      "thru": "13",
+      "thru": "F",
       "today": "E"
     },
     {
-      "position": "T9",
+      "position": "T11",
       "player": "Cam Davis",
       "toPar": "-12",
       "thru": "F",
       "today": "-4"
     },
     {
-      "position": "T9",
+      "position": "T11",
       "player": "Luke Clanton",
       "toPar": "-12",
       "thru": "F*",
       "today": "-5"
     },
     {
-      "position": "T9",
+      "position": "T11",
       "player": "Isaiah Salinda",
       "toPar": "-12",
       "thru": "F",
       "today": "-4"
     },
     {
-      "position": "T9",
+      "position": "T11",
       "player": "Greyson Sigg",
       "toPar": "-12",
-      "thru": "15",
+      "thru": "F",
       "today": "-1"
     },
     {
-      "position": "T9",
-      "player": "Danny Walker",
-      "toPar": "-12",
-      "thru": "14",
-      "today": "E"
-    },
-    {
-      "position": "T14",
-      "player": "Chan Kim",
-      "toPar": "-11",
-      "thru": "15*",
-      "today": "-5"
-    },
-    {
-      "position": "T14",
+      "position": "T15",
       "player": "David Skinns",
       "toPar": "-11",
-      "thru": "14",
+      "thru": "F",
       "today": "E"
     }
   ]
