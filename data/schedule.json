@@ -1,5 +1,5 @@
 {
-  "lastUpdatedUtc": "2026-10-24T19:29:21.223589Z",
+  "lastUpdatedUtc": "2026-10-25T01:09:36.542481Z",
   "tournament": {
     "name": "Butterfield Bermuda Championship",
     "course": "",
@@ -51,8 +51,8 @@
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-10-25T17:00:00Z",
-      "endUtc": "2026-10-25T20:00:00Z",
+      "startUtc": "2026-10-25T15:00:00Z",
+      "endUtc": "2026-10-25T18:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
