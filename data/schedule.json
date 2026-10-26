@@ -1,11 +1,11 @@
 {
-  "lastUpdatedUtc": "2026-10-26T01:16:48.559732Z",
+  "lastUpdatedUtc": "2026-10-26T20:30:55.054059Z",
   "tournament": {
-    "name": "Butterfield Bermuda Championship",
+    "name": "VidantaWorld Mexico Open",
     "course": "",
     "location": "",
-    "startDate": "2026-10-22",
-    "endDate": "2026-10-25",
+    "startDate": "2026-10-29",
+    "endDate": "2026-11-01",
     "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule"
   },
   "coverage": [
@@ -15,8 +15,8 @@
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-10-22T17:00:00Z",
-      "endUtc": "2026-10-22T20:00:00Z",
+      "startUtc": "2026-10-29T20:00:00Z",
+      "endUtc": "2026-10-29T23:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
@@ -27,8 +27,8 @@
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-10-23T17:00:00Z",
-      "endUtc": "2026-10-23T20:00:00Z",
+      "startUtc": "2026-10-30T20:00:00Z",
+      "endUtc": "2026-10-30T23:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
@@ -39,8 +39,8 @@
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-10-24T17:00:00Z",
-      "endUtc": "2026-10-24T20:00:00Z",
+      "startUtc": "2026-10-31T20:00:00Z",
+      "endUtc": "2026-10-31T23:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
@@ -51,8 +51,8 @@
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-10-25T15:00:00Z",
-      "endUtc": "2026-10-25T18:00:00Z",
+      "startUtc": "2026-11-01T21:00:00Z",
+      "endUtc": "2026-11-02T00:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
