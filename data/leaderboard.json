@@ -1,113 +1,113 @@
 {
-  "tournament": "Butterfield Bermuda Championship",
-  "tournamentId": "R2026528",
+  "tournament": "VidantaWorld Mexico Open",
+  "tournamentId": "R2026540",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-26T01:43:27.346167Z",
+  "updatedUtc": "2026-10-29T18:22:20.725688Z",
   "players": [
     {
-      "position": "T1",
-      "player": "Austin Smotherman",
-      "toPar": "-16",
-      "thru": "F",
-      "today": "-5"
+      "position": "1",
+      "player": "Ben Griffin",
+      "toPar": "-8",
+      "thru": "17*",
+      "today": "-8"
     },
     {
-      "position": "T1",
-      "player": "Seamus Power",
-      "toPar": "-16",
-      "thru": "F",
-      "today": "-4"
-    },
-    {
-      "position": "T3",
-      "player": "Taylor Moore",
-      "toPar": "-14",
-      "thru": "F",
-      "today": "-5"
-    },
-    {
-      "position": "T3",
-      "player": "Corey Conners",
-      "toPar": "-14",
-      "thru": "F",
-      "today": "-2"
-    },
-    {
-      "position": "T3",
-      "player": "Ben Silverman",
-      "toPar": "-14",
-      "thru": "F",
-      "today": "-2"
-    },
-    {
-      "position": "T6",
-      "player": "Tom Hoge",
-      "toPar": "-13",
-      "thru": "F",
-      "today": "-6"
-    },
-    {
-      "position": "T6",
-      "player": "Chris Kirk",
-      "toPar": "-13",
-      "thru": "F",
-      "today": "-4"
-    },
-    {
-      "position": "T6",
-      "player": "Chan Kim",
-      "toPar": "-13",
-      "thru": "F*",
+      "position": "2",
+      "player": "Kensei Hirata",
+      "toPar": "-7",
+      "thru": "13*",
       "today": "-7"
     },
     {
-      "position": "T6",
-      "player": "Danny Walker",
-      "toPar": "-13",
-      "thru": "F",
-      "today": "-1"
-    },
-    {
-      "position": "T6",
-      "player": "Chandler Blanchet",
-      "toPar": "-13",
-      "thru": "F",
-      "today": "E"
-    },
-    {
-      "position": "T11",
-      "player": "Cam Davis",
-      "toPar": "-12",
-      "thru": "F",
-      "today": "-4"
-    },
-    {
-      "position": "T11",
-      "player": "Luke Clanton",
-      "toPar": "-12",
+      "position": "T3",
+      "player": "Max Homa",
+      "toPar": "-6",
       "thru": "F*",
+      "today": "-6"
+    },
+    {
+      "position": "T3",
+      "player": "Pierceson Coody",
+      "toPar": "-6",
+      "thru": "14",
+      "today": "-6"
+    },
+    {
+      "position": "5",
+      "player": "Trent Phillips",
+      "toPar": "-5",
+      "thru": "13",
       "today": "-5"
     },
     {
-      "position": "T11",
-      "player": "Isaiah Salinda",
-      "toPar": "-12",
-      "thru": "F",
+      "position": "T6",
+      "player": "Denny McCarthy",
+      "toPar": "-4",
+      "thru": "F*",
       "today": "-4"
     },
     {
-      "position": "T11",
-      "player": "Greyson Sigg",
-      "toPar": "-12",
-      "thru": "F",
-      "today": "-1"
+      "position": "T6",
+      "player": "Jeremy Paul",
+      "toPar": "-4",
+      "thru": "F*",
+      "today": "-4"
     },
     {
-      "position": "T15",
-      "player": "David Skinns",
-      "toPar": "-11",
+      "position": "T6",
+      "player": "Andrew Novak",
+      "toPar": "-4",
+      "thru": "17*",
+      "today": "-4"
+    },
+    {
+      "position": "T6",
+      "player": "Joel Dahmen",
+      "toPar": "-4",
+      "thru": "17*",
+      "today": "-4"
+    },
+    {
+      "position": "T6",
+      "player": "Sudarshan Yellamaraju",
+      "toPar": "-4",
+      "thru": "16*",
+      "today": "-4"
+    },
+    {
+      "position": "T6",
+      "player": "Chad Ramey",
+      "toPar": "-4",
+      "thru": "14",
+      "today": "-4"
+    },
+    {
+      "position": "T6",
+      "player": "Isaiah Salinda",
+      "toPar": "-4",
+      "thru": "13",
+      "today": "-4"
+    },
+    {
+      "position": "T13",
+      "player": "Austin Eckroat",
+      "toPar": "-3",
       "thru": "F",
-      "today": "E"
+      "today": "-3"
+    },
+    {
+      "position": "T13",
+      "player": "Beau Hossler",
+      "toPar": "-3",
+      "thru": "F",
+      "today": "-3"
+    },
+    {
+      "position": "T13",
+      "player": "Justin Lower",
+      "toPar": "-3",
+      "thru": "17",
+      "today": "-3"
     }
   ]
 }
