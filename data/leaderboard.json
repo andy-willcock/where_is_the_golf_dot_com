@@ -2,112 +2,112 @@
   "tournament": "VidantaWorld Mexico Open",
   "tournamentId": "R2026540",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-30T02:30:29.731047Z",
+  "updatedUtc": "2026-10-30T17:56:32.381889Z",
   "players": [
     {
-      "position": "1",
-      "player": "Karl Vilips",
-      "toPar": "-9",
-      "thru": "F*",
-      "today": "-9"
-    },
-    {
-      "position": "2",
-      "player": "Kensei Hirata",
-      "toPar": "-8",
-      "thru": "F*",
-      "today": "-8"
-    },
-    {
-      "position": "T3",
-      "player": "Ben Griffin",
-      "toPar": "-7",
-      "thru": "F*",
-      "today": "-7"
-    },
-    {
-      "position": "T3",
-      "player": "Marco Penge",
-      "toPar": "-7",
-      "thru": "F",
-      "today": "-7"
-    },
-    {
-      "position": "T3",
-      "player": "Garrick Higgo",
-      "toPar": "-7",
-      "thru": "F",
-      "today": "-7"
-    },
-    {
-      "position": "T3",
-      "player": "Jeffrey Kang",
-      "toPar": "-7",
-      "thru": "F",
-      "today": "-7"
-    },
-    {
-      "position": "T3",
-      "player": "Adrien Dumont de Chassart",
-      "toPar": "-7",
-      "thru": "F*",
-      "today": "-7"
-    },
-    {
-      "position": "T8",
-      "player": "Pierceson Coody",
-      "toPar": "-6",
-      "thru": "F",
-      "today": "-6"
-    },
-    {
-      "position": "T8",
+      "position": "T1",
       "player": "Mackenzie Hughes",
-      "toPar": "-6",
-      "thru": "F",
+      "toPar": "-10",
+      "thru": "F*",
+      "today": "-4"
+    },
+    {
+      "position": "T1",
+      "player": "Jackson Suber",
+      "toPar": "-10",
+      "thru": "17",
+      "today": "-5"
+    },
+    {
+      "position": "T1",
+      "player": "Brian Campbell",
+      "toPar": "-10",
+      "thru": "16*",
       "today": "-6"
     },
     {
-      "position": "T8",
+      "position": "T1",
+      "player": "Adrien Dumont de Chassart",
+      "toPar": "-10",
+      "thru": "11",
+      "today": "-3"
+    },
+    {
+      "position": "T5",
       "player": "Doug Ghim",
-      "toPar": "-6",
-      "thru": "F",
-      "today": "-6"
+      "toPar": "-9",
+      "thru": "17*",
+      "today": "-3"
     },
     {
-      "position": "T8",
+      "position": "T5",
       "player": "Alvaro Ortiz",
-      "toPar": "-6",
-      "thru": "F",
-      "today": "-6"
+      "toPar": "-9",
+      "thru": "16*",
+      "today": "-3"
+    },
+    {
+      "position": "T5",
+      "player": "Matthieu Pavon",
+      "toPar": "-9",
+      "thru": "14*",
+      "today": "-3"
     },
     {
       "position": "T8",
-      "player": "Matthieu Pavon",
-      "toPar": "-6",
-      "thru": "F",
-      "today": "-6"
+      "player": "Brice Garnett",
+      "toPar": "-8",
+      "thru": "17",
+      "today": "-5"
+    },
+    {
+      "position": "T8",
+      "player": "Tom Kim",
+      "toPar": "-8",
+      "thru": "16*",
+      "today": "-4"
+    },
+    {
+      "position": "T8",
+      "player": "Garrick Higgo",
+      "toPar": "-8",
+      "thru": "16*",
+      "today": "-1"
     },
     {
       "position": "T8",
       "player": "Max Greyserman",
-      "toPar": "-6",
-      "thru": "F",
-      "today": "-6"
+      "toPar": "-8",
+      "thru": "14*",
+      "today": "-2"
     },
     {
-      "position": "T14",
-      "player": "Max Homa",
-      "toPar": "-5",
-      "thru": "F*",
-      "today": "-5"
+      "position": "T8",
+      "player": "Kihei Akina",
+      "toPar": "-8",
+      "thru": "12",
+      "today": "-4"
     },
     {
-      "position": "T14",
-      "player": "Sudarshan Yellamaraju",
-      "toPar": "-5",
-      "thru": "F*",
-      "today": "-5"
+      "position": "T8",
+      "player": "Hayden Springer",
+      "toPar": "-8",
+      "thru": "13*",
+      "today": "-3"
+    },
+    {
+      "position": "T8",
+      "player": "Jeffrey Kang",
+      "toPar": "-8",
+      "thru": "13*",
+      "today": "-1"
+    },
+    {
+      "position": "T8",
+      "player": "Kensei Hirata",
+      "toPar": "-8",
+      "thru": "",
+      "today": "-"
     }
   ]
 }
