@@ -2,20 +2,20 @@
   "tournament": "VidantaWorld Mexico Open",
   "tournamentId": "R2026540",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-29T22:55:39.752360Z",
+  "updatedUtc": "2026-10-30T02:30:29.731047Z",
   "players": [
     {
-      "position": "T1",
+      "position": "1",
+      "player": "Karl Vilips",
+      "toPar": "-9",
+      "thru": "F*",
+      "today": "-9"
+    },
+    {
+      "position": "2",
       "player": "Kensei Hirata",
       "toPar": "-8",
       "thru": "F*",
-      "today": "-8"
-    },
-    {
-      "position": "T1",
-      "player": "Karl Vilips",
-      "toPar": "-8",
-      "thru": "17*",
       "today": "-8"
     },
     {
@@ -34,77 +34,77 @@
     },
     {
       "position": "T3",
-      "player": "Doug Ghim",
+      "player": "Garrick Higgo",
       "toPar": "-7",
       "thru": "F",
       "today": "-7"
     },
     {
-      "position": "T6",
+      "position": "T3",
+      "player": "Jeffrey Kang",
+      "toPar": "-7",
+      "thru": "F",
+      "today": "-7"
+    },
+    {
+      "position": "T3",
+      "player": "Adrien Dumont de Chassart",
+      "toPar": "-7",
+      "thru": "F*",
+      "today": "-7"
+    },
+    {
+      "position": "T8",
       "player": "Pierceson Coody",
       "toPar": "-6",
       "thru": "F",
       "today": "-6"
     },
     {
-      "position": "T6",
+      "position": "T8",
       "player": "Mackenzie Hughes",
       "toPar": "-6",
       "thru": "F",
       "today": "-6"
     },
     {
-      "position": "T6",
+      "position": "T8",
+      "player": "Doug Ghim",
+      "toPar": "-6",
+      "thru": "F",
+      "today": "-6"
+    },
+    {
+      "position": "T8",
       "player": "Alvaro Ortiz",
       "toPar": "-6",
-      "thru": "16",
+      "thru": "F",
       "today": "-6"
     },
     {
-      "position": "T6",
+      "position": "T8",
       "player": "Matthieu Pavon",
       "toPar": "-6",
-      "thru": "15",
+      "thru": "F",
       "today": "-6"
     },
     {
-      "position": "T6",
-      "player": "Hayden Springer",
+      "position": "T8",
+      "player": "Max Greyserman",
       "toPar": "-6",
-      "thru": "13",
+      "thru": "F",
       "today": "-6"
     },
     {
-      "position": "T6",
-      "player": "Jeffrey Kang",
-      "toPar": "-6",
-      "thru": "13",
-      "today": "-6"
-    },
-    {
-      "position": "T12",
+      "position": "T14",
       "player": "Max Homa",
       "toPar": "-5",
       "thru": "F*",
       "today": "-5"
     },
     {
-      "position": "T12",
+      "position": "T14",
       "player": "Sudarshan Yellamaraju",
-      "toPar": "-5",
-      "thru": "F*",
-      "today": "-5"
-    },
-    {
-      "position": "T12",
-      "player": "Trent Phillips",
-      "toPar": "-5",
-      "thru": "F",
-      "today": "-5"
-    },
-    {
-      "position": "T12",
-      "player": "Max McGreevy",
       "toPar": "-5",
       "thru": "F*",
       "today": "-5"
