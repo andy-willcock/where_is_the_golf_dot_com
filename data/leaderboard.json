@@ -2,112 +2,112 @@
   "tournament": "VidantaWorld Mexico Open",
   "tournamentId": "R2026540",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-10-31T17:09:34.712229Z",
+  "updatedUtc": "2026-10-31T20:28:05.326347Z",
   "players": [
     {
       "position": "1",
       "player": "Andrew Novak",
+      "toPar": "-18",
+      "thru": "9",
+      "today": "-4"
+    },
+    {
+      "position": "2",
+      "player": "Pierceson Coody",
       "toPar": "-14",
-      "thru": "",
-      "today": "-"
+      "thru": "14",
+      "today": "-6"
     },
     {
-      "position": "T2",
-      "player": "Matthieu Pavon",
-      "toPar": "-11",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T2",
-      "player": "Kihei Akina",
-      "toPar": "-11",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T2",
-      "player": "Adrien Dumont de Chassart",
-      "toPar": "-11",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T2",
-      "player": "Ben Griffin",
-      "toPar": "-11",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T2",
-      "player": "Kensei Hirata",
-      "toPar": "-11",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T7",
-      "player": "Mackenzie Hughes",
-      "toPar": "-10",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T7",
-      "player": "Max Greyserman",
-      "toPar": "-10",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T7",
-      "player": "Gordon Sargent",
-      "toPar": "-10",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T7",
-      "player": "Marco Penge",
-      "toPar": "-10",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T11",
-      "player": "Tom Kim",
-      "toPar": "-9",
-      "thru": "3",
-      "today": "-2"
-    },
-    {
-      "position": "T11",
+      "position": "T3",
       "player": "Brian Campbell",
-      "toPar": "-9",
-      "thru": "3",
+      "toPar": "-13",
+      "thru": "15",
+      "today": "-6"
+    },
+    {
+      "position": "T3",
+      "player": "Steven Fisk",
+      "toPar": "-13",
+      "thru": "13",
+      "today": "-4"
+    },
+    {
+      "position": "T3",
+      "player": "Max Greyserman",
+      "toPar": "-13",
+      "thru": "11",
+      "today": "-3"
+    },
+    {
+      "position": "T3",
+      "player": "Ben Griffin",
+      "toPar": "-13",
+      "thru": "10",
       "today": "-2"
     },
     {
-      "position": "T11",
-      "player": "Keita Nakajima",
-      "toPar": "-9",
-      "thru": "2",
+      "position": "T3",
+      "player": "Matthieu Pavon",
+      "toPar": "-13",
+      "thru": "9",
+      "today": "-2"
+    },
+    {
+      "position": "T8",
+      "player": "Kristoffer Ventura",
+      "toPar": "-12",
+      "thru": "16",
+      "today": "-5"
+    },
+    {
+      "position": "T8",
+      "player": "Harry Hall",
+      "toPar": "-12",
+      "thru": "15",
+      "today": "-5"
+    },
+    {
+      "position": "T8",
+      "player": "Chandler Phillips",
+      "toPar": "-12",
+      "thru": "15",
+      "today": "-5"
+    },
+    {
+      "position": "T8",
+      "player": "Jackson Suber",
+      "toPar": "-12",
+      "thru": "11",
+      "today": "-3"
+    },
+    {
+      "position": "T8",
+      "player": "Doug Ghim",
+      "toPar": "-12",
+      "thru": "11",
+      "today": "-3"
+    },
+    {
+      "position": "T8",
+      "player": "Adrien Dumont de Chassart",
+      "toPar": "-12",
+      "thru": "10",
       "today": "-1"
     },
     {
-      "position": "T11",
-      "player": "Steven Fisk",
-      "toPar": "-9",
-      "thru": "1",
-      "today": "E"
+      "position": "T8",
+      "player": "Kensei Hirata",
+      "toPar": "-12",
+      "thru": "10",
+      "today": "-1"
     },
     {
-      "position": "T11",
-      "player": "Hayden Springer",
-      "toPar": "-9",
-      "thru": "1",
-      "today": "E"
+      "position": "T8",
+      "player": "Kihei Akina",
+      "toPar": "-12",
+      "thru": "9",
+      "today": "-1"
     }
   ]
 }
