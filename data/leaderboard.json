@@ -2,112 +2,112 @@
   "tournament": "VidantaWorld Mexico Open",
   "tournamentId": "R2026540",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-11-01T02:37:44.845180Z",
+  "updatedUtc": "2026-11-01T17:51:42.352832Z",
   "players": [
     {
       "position": "1",
       "player": "Andrew Novak",
       "toPar": "-23",
-      "thru": "F",
-      "today": "-9"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "2",
       "player": "Matthieu Pavon",
       "toPar": "-17",
-      "thru": "F",
-      "today": "-6"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "3",
       "player": "Doug Ghim",
       "toPar": "-16",
-      "thru": "F",
-      "today": "-7"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T4",
       "player": "Pierceson Coody",
       "toPar": "-15",
-      "thru": "F",
-      "today": "-7"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T4",
       "player": "Max Greyserman",
       "toPar": "-15",
-      "thru": "F",
-      "today": "-5"
+      "thru": "",
+      "today": "-"
     },
     {
       "position": "T4",
       "player": "Ben Griffin",
       "toPar": "-15",
-      "thru": "F",
-      "today": "-4"
+      "thru": "",
+      "today": "-"
+    },
+    {
+      "position": "T7",
+      "player": "Steven Fisk",
+      "toPar": "-14",
+      "thru": "3",
+      "today": "-2"
+    },
+    {
+      "position": "T7",
+      "player": "Brian Campbell",
+      "toPar": "-14",
+      "thru": "2",
+      "today": "-1"
     },
     {
       "position": "T7",
       "player": "Mackenzie Hughes",
       "toPar": "-14",
-      "thru": "F",
-      "today": "-4"
+      "thru": "1",
+      "today": "E"
     },
     {
       "position": "T7",
       "player": "Kihei Akina",
       "toPar": "-14",
-      "thru": "F",
+      "thru": "1",
+      "today": "E"
+    },
+    {
+      "position": "T11",
+      "player": "Marco Penge",
+      "toPar": "-13",
+      "thru": "7*",
+      "today": "-5"
+    },
+    {
+      "position": "T11",
+      "player": "Ben Silverman",
+      "toPar": "-13",
+      "thru": "5",
       "today": "-3"
     },
     {
-      "position": "T9",
-      "player": "Tom Kim",
+      "position": "T11",
+      "player": "Adrien Dumont de Chassart",
       "toPar": "-13",
-      "thru": "F",
-      "today": "-6"
-    },
-    {
-      "position": "T9",
-      "player": "Brian Campbell",
-      "toPar": "-13",
-      "thru": "F",
-      "today": "-6"
-    },
-    {
-      "position": "T9",
-      "player": "Blades Brown",
-      "toPar": "-13",
-      "thru": "F",
-      "today": "-4"
-    },
-    {
-      "position": "T9",
-      "player": "Kensei Hirata",
-      "toPar": "-13",
-      "thru": "F",
+      "thru": "4",
       "today": "-2"
     },
     {
-      "position": "T13",
-      "player": "Kristoffer Ventura",
-      "toPar": "-12",
-      "thru": "F",
-      "today": "-5"
+      "position": "T11",
+      "player": "Blades Brown",
+      "toPar": "-13",
+      "thru": "2",
+      "today": "E"
     },
     {
-      "position": "T13",
-      "player": "Christiaan Bezuidenhout",
-      "toPar": "-12",
-      "thru": "F*",
-      "today": "-6"
-    },
-    {
-      "position": "T13",
-      "player": "Chandler Phillips",
-      "toPar": "-12",
-      "thru": "F",
-      "today": "-5"
+      "position": "T11",
+      "player": "Kensei Hirata",
+      "toPar": "-13",
+      "thru": "2",
+      "today": "E"
     }
   ]
 }
