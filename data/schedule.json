@@ -1,11 +1,11 @@
 {
-  "lastUpdatedUtc": "2026-11-02T02:35:02.312123Z",
+  "lastUpdatedUtc": "2026-11-02T23:07:32.082337Z",
   "tournament": {
-    "name": "VidantaWorld Mexico Open",
+    "name": "World Wide Technology Championship",
     "course": "",
     "location": "",
-    "startDate": "2026-10-29",
-    "endDate": "2026-11-01",
+    "startDate": "2026-11-05",
+    "endDate": "2026-11-08",
     "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule"
   },
   "coverage": [
@@ -15,8 +15,8 @@
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-10-29T20:00:00Z",
-      "endUtc": "2026-10-29T23:00:00Z",
+      "startUtc": "2026-11-05T21:00:00Z",
+      "endUtc": "2026-11-06T00:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
@@ -27,8 +27,8 @@
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-10-30T20:00:00Z",
-      "endUtc": "2026-10-30T23:00:00Z",
+      "startUtc": "2026-11-06T21:00:00Z",
+      "endUtc": "2026-11-07T00:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
@@ -39,8 +39,8 @@
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-10-31T20:00:00Z",
-      "endUtc": "2026-10-31T23:00:00Z",
+      "startUtc": "2026-11-07T21:00:00Z",
+      "endUtc": "2026-11-08T00:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
@@ -49,10 +49,10 @@
       "id": "coverage-4",
       "round": "Final Round",
       "provider": "Golf Channel",
-      "feed": "Full Telecast",
+      "feed": "Full Telecast\n\u00a9 2026 PGA Tour INC. All rights reserved. | 1 PGA TOUR Blvd., Ponte Vedra Beach, FL 32082 |\nTERMS OF SERVICE\n|\nCONTACT US",
       "type": "tv",
-      "startUtc": "2026-11-01T21:00:00Z",
-      "endUtc": "2026-11-02T00:00:00Z",
+      "startUtc": "2026-11-08T21:00:00Z",
+      "endUtc": "2026-11-09T00:00:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
