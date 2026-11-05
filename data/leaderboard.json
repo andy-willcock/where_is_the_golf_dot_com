@@ -1,113 +1,113 @@
 {
-  "tournament": "VidantaWorld Mexico Open",
-  "tournamentId": "R2026540",
+  "tournament": "World Wide Technology Championship",
+  "tournamentId": "R2026457",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-11-02T01:26:25.331762Z",
+  "updatedUtc": "2026-11-05T19:48:43.067886Z",
   "players": [
     {
       "position": "1",
-      "player": "Andrew Novak",
-      "toPar": "-25",
+      "player": "Chris Kirk",
+      "toPar": "-9",
       "thru": "F",
-      "today": "-2"
+      "today": "-9"
     },
     {
-      "position": "T2",
-      "player": "Steven Fisk",
-      "toPar": "-20",
-      "thru": "F",
+      "position": "2",
+      "player": "Nick Dunlap",
+      "toPar": "-8",
+      "thru": "F*",
       "today": "-8"
     },
     {
-      "position": "T2",
-      "player": "Kristoffer Ventura",
-      "toPar": "-20",
-      "thru": "F",
-      "today": "-8"
-    },
-    {
-      "position": "T4",
-      "player": "Mackenzie Hughes",
-      "toPar": "-19",
-      "thru": "F",
-      "today": "-5"
-    },
-    {
-      "position": "T4",
-      "player": "Ben Griffin",
-      "toPar": "-19",
-      "thru": "F",
-      "today": "-4"
-    },
-    {
-      "position": "T6",
-      "player": "Erik van Rooyen",
-      "toPar": "-18",
+      "position": "T3",
+      "player": "Matthieu Pavon",
+      "toPar": "-7",
       "thru": "F",
       "today": "-7"
     },
     {
-      "position": "T6",
-      "player": "Brian Campbell",
-      "toPar": "-18",
+      "position": "T3",
+      "player": "Harry Hall",
+      "toPar": "-7",
       "thru": "F",
-      "today": "-5"
+      "today": "-7"
     },
     {
-      "position": "T6",
-      "player": "Tom Kim",
-      "toPar": "-18",
-      "thru": "F",
-      "today": "-5"
-    },
-    {
-      "position": "T6",
-      "player": "Pierceson Coody",
-      "toPar": "-18",
-      "thru": "F",
-      "today": "-3"
-    },
-    {
-      "position": "T6",
-      "player": "Doug Ghim",
-      "toPar": "-18",
-      "thru": "F",
-      "today": "-2"
-    },
-    {
-      "position": "T11",
-      "player": "Trace Crowe",
-      "toPar": "-17",
-      "thru": "F",
-      "today": "-8"
-    },
-    {
-      "position": "T11",
+      "position": "T3",
       "player": "Kensei Hirata",
-      "toPar": "-17",
-      "thru": "F",
-      "today": "-4"
+      "toPar": "-7",
+      "thru": "F*",
+      "today": "-7"
     },
     {
-      "position": "T11",
-      "player": "Max Greyserman",
-      "toPar": "-17",
+      "position": "T6",
+      "player": "Peter Malnati",
+      "toPar": "-6",
       "thru": "F",
-      "today": "-2"
+      "today": "-6"
     },
     {
-      "position": "T11",
-      "player": "Matthieu Pavon",
-      "toPar": "-17",
-      "thru": "F",
-      "today": "E"
+      "position": "T6",
+      "player": "Ryan Gerard",
+      "toPar": "-6",
+      "thru": "F*",
+      "today": "-6"
     },
     {
-      "position": "15",
-      "player": "Kihei Akina",
-      "toPar": "-16",
+      "position": "T6",
+      "player": "Blades Brown",
+      "toPar": "-6",
+      "thru": "F*",
+      "today": "-6"
+    },
+    {
+      "position": "T6",
+      "player": "Karl Vilips",
+      "toPar": "-6",
+      "thru": "F*",
+      "today": "-6"
+    },
+    {
+      "position": "T6",
+      "player": "Joe Highsmith",
+      "toPar": "-6",
       "thru": "F",
-      "today": "-2"
+      "today": "-6"
+    },
+    {
+      "position": "T6",
+      "player": "Taylor Montgomery",
+      "toPar": "-6",
+      "thru": "17",
+      "today": "-6"
+    },
+    {
+      "position": "T12",
+      "player": "Ben Martin",
+      "toPar": "-5",
+      "thru": "F",
+      "today": "-5"
+    },
+    {
+      "position": "T12",
+      "player": "Brice Garnett",
+      "toPar": "-5",
+      "thru": "F*",
+      "today": "-5"
+    },
+    {
+      "position": "T12",
+      "player": "Rico Hoey",
+      "toPar": "-5",
+      "thru": "F",
+      "today": "-5"
+    },
+    {
+      "position": "T12",
+      "player": "Johnny Keefer",
+      "toPar": "-5",
+      "thru": "F",
+      "today": "-5"
     }
   ]
 }
