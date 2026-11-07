@@ -2,112 +2,112 @@
   "tournament": "World Wide Technology Championship",
   "tournamentId": "R2026457",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-11-07T17:41:53.794962Z",
+  "updatedUtc": "2026-11-07T21:06:11.461893Z",
   "players": [
     {
       "position": "1",
       "player": "Ben James",
-      "toPar": "-15",
-      "thru": "",
-      "today": "-"
+      "toPar": "-18",
+      "thru": "11",
+      "today": "-3"
     },
     {
       "position": "2",
-      "player": "Peter Malnati",
-      "toPar": "-14",
-      "thru": "",
-      "today": "-"
+      "player": "Kensei Hirata",
+      "toPar": "-16",
+      "thru": "13",
+      "today": "-6"
     },
     {
       "position": "T3",
       "player": "David Ford",
-      "toPar": "-13",
-      "thru": "3",
-      "today": "-4"
-    },
-    {
-      "position": "T3",
-      "player": "Blades Brown",
-      "toPar": "-13",
-      "thru": "2",
-      "today": "-3"
+      "toPar": "-15",
+      "thru": "14",
+      "today": "-6"
     },
     {
       "position": "T3",
       "player": "Keith Mitchell",
-      "toPar": "-13",
-      "thru": "2",
-      "today": "-3"
+      "toPar": "-15",
+      "thru": "13",
+      "today": "-5"
     },
     {
       "position": "T3",
-      "player": "Kensei Hirata",
-      "toPar": "-13",
-      "thru": "2",
-      "today": "-3"
+      "player": "Ryan Gerard",
+      "toPar": "-15",
+      "thru": "13",
+      "today": "-5"
+    },
+    {
+      "position": "T3",
+      "player": "Peter Malnati",
+      "toPar": "-15",
+      "thru": "11",
+      "today": "-1"
     },
     {
       "position": "T7",
-      "player": "Ben Martin",
-      "toPar": "-12",
-      "thru": "5",
+      "player": "Blades Brown",
+      "toPar": "-14",
+      "thru": "13",
       "today": "-4"
     },
     {
       "position": "T7",
-      "player": "Beau Hossler",
-      "toPar": "-12",
-      "thru": "3",
-      "today": "-3"
+      "player": "Zach Bauchou",
+      "toPar": "-14",
+      "thru": "12",
+      "today": "-4"
     },
     {
       "position": "T7",
-      "player": "Zac Blair",
-      "toPar": "-12",
-      "thru": "",
-      "today": "-"
+      "player": "Denny McCarthy",
+      "toPar": "-14",
+      "thru": "12",
+      "today": "-3"
     },
     {
       "position": "T10",
       "player": "Rico Hoey",
-      "toPar": "-11",
-      "thru": "6",
-      "today": "-3"
+      "toPar": "-13",
+      "thru": "F",
+      "today": "-5"
     },
     {
       "position": "T10",
       "player": "Harry Hall",
-      "toPar": "-11",
-      "thru": "6",
-      "today": "-3"
+      "toPar": "-13",
+      "thru": "F",
+      "today": "-5"
     },
     {
       "position": "T10",
-      "player": "Chad Ramey",
-      "toPar": "-11",
-      "thru": "5",
-      "today": "-3"
+      "player": "Adrien Dumont de Chassart",
+      "toPar": "-13",
+      "thru": "17*",
+      "today": "-6"
     },
     {
       "position": "T10",
-      "player": "Cam Davis",
-      "toPar": "-11",
-      "thru": "4",
-      "today": "-3"
+      "player": "Paul Peterson",
+      "toPar": "-13",
+      "thru": "16",
+      "today": "-4"
     },
     {
       "position": "T10",
       "player": "Alvaro Ortiz",
-      "toPar": "-11",
-      "thru": "3",
-      "today": "-2"
+      "toPar": "-13",
+      "thru": "15",
+      "today": "-4"
     },
     {
       "position": "T10",
       "player": "Chris Kirk",
-      "toPar": "-11",
-      "thru": "3",
-      "today": "-2"
+      "toPar": "-13",
+      "thru": "15",
+      "today": "-4"
     }
   ]
 }
