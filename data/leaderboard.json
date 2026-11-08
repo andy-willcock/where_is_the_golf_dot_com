@@ -2,112 +2,112 @@
   "tournament": "World Wide Technology Championship",
   "tournamentId": "R2026457",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-11-08T17:52:21.413883Z",
+  "updatedUtc": "2026-11-08T21:56:12.119969Z",
   "players": [
     {
-      "position": "1",
-      "player": "Ben James",
-      "toPar": "-21",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "2",
-      "player": "Ryan Gerard",
-      "toPar": "-17",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T3",
-      "player": "Kensei Hirata",
-      "toPar": "-16",
-      "thru": "1",
-      "today": "-1"
-    },
-    {
-      "position": "T3",
-      "player": "Chris Kirk",
-      "toPar": "-16",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T3",
-      "player": "Denny McCarthy",
-      "toPar": "-16",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T6",
-      "player": "Rico Hoey",
-      "toPar": "-15",
-      "thru": "3",
-      "today": "-2"
-    },
-    {
-      "position": "T6",
+      "position": "T1",
       "player": "Blades Brown",
-      "toPar": "-15",
-      "thru": "2",
-      "today": "-1"
+      "toPar": "-22",
+      "thru": "16",
+      "today": "-8"
     },
     {
-      "position": "T6",
+      "position": "T1",
+      "player": "Denny McCarthy",
+      "toPar": "-22",
+      "thru": "14",
+      "today": "-6"
+    },
+    {
+      "position": "3",
       "player": "Michael Kim",
-      "toPar": "-15",
-      "thru": "2",
-      "today": "-1"
+      "toPar": "-21",
+      "thru": "16",
+      "today": "-7"
     },
     {
-      "position": "T6",
-      "player": "David Ford",
-      "toPar": "-15",
-      "thru": "1",
-      "today": "-1"
-    },
-    {
-      "position": "T6",
-      "player": "Paul Peterson",
-      "toPar": "-15",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T6",
-      "player": "Alvaro Ortiz",
-      "toPar": "-15",
-      "thru": "",
-      "today": "-"
-    },
-    {
-      "position": "T12",
-      "player": "Nick Dunlap",
-      "toPar": "-14",
-      "thru": "8*",
+      "position": "T4",
+      "player": "Kensei Hirata",
+      "toPar": "-20",
+      "thru": "15",
       "today": "-5"
     },
     {
-      "position": "T12",
-      "player": "Jackson Koivun",
-      "toPar": "-14",
-      "thru": "6",
+      "position": "T4",
+      "player": "Ben James",
+      "toPar": "-20",
+      "thru": "13",
+      "today": "+1"
+    },
+    {
+      "position": "T4",
+      "player": "Ryan Gerard",
+      "toPar": "-20",
+      "thru": "13",
+      "today": "-3"
+    },
+    {
+      "position": "T4",
+      "player": "Chris Kirk",
+      "toPar": "-20",
+      "thru": "13",
       "today": "-4"
     },
     {
-      "position": "T12",
-      "player": "Emiliano Grillo",
-      "toPar": "-14",
-      "thru": "5",
+      "position": "T8",
+      "player": "David Ford",
+      "toPar": "-19",
+      "thru": "15",
+      "today": "-5"
+    },
+    {
+      "position": "T8",
+      "player": "Alvaro Ortiz",
+      "toPar": "-19",
+      "thru": "14",
       "today": "-4"
     },
     {
-      "position": "T12",
-      "player": "Matthieu Pavon",
-      "toPar": "-14",
-      "thru": "3",
-      "today": "-2"
+      "position": "T10",
+      "player": "Jordan Smith",
+      "toPar": "-18",
+      "thru": "F",
+      "today": "-9"
+    },
+    {
+      "position": "T10",
+      "player": "Seamus Power",
+      "toPar": "-18",
+      "thru": "F",
+      "today": "-6"
+    },
+    {
+      "position": "T10",
+      "player": "Paul Peterson",
+      "toPar": "-18",
+      "thru": "14",
+      "today": "-3"
+    },
+    {
+      "position": "T13",
+      "player": "Ben Griffin",
+      "toPar": "-17",
+      "thru": "F",
+      "today": "-7"
+    },
+    {
+      "position": "T13",
+      "player": "Sudarshan Yellamaraju",
+      "toPar": "-17",
+      "thru": "F",
+      "today": "-6"
+    },
+    {
+      "position": "T13",
+      "player": "Beau Hossler",
+      "toPar": "-17",
+      "thru": "F",
+      "today": "-6"
     }
   ]
 }
