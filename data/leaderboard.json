@@ -1,113 +1,113 @@
 {
-  "tournament": "World Wide Technology Championship",
-  "tournamentId": "R2026457",
+  "tournament": "Austin Championship presented by Compliance Solutions",
+  "tournamentId": "R2026558",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-11-09T01:36:10.166915Z",
+  "updatedUtc": "2026-11-12T19:47:40.388608Z",
   "players": [
     {
       "position": "1",
-      "player": "Blades Brown",
-      "toPar": "-23",
-      "thru": "F",
-      "today": "-9"
+      "player": "Trace Crowe",
+      "toPar": "-10",
+      "thru": "F*",
+      "today": "-10"
     },
     {
       "position": "2",
-      "player": "Ben James",
-      "toPar": "-23",
-      "thru": "F",
-      "today": "-2"
-    },
-    {
-      "position": "3",
-      "player": "Michael Kim",
-      "toPar": "-22",
-      "thru": "F",
+      "player": "Erik van Rooyen",
+      "toPar": "-8",
+      "thru": "F*",
       "today": "-8"
     },
     {
-      "position": "4",
-      "player": "Kensei Hirata",
-      "toPar": "-21",
+      "position": "3",
+      "player": "Blades Brown",
+      "toPar": "-7",
+      "thru": "F*",
+      "today": "-7"
+    },
+    {
+      "position": "T4",
+      "player": "Rafael Campos",
+      "toPar": "-6",
       "thru": "F",
       "today": "-6"
     },
     {
-      "position": "5",
-      "player": "David Ford",
-      "toPar": "-20",
+      "position": "T4",
+      "player": "Kevin Yu",
+      "toPar": "-6",
       "thru": "F",
       "today": "-6"
     },
     {
       "position": "T6",
-      "player": "Denny McCarthy",
-      "toPar": "-19",
-      "thru": "F",
-      "today": "-3"
+      "player": "Chandler Phillips",
+      "toPar": "-5",
+      "thru": "F*",
+      "today": "-5"
     },
     {
       "position": "T6",
-      "player": "Alvaro Ortiz",
-      "toPar": "-19",
+      "player": "Aaron Wise",
+      "toPar": "-5",
+      "thru": "F",
+      "today": "-5"
+    },
+    {
+      "position": "T6",
+      "player": "Miles Russell",
+      "toPar": "-5",
+      "thru": "F",
+      "today": "-5"
+    },
+    {
+      "position": "T9",
+      "player": "Mac Meissner",
+      "toPar": "-4",
       "thru": "F",
       "today": "-4"
     },
     {
-      "position": "T8",
-      "player": "Jordan Smith",
-      "toPar": "-18",
+      "position": "T9",
+      "player": "Tyler Duncan",
+      "toPar": "-4",
       "thru": "F",
-      "today": "-9"
+      "today": "-4"
     },
     {
-      "position": "T8",
-      "player": "Seamus Power",
-      "toPar": "-18",
+      "position": "T9",
+      "player": "Sami Valimaki",
+      "toPar": "-4",
       "thru": "F",
-      "today": "-6"
+      "today": "-4"
     },
     {
-      "position": "T8",
-      "player": "Keith Mitchell",
-      "toPar": "-18",
+      "position": "T9",
+      "player": "Adam Schenk",
+      "toPar": "-4",
       "thru": "F",
-      "today": "-3"
+      "today": "-4"
     },
     {
-      "position": "T8",
-      "player": "Ryan Gerard",
-      "toPar": "-18",
-      "thru": "F",
-      "today": "-1"
+      "position": "T9",
+      "player": "Marcelo Rozo",
+      "toPar": "-4",
+      "thru": "F*",
+      "today": "-4"
     },
     {
-      "position": "T12",
-      "player": "Ben Griffin",
-      "toPar": "-17",
+      "position": "T9",
+      "player": "Neal Shipley",
+      "toPar": "-4",
       "thru": "F",
-      "today": "-7"
+      "today": "-4"
     },
     {
-      "position": "T12",
-      "player": "Sudarshan Yellamaraju",
-      "toPar": "-17",
-      "thru": "F",
-      "today": "-6"
-    },
-    {
-      "position": "T12",
-      "player": "Beau Hossler",
-      "toPar": "-17",
-      "thru": "F",
-      "today": "-6"
-    },
-    {
-      "position": "T12",
-      "player": "Jay Leng",
-      "toPar": "-17",
-      "thru": "F",
-      "today": "-5"
+      "position": "T9",
+      "player": "Chandler Blanchet",
+      "toPar": "-4",
+      "thru": "17*",
+      "today": "-4"
     }
   ]
 }
