@@ -1,5 +1,5 @@
 {
-  "lastUpdatedUtc": "2026-11-14T17:11:42.707229Z",
+  "lastUpdatedUtc": "2026-11-14T21:27:52.689723Z",
   "tournament": {
     "name": "Austin Championship presented by Compliance Solutions",
     "course": "",
@@ -51,8 +51,8 @@
       "provider": "Golf Channel",
       "feed": "Full Telecast",
       "type": "tv",
-      "startUtc": "2026-11-15T20:00:00Z",
-      "endUtc": "2026-11-15T23:00:00Z",
+      "startUtc": "2026-11-15T18:30:00Z",
+      "endUtc": "2026-11-15T21:30:00Z",
       "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
       "sourceDomain": "pgatourmedia.pgatourhq.com",
       "sourceLabel": "PGA TOUR Media Broadcast Schedule"
