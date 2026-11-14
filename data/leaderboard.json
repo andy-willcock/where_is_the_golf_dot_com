@@ -2,112 +2,112 @@
   "tournament": "Austin Championship presented by Compliance Solutions",
   "tournamentId": "R2026558",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-11-13T19:30:26.996861Z",
+  "updatedUtc": "2026-11-14T00:27:30.729736Z",
   "players": [
     {
-      "position": "T1",
+      "position": "1",
+      "player": "Trace Crowe",
+      "toPar": "-13",
+      "thru": "16",
+      "today": "-3"
+    },
+    {
+      "position": "2",
+      "player": "Kevin Yu",
+      "toPar": "-12",
+      "thru": "F*",
+      "today": "-6"
+    },
+    {
+      "position": "T3",
       "player": "Brian Harman",
       "toPar": "-11",
       "thru": "F*",
       "today": "-6"
     },
     {
-      "position": "T1",
+      "position": "T3",
       "player": "Kristoffer Ventura",
       "toPar": "-11",
       "thru": "F",
       "today": "-5"
     },
     {
-      "position": "T3",
+      "position": "T5",
       "player": "Jordan Smith",
       "toPar": "-10",
       "thru": "F*",
       "today": "-5"
     },
     {
-      "position": "T3",
-      "player": "Trace Crowe",
+      "position": "T5",
+      "player": "Erik van Rooyen",
       "toPar": "-10",
-      "thru": "2",
-      "today": "E"
+      "thru": "F",
+      "today": "-2"
     },
     {
       "position": "T5",
+      "player": "Sami Valimaki",
+      "toPar": "-10",
+      "thru": "F*",
+      "today": "-6"
+    },
+    {
+      "position": "T5",
+      "player": "Neal Shipley",
+      "toPar": "-10",
+      "thru": "16*",
+      "today": "-6"
+    },
+    {
+      "position": "T9",
       "player": "Zach Bauchou",
       "toPar": "-9",
       "thru": "F*",
       "today": "-6"
     },
     {
-      "position": "T5",
+      "position": "T9",
       "player": "Max Greyserman",
       "toPar": "-9",
       "thru": "F*",
       "today": "-1"
     },
     {
-      "position": "T5",
+      "position": "T9",
       "player": "Ben Kohles",
       "toPar": "-9",
       "thru": "F",
       "today": "-3"
     },
     {
-      "position": "T5",
+      "position": "T9",
       "player": "Rasmus Neergaard-Petersen",
       "toPar": "-9",
       "thru": "F",
       "today": "-6"
     },
     {
-      "position": "T5",
-      "player": "Erik van Rooyen",
+      "position": "T9",
+      "player": "Rafael Campos",
       "toPar": "-9",
-      "thru": "6",
-      "today": "-1"
+      "thru": "F*",
+      "today": "-3"
     },
     {
-      "position": "T5",
+      "position": "T9",
       "player": "Blades Brown",
       "toPar": "-9",
-      "thru": "4",
-      "today": "-2"
-    },
-    {
-      "position": "T11",
-      "player": "Tommy Morrison",
-      "toPar": "-8",
-      "thru": "F*",
-      "today": "-6"
-    },
-    {
-      "position": "T11",
-      "player": "Chad Ramey",
-      "toPar": "-8",
-      "thru": "F*",
-      "today": "-4"
-    },
-    {
-      "position": "T11",
-      "player": "Kevin Yu",
-      "toPar": "-8",
-      "thru": "4*",
-      "today": "-2"
-    },
-    {
-      "position": "T14",
-      "player": "Max McGreevy",
-      "toPar": "-7",
-      "thru": "F*",
-      "today": "-2"
-    },
-    {
-      "position": "T14",
-      "player": "Mark Hubbard",
-      "toPar": "-7",
       "thru": "F",
-      "today": "-3"
+      "today": "-2"
+    },
+    {
+      "position": "T9",
+      "player": "Jeffrey Kang",
+      "toPar": "-9",
+      "thru": "15",
+      "today": "-6"
     }
   ]
 }
