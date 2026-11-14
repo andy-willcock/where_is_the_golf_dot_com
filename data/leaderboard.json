@@ -2,112 +2,112 @@
   "tournament": "Austin Championship presented by Compliance Solutions",
   "tournamentId": "R2026558",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-11-14T17:53:43.828314Z",
+  "updatedUtc": "2026-11-14T22:14:39.213109Z",
   "players": [
     {
-      "position": "1",
+      "position": "T1",
+      "player": "Chad Ramey",
+      "toPar": "-13",
+      "thru": "F",
+      "today": "-5"
+    },
+    {
+      "position": "T1",
+      "player": "Sami Valimaki",
+      "toPar": "-13",
+      "thru": "F",
+      "today": "-3"
+    },
+    {
+      "position": "T1",
       "player": "Erik van Rooyen",
       "toPar": "-13",
-      "thru": "4",
+      "thru": "F",
       "today": "-3"
     },
     {
-      "position": "T2",
-      "player": "Miles Russell",
+      "position": "T1",
+      "player": "Trace Crowe",
+      "toPar": "-13",
+      "thru": "17",
+      "today": "E"
+    },
+    {
+      "position": "T5",
+      "player": "Max Greyserman",
       "toPar": "-12",
-      "thru": "6",
+      "thru": "F",
       "today": "-3"
     },
     {
-      "position": "T2",
-      "player": "Sami Valimaki",
+      "position": "T5",
+      "player": "Ben Kohles",
       "toPar": "-12",
-      "thru": "5",
+      "thru": "F",
+      "today": "-3"
+    },
+    {
+      "position": "T7",
+      "player": "Zac Blair",
+      "toPar": "-11",
+      "thru": "F",
+      "today": "-5"
+    },
+    {
+      "position": "T7",
+      "player": "Austin Smotherman",
+      "toPar": "-11",
+      "thru": "F",
+      "today": "-5"
+    },
+    {
+      "position": "T7",
+      "player": "Will Gordon",
+      "toPar": "-11",
+      "thru": "F*",
+      "today": "-6"
+    },
+    {
+      "position": "T7",
+      "player": "John VanDerLaan",
+      "toPar": "-11",
+      "thru": "F",
+      "today": "-3"
+    },
+    {
+      "position": "T7",
+      "player": "Tommy Morrison",
+      "toPar": "-11",
+      "thru": "F",
+      "today": "-3"
+    },
+    {
+      "position": "T7",
+      "player": "Rafael Campos",
+      "toPar": "-11",
+      "thru": "F",
       "today": "-2"
     },
     {
-      "position": "T2",
-      "player": "Trace Crowe",
-      "toPar": "-12",
-      "thru": "4",
+      "position": "T7",
+      "player": "Kristoffer Ventura",
+      "toPar": "-11",
+      "thru": "F",
+      "today": "E"
+    },
+    {
+      "position": "T7",
+      "player": "Kevin Yu",
+      "toPar": "-11",
+      "thru": "17",
       "today": "+1"
     },
     {
-      "position": "T2",
-      "player": "Kevin Yu",
-      "toPar": "-12",
-      "thru": "4",
-      "today": "E"
-    },
-    {
-      "position": "T6",
-      "player": "Jeffrey Kang",
-      "toPar": "-11",
-      "thru": "8",
-      "today": "-3"
-    },
-    {
-      "position": "T6",
-      "player": "Chad Ramey",
-      "toPar": "-11",
-      "thru": "7",
-      "today": "-3"
-    },
-    {
-      "position": "T6",
-      "player": "Max Greyserman",
-      "toPar": "-11",
-      "thru": "6",
-      "today": "-2"
-    },
-    {
-      "position": "T6",
-      "player": "Ben Kohles",
-      "toPar": "-11",
-      "thru": "6",
-      "today": "-2"
-    },
-    {
-      "position": "T6",
-      "player": "Kristoffer Ventura",
-      "toPar": "-11",
-      "thru": "4",
-      "today": "E"
-    },
-    {
-      "position": "T6",
-      "player": "Jordan Smith",
-      "toPar": "-11",
-      "thru": "4",
-      "today": "-1"
-    },
-    {
-      "position": "T6",
-      "player": "Brian Harman",
-      "toPar": "-11",
-      "thru": "4",
-      "today": "E"
-    },
-    {
-      "position": "T13",
-      "player": "Zac Blair",
+      "position": "T15",
+      "player": "Hayden Springer",
       "toPar": "-10",
-      "thru": "13",
+      "thru": "F",
       "today": "-4"
-    },
-    {
-      "position": "T13",
-      "player": "John VanDerLaan",
-      "toPar": "-10",
-      "thru": "8",
-      "today": "-2"
-    },
-    {
-      "position": "T13",
-      "player": "Mac Meissner",
-      "toPar": "-10",
-      "thru": "7",
-      "today": "-2"
     }
   ]
 }
