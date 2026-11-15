@@ -2,35 +2,35 @@
   "tournament": "Austin Championship presented by Compliance Solutions",
   "tournamentId": "R2026558",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-11-14T22:14:39.213109Z",
+  "updatedUtc": "2026-11-15T01:59:59.057732Z",
   "players": [
     {
-      "position": "T1",
+      "position": "1",
+      "player": "Trace Crowe",
+      "toPar": "-14",
+      "thru": "F",
+      "today": "-1"
+    },
+    {
+      "position": "T2",
       "player": "Chad Ramey",
       "toPar": "-13",
       "thru": "F",
       "today": "-5"
     },
     {
-      "position": "T1",
+      "position": "T2",
       "player": "Sami Valimaki",
       "toPar": "-13",
       "thru": "F",
       "today": "-3"
     },
     {
-      "position": "T1",
+      "position": "T2",
       "player": "Erik van Rooyen",
       "toPar": "-13",
       "thru": "F",
       "today": "-3"
-    },
-    {
-      "position": "T1",
-      "player": "Trace Crowe",
-      "toPar": "-13",
-      "thru": "17",
-      "today": "E"
     },
     {
       "position": "T5",
@@ -99,7 +99,7 @@
       "position": "T7",
       "player": "Kevin Yu",
       "toPar": "-11",
-      "thru": "17",
+      "thru": "F",
       "today": "+1"
     },
     {
