@@ -1,113 +1,113 @@
 {
-  "tournament": "Austin Championship presented by Compliance Solutions",
-  "tournamentId": "R2026558",
+  "tournament": "The RSM Classic",
+  "tournamentId": "R2026493",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-11-16T02:53:01.841604Z",
+  "updatedUtc": "2026-11-19T20:24:38.946756Z",
   "players": [
     {
-      "position": "1",
-      "player": "Trace Crowe",
-      "toPar": "-14",
-      "thru": "F",
-      "today": "-1"
-    },
-    {
-      "position": "T2",
-      "player": "Chad Ramey",
-      "toPar": "-13",
-      "thru": "F",
-      "today": "-5"
-    },
-    {
-      "position": "T2",
-      "player": "Sami Valimaki",
-      "toPar": "-13",
-      "thru": "F",
-      "today": "-3"
-    },
-    {
-      "position": "T2",
-      "player": "Erik van Rooyen",
-      "toPar": "-13",
-      "thru": "F",
-      "today": "-3"
-    },
-    {
-      "position": "T5",
+      "position": "T1",
       "player": "Max Greyserman",
-      "toPar": "-12",
+      "toPar": "-7",
       "thru": "F",
-      "today": "-3"
+      "today": "-7"
     },
     {
-      "position": "T5",
-      "player": "Ben Kohles",
-      "toPar": "-12",
+      "position": "T1",
+      "player": "Garrick Higgo",
+      "toPar": "-7",
       "thru": "F",
-      "today": "-3"
+      "today": "-7"
     },
     {
-      "position": "T7",
-      "player": "Zac Blair",
-      "toPar": "-11",
-      "thru": "F",
-      "today": "-5"
+      "position": "T1",
+      "player": "Jesper Svensson",
+      "toPar": "-7",
+      "thru": "17",
+      "today": "-7"
     },
     {
-      "position": "T7",
-      "player": "Austin Smotherman",
-      "toPar": "-11",
-      "thru": "F",
-      "today": "-5"
-    },
-    {
-      "position": "T7",
-      "player": "Will Gordon",
-      "toPar": "-11",
+      "position": "T4",
+      "player": "Lee Hodges",
+      "toPar": "-6",
       "thru": "F*",
       "today": "-6"
     },
     {
-      "position": "T7",
+      "position": "T4",
+      "player": "Emiliano Grillo",
+      "toPar": "-6",
+      "thru": "F*",
+      "today": "-6"
+    },
+    {
+      "position": "T4",
+      "player": "Hank Lebioda",
+      "toPar": "-6",
+      "thru": "F*",
+      "today": "-6"
+    },
+    {
+      "position": "T4",
+      "player": "Maverick McNealy",
+      "toPar": "-6",
+      "thru": "F*",
+      "today": "-6"
+    },
+    {
+      "position": "T4",
+      "player": "Davis Riley",
+      "toPar": "-6",
+      "thru": "F",
+      "today": "-6"
+    },
+    {
+      "position": "T4",
+      "player": "Michael Thorbjornsen",
+      "toPar": "-6",
+      "thru": "F",
+      "today": "-6"
+    },
+    {
+      "position": "T10",
+      "player": "Joel Dahmen",
+      "toPar": "-5",
+      "thru": "F",
+      "today": "-5"
+    },
+    {
+      "position": "T10",
+      "player": "Keith Mitchell",
+      "toPar": "-5",
+      "thru": "F",
+      "today": "-5"
+    },
+    {
+      "position": "T10",
+      "player": "Zecheng Dou",
+      "toPar": "-5",
+      "thru": "F*",
+      "today": "-5"
+    },
+    {
+      "position": "T10",
       "player": "John VanDerLaan",
-      "toPar": "-11",
+      "toPar": "-5",
       "thru": "F",
-      "today": "-3"
+      "today": "-5"
     },
     {
-      "position": "T7",
-      "player": "Tommy Morrison",
-      "toPar": "-11",
-      "thru": "F",
-      "today": "-3"
+      "position": "T10",
+      "player": "Austin Smotherman",
+      "toPar": "-5",
+      "thru": "F*",
+      "today": "-5"
     },
     {
-      "position": "T7",
-      "player": "Rafael Campos",
-      "toPar": "-11",
-      "thru": "F",
-      "today": "-2"
-    },
-    {
-      "position": "T7",
-      "player": "Kristoffer Ventura",
-      "toPar": "-11",
-      "thru": "F",
-      "today": "E"
-    },
-    {
-      "position": "T7",
-      "player": "Kevin Yu",
-      "toPar": "-11",
-      "thru": "F",
-      "today": "+1"
-    },
-    {
-      "position": "T15",
-      "player": "Hayden Springer",
-      "toPar": "-10",
-      "thru": "F",
-      "today": "-4"
+      "position": "T10",
+      "player": "Chris Kirk",
+      "toPar": "-5",
+      "thru": "F*",
+      "today": "-5"
     }
   ]
 }
