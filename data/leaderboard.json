@@ -2,27 +2,27 @@
   "tournament": "The RSM Classic",
   "tournamentId": "R2026493",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-11-19T20:24:38.946756Z",
+  "updatedUtc": "2026-11-20T01:52:07.314392Z",
   "players": [
     {
-      "position": "T1",
+      "position": "1",
+      "player": "Jesper Svensson",
+      "toPar": "-8",
+      "thru": "F",
+      "today": "-8"
+    },
+    {
+      "position": "T2",
       "player": "Max Greyserman",
       "toPar": "-7",
       "thru": "F",
       "today": "-7"
     },
     {
-      "position": "T1",
+      "position": "T2",
       "player": "Garrick Higgo",
       "toPar": "-7",
       "thru": "F",
-      "today": "-7"
-    },
-    {
-      "position": "T1",
-      "player": "Jesper Svensson",
-      "toPar": "-7",
-      "thru": "17",
       "today": "-7"
     },
     {
