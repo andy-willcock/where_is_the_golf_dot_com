@@ -2,7 +2,7 @@
   "tournament": "The RSM Classic",
   "tournamentId": "R2026493",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-11-21T01:19:33.940807Z",
+  "updatedUtc": "2026-11-21T19:00:52.913996Z",
   "players": [
     {
       "position": "T1",
@@ -90,17 +90,17 @@
     },
     {
       "position": "T10",
-      "player": "Hank Lebioda",
-      "toPar": "-7",
-      "thru": "F",
-      "today": "-1"
-    },
-    {
-      "position": "T10",
       "player": "Patton Kizzire",
       "toPar": "-7",
       "thru": "F",
       "today": "-3"
+    },
+    {
+      "position": "T10",
+      "player": "Hank Lebioda",
+      "toPar": "-7",
+      "thru": "F",
+      "today": "-1"
     },
     {
       "position": "T10",
