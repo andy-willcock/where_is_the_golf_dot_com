@@ -2,112 +2,112 @@
   "tournament": "The RSM Classic",
   "tournamentId": "R2026493",
   "source": "https://www.pgatour.com/leaderboard",
-  "updatedUtc": "2026-11-23T00:25:48.854015Z",
+  "updatedUtc": "2026-11-26T21:19:41.688923Z",
   "players": [
     {
-      "position": "T1",
-      "player": "Rasmus H\u00f8jgaard",
-      "toPar": "-13",
+      "position": "1",
+      "player": "Marco Penge",
+      "toPar": "-16",
       "thru": "F",
       "today": "-5"
     },
     {
-      "position": "T1",
+      "position": "T2",
+      "player": "Haotong Li",
+      "toPar": "-16",
+      "thru": "F",
+      "today": "-5"
+    },
+    {
+      "position": "T2",
       "player": "Michael Thorbjornsen",
-      "toPar": "-13",
+      "toPar": "-16",
+      "thru": "F",
+      "today": "-3"
+    },
+    {
+      "position": "T2",
+      "player": "Max Greyserman",
+      "toPar": "-16",
       "thru": "F",
       "today": "-4"
     },
     {
-      "position": "3",
-      "player": "Max Greyserman",
-      "toPar": "-12",
+      "position": "T5",
+      "player": "Jackson Koivun",
+      "toPar": "-14",
       "thru": "F",
-      "today": "-5"
+      "today": "-4"
     },
     {
-      "position": "T4",
-      "player": "Max McGreevy",
-      "toPar": "-11",
+      "position": "T5",
+      "player": "Rasmus H\u00f8jgaard",
+      "toPar": "-14",
       "thru": "F",
-      "today": "-3"
-    },
-    {
-      "position": "T4",
-      "player": "Haotong Li",
-      "toPar": "-11",
-      "thru": "F",
-      "today": "-3"
-    },
-    {
-      "position": "T4",
-      "player": "Marco Penge",
-      "toPar": "-11",
-      "thru": "F",
-      "today": "-2"
+      "today": "-1"
     },
     {
       "position": "T7",
-      "player": "Jackson Koivun",
-      "toPar": "-10",
+      "player": "Harris English",
+      "toPar": "-13",
       "thru": "F",
       "today": "-5"
     },
     {
       "position": "T7",
       "player": "Adrien Dumont de Chassart",
-      "toPar": "-10",
+      "toPar": "-13",
       "thru": "F",
-      "today": "-2"
+      "today": "-3"
     },
     {
-      "position": "T7",
-      "player": "Rasmus Neergaard-Petersen",
-      "toPar": "-10",
+      "position": "9",
+      "player": "Nick Dunlap",
+      "toPar": "-12",
+      "thru": "F*",
+      "today": "-6"
+    },
+    {
+      "position": "T10",
+      "player": "Brooks Koepka",
+      "toPar": "-11",
       "thru": "F",
-      "today": "-1"
+      "today": "-3"
     },
     {
       "position": "T10",
       "player": "Sami Valimaki",
-      "toPar": "-9",
+      "toPar": "-11",
       "thru": "F",
-      "today": "-4"
+      "today": "-2"
     },
     {
       "position": "T10",
       "player": "Ricky Castillo",
-      "toPar": "-9",
+      "toPar": "-11",
+      "thru": "F",
+      "today": "-2"
+    },
+    {
+      "position": "T10",
+      "player": "Rasmus Neergaard-Petersen",
+      "toPar": "-11",
       "thru": "F",
       "today": "-1"
     },
     {
-      "position": "T12",
-      "player": "Davis Thompson",
-      "toPar": "-8",
+      "position": "T10",
+      "player": "Max McGreevy",
+      "toPar": "-11",
       "thru": "F",
-      "today": "-3"
+      "today": "E"
     },
     {
-      "position": "T12",
-      "player": "John VanDerLaan",
-      "toPar": "-8",
+      "position": "T15",
+      "player": "Taylor Pendrith",
+      "toPar": "-10",
       "thru": "F*",
       "today": "-4"
-    },
-    {
-      "position": "T12",
-      "player": "Brooks Koepka",
-      "toPar": "-8",
-      "thru": "F",
-      "today": "-3"
-    },
-    {
-      "position": "T12",
-      "player": "David Ford",
-      "toPar": "-8",
-      "thru": "F",
-      "today": "-2"
     }
   ]
 }
