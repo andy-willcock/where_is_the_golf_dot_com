@@ -1,65 +1,170 @@
 {
-  "lastUpdatedUtc": "2026-11-23T03:44:59.204198Z",
+  "lastUpdatedUtc": "2026-11-27T20:00:31.864886Z",
   "tournament": {
-    "name": "The RSM Classic",
-    "course": "",
-    "location": "",
-    "startDate": "2026-11-19",
-    "endDate": "2026-11-22",
-    "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule"
+    "name": "Hero World Challenge",
+    "course": "Albany",
+    "location": "Nassau, BAH",
+    "startDate": "2026-12-03",
+    "endDate": "2026-12-06",
+    "sourceUrl": "https://www.cbssports.com/golf/schedules/"
   },
   "coverage": [
     {
       "id": "coverage-1",
       "round": "Round 1",
       "provider": "Golf Channel",
-      "feed": "Full Telecast",
+      "feed": "Live TV coverage",
       "type": "tv",
-      "startUtc": "2026-11-19T18:00:00Z",
-      "endUtc": "2026-11-19T21:00:00Z",
-      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
-      "sourceDomain": "pgatourmedia.pgatourhq.com",
-      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+      "startUtc": "2026-12-03T18:30:00Z",
+      "endUtc": "2026-12-03T21:30:00Z",
+      "sourceUrl": "https://www.cbssports.com/golf/news/2024-hero-world-challenge-tv-schedule-channel-live-stream-radio-where-to-watch-tiger-woods-event/",
+      "sourceDomain": "cbssports.com",
+      "sourceLabel": "Live TV coverage"
     },
     {
       "id": "coverage-2",
       "round": "Round 2",
-      "provider": "Golf Channel",
-      "feed": "Full Telecast",
-      "type": "tv",
-      "startUtc": "2026-11-20T18:00:00Z",
-      "endUtc": "2026-11-20T21:00:00Z",
-      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
-      "sourceDomain": "pgatourmedia.pgatourhq.com",
-      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+      "provider": "GolfChannel.com",
+      "feed": "Live TV coverage",
+      "type": "streaming",
+      "startUtc": "2026-12-04T18:30:00Z",
+      "endUtc": "2026-12-04T21:30:00Z",
+      "sourceUrl": "https://www.cbssports.com/golf/news/2021-hero-world-challenge-live-stream-watch-online-tv-schedule-radio-golf-tee-times/",
+      "sourceDomain": "cbssports.com",
+      "sourceLabel": "Live TV coverage"
     },
     {
       "id": "coverage-3",
       "round": "Round 3",
       "provider": "Golf Channel",
-      "feed": "Full Telecast\n\u00a9 2026 PGA Tour INC. All rights reserved. | 1 PGA TOUR Blvd., Ponte Vedra Beach, FL 32082 |\nTERMS OF SERVICE\n|\nCONTACT US",
+      "feed": "Early TV coverage",
       "type": "tv",
-      "startUtc": "2026-11-22T19:00:00Z",
-      "endUtc": "2026-11-22T22:00:00Z",
-      "sourceUrl": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
-      "sourceDomain": "pgatourmedia.pgatourhq.com",
-      "sourceLabel": "PGA TOUR Media Broadcast Schedule"
+      "startUtc": "2026-12-05T17:00:00Z",
+      "endUtc": "2026-12-05T19:30:00Z",
+      "sourceUrl": "https://www.cbssports.com/golf/news/2023-hero-world-challenge-live-stream-watch-online-tv-schedule-channel-tee-times-radio-golf-coverage/",
+      "sourceDomain": "cbssports.com",
+      "sourceLabel": "Early TV coverage"
+    },
+    {
+      "id": "coverage-4",
+      "round": "Round 3",
+      "provider": "NBC",
+      "feed": "Live TV coverage",
+      "type": "tv",
+      "startUtc": "2026-12-05T19:30:00Z",
+      "endUtc": "2026-12-05T22:00:00Z",
+      "sourceUrl": "https://www.cbssports.com/golf/news/2023-hero-world-challenge-live-stream-watch-online-tv-schedule-channel-tee-times-radio-golf-coverage/",
+      "sourceDomain": "cbssports.com",
+      "sourceLabel": "Live TV coverage"
+    },
+    {
+      "id": "coverage-5",
+      "round": "Round 3",
+      "provider": "NBCSports.com",
+      "feed": "Live TV coverage",
+      "type": "streaming",
+      "startUtc": "2026-12-05T19:30:00Z",
+      "endUtc": "2026-12-05T22:00:00Z",
+      "sourceUrl": "https://www.cbssports.com/golf/news/2021-hero-world-challenge-live-stream-watch-online-tv-schedule-radio-golf-tee-times/",
+      "sourceDomain": "cbssports.com",
+      "sourceLabel": "Live TV coverage"
+    },
+    {
+      "id": "coverage-6",
+      "round": "Final Round",
+      "provider": "Golf Channel",
+      "feed": "Early TV coverage",
+      "type": "tv",
+      "startUtc": "2026-12-06T16:00:00Z",
+      "endUtc": "2026-12-06T18:00:00Z",
+      "sourceUrl": "https://www.cbssports.com/golf/news/2021-hero-world-challenge-live-stream-watch-online-tv-schedule-radio-golf-tee-times/",
+      "sourceDomain": "cbssports.com",
+      "sourceLabel": "Early TV coverage"
+    },
+    {
+      "id": "coverage-7",
+      "round": "Final Round",
+      "provider": "Golf Channel",
+      "feed": "Early TV coverage",
+      "type": "tv",
+      "startUtc": "2026-12-06T16:30:00Z",
+      "endUtc": "2026-12-06T18:30:00Z",
+      "sourceUrl": "https://www.cbssports.com/golf/news/2023-hero-world-challenge-live-stream-watch-online-tv-schedule-channel-tee-times-radio-golf-coverage/",
+      "sourceDomain": "cbssports.com",
+      "sourceLabel": "Early TV coverage"
+    },
+    {
+      "id": "coverage-8",
+      "round": "Final Round",
+      "provider": "NBCSports.com",
+      "feed": "Live TV coverage",
+      "type": "streaming",
+      "startUtc": "2026-12-06T18:00:00Z",
+      "endUtc": "2026-12-06T21:00:00Z",
+      "sourceUrl": "https://www.cbssports.com/golf/news/2021-hero-world-challenge-live-stream-watch-online-tv-schedule-radio-golf-tee-times/",
+      "sourceDomain": "cbssports.com",
+      "sourceLabel": "Live TV coverage"
+    },
+    {
+      "id": "coverage-9",
+      "round": "Final Round",
+      "provider": "NBC TV Coverage: 1-5 p.m. on Peacock",
+      "feed": "TV Coverage",
+      "type": "streaming",
+      "startUtc": "2026-12-06T18:00:00Z",
+      "endUtc": "2026-12-06T22:00:00Z",
+      "sourceUrl": "https://www.cbssports.com/golf/news/2022-hero-world-challenge-live-stream-watch-online-tv-schedule-channel-golf-coverage-tee-times/",
+      "sourceDomain": "cbssports.com",
+      "sourceLabel": "TV Coverage"
+    },
+    {
+      "id": "coverage-10",
+      "round": "Final Round",
+      "provider": "NBC",
+      "feed": "Live TV coverage",
+      "type": "tv",
+      "startUtc": "2026-12-06T18:30:00Z",
+      "endUtc": "2026-12-06T21:30:00Z",
+      "sourceUrl": "https://www.cbssports.com/golf/news/2023-hero-world-challenge-live-stream-watch-online-tv-schedule-channel-tee-times-radio-golf-coverage/",
+      "sourceDomain": "cbssports.com",
+      "sourceLabel": "Live TV coverage"
     }
   ],
   "collection": {
-    "score": 57,
+    "score": 120,
     "warnings": [
-      "Final-round coverage was not found."
+      "Primary PGA TOUR Media source failed: Could not find the PGA TOUR section on the media page."
     ],
     "sources": [
       {
-        "url": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
-        "domain": "pgatourmedia.pgatourhq.com",
-        "title": "PGA TOUR Media Broadcast Schedule",
+        "url": "https://www.cbssports.com/golf/news/2023-hero-world-challenge-live-stream-watch-online-tv-schedule-channel-tee-times-radio-golf-coverage/",
+        "domain": "cbssports.com",
+        "title": "2023 Hero World Challenge live stream, watch online, TV ...2022 Hero World Challenge live stream, watch online, TV ...2021 Hero World Challenge: Live stream, watch online, TV ...2024 Hero World Challenge TV schedule, channel, live stream ...How to watch Tiger Woods live at Hero World Challenge: Live ...2025 Hero World Challenge leaderboard: Hideki Matsuyama ...Tiger Woods commits to Hero World Challenge, will make first ...",
+        "parsedWindows": 4
+      },
+      {
+        "url": "https://www.cbssports.com/golf/news/2022-hero-world-challenge-live-stream-watch-online-tv-schedule-channel-golf-coverage-tee-times/",
+        "domain": "cbssports.com",
+        "title": "2022 Hero World Challenge live stream, watch online, TV ...2021 Hero World Challenge: Live stream, watch online, TV ...2024 Hero World Challenge TV schedule, channel, live stream ...How to watch Tiger Woods live at Hero World Challenge: Live ...2025 Hero World Challenge leaderboard: Hideki Matsuyama ...Tiger Woods commits to Hero World Challenge, will make first ...",
+        "parsedWindows": 1
+      },
+      {
+        "url": "https://www.cbssports.com/golf/news/2021-hero-world-challenge-live-stream-watch-online-tv-schedule-radio-golf-tee-times/",
+        "domain": "cbssports.com",
+        "title": "2021 Hero World Challenge: Live stream, watch online, TV ...",
+        "parsedWindows": 5
+      },
+      {
+        "url": "https://www.cbssports.com/golf/news/2024-hero-world-challenge-tv-schedule-channel-live-stream-radio-where-to-watch-tiger-woods-event/",
+        "domain": "cbssports.com",
+        "title": "2024 Hero World Challenge TV schedule, channel, live stream ...How to watch Tiger Woods live at Hero World Challenge: Live ...2025 Hero World Challenge leaderboard: Hideki Matsuyama ...Tiger Woods commits to Hero World Challenge, will make first ...",
         "parsedWindows": 3
       }
     ],
-    "failedSources": [],
+    "failedSources": [
+      "No windows parsed: https://www.golfchannel.com/pga-tour/news/hero-world-challenge-2026-tiger-woods-headlines-full-field-how-to-watch",
+      "No windows parsed: https://www.golfchannel.com/pga-tour/2026/hero-world-challenge"
+    ],
     "sourceTimezone": "America/New_York",
     "primarySource": "https://pgatourmedia.pgatourhq.com/broadcast-schedule",
     "notes": "PGA TOUR Media broadcast schedule is the primary source. Audio-only records are excluded. Times are converted from Eastern to UTC."
